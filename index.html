@@ -134,6 +134,64 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 623 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/29/git-1/">第四篇 git&amp;github(2)</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="git练习">git练习</span></h2><h3><span id="本地仓库">本地仓库</span></h3><p>最近在学java，也想巩固一下之前学习过的算法和学习新的算法，就打算用java实现，就用这个项目来加强git的使用练习。</p>
+<p>首先在IDEA下java学习的项目里，新建了一个algorithms module，在此文件下，进入Git Bash，新建本地仓库，此时只有一个用来测试排序算法的java文件和一个iml项目配置文件。</p>
+<p><img src="/2020/03/29/git-1/image-20200322125951038.png" alt="image-20200322125951038"></p>
+<p>目前java文件的内容还是空的，</p>
+<p><img src="/2020/03/29/git-1/image-20200322130352882.png" alt="image-20200322130352882"></p>
+<p>编辑一下，加入main函数，文件被编辑之后，再次使用<code>git status</code>查看文件状态，会发现文件状态已经变成了modified，再次add，然后开始commit。</p>
+<p><img src="/2020/03/29/git-1/image-20200322130657131.png" alt="image-20200322130657131"></p>
+<p>commit之后，会显示此次提交的一些信息。</p>
+<p><img src="/2020/03/29/git-1/image-20200322131655585.png" alt="image-20200322131655585"></p>
+<h3><span id="远程仓库">远程仓库</span></h3><p>前面展示了一些Git本地的基本操作，现在假如本地文件修改好了，或者工作暂停了，准备放到github上，那么先去github上Create a new repository，最初创建的时候只有一个readme文件，下面将本地仓库同步到远程仓库上。</p>
+<p><img src="/2020/03/29/git-1/image-20200322132218647.png" alt="image-20200322132218647"></p>
+<p><img src="/2020/03/29/git-1/image-20200322133650342.png" alt="image-20200322133650342"></p>
+<p>建立完之后，在本地仓库，将远程仓库的URL复制下来，添加远程仓库。</p>
+<p><img src="/2020/03/29/git-1/image-20200322133352132.png" alt="image-20200322133352132"></p>
+<p>现在本地仓库里是没有readme文件的，如果此时想要直接push，将本地仓库推送到远程仓库的话，看看会发生什么。</p>
+<p><img src="/2020/03/29/git-1/image-20200322134210602.png" alt="image-20200322134210602"></p>
+<p>跟随这个报错信息的指示，使用pull，看又会发生什么。这个原因是因为目前本地仓库和远程仓库没有任何相同的文件，根本不相干，所以会被告知无法合并，更加方便的流程是先从远程仓库拉取下来，再把本地文件加入到远程仓库下载到本地的库，然后再提交。</p>
+<p><img src="/2020/03/29/git-1/image-20200322135255020.png" alt="image-20200322135255020"></p>
+<p>那就没有解决办法了嘛？不是的，可以使用一个强制的方法，添加一个可选项–allow-unrelated-histories，问题终于得以解决。</p>
+<p><img src="/2020/03/29/git-1/image-20200322140334095.png" alt="image-20200322140334095"></p>
+<p>现在再去github上看看，就会发现提交成功而且push成功啦，开森，撒花~之后就要坚持练习写代码啦，刚把得勒~</p>
+<p><img src="/2020/03/29/git-1/image-20200322140554220.png" alt="image-20200322140554220"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-15T15:58:57.000Z">2020-03-15</time>
                 
                 
@@ -514,7 +572,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        6
+                        7
                     </p>
                 </div>
             </div>
@@ -676,6 +734,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/29/git-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git&amp;github(2)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
+                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git&amp;github(2)</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/15/git/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)">
@@ -750,25 +827,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/21/My-first-blog/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="My first blog">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-21T12:59:45.000Z">2018-12-21</time></div>
-                    <a href="/2018/12/21/My-first-blog/" class="has-link-black-ter is-size-6">My first blog</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/others/">others</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -787,7 +845,7 @@
                     <span class="level-item">March 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -874,6 +932,25 @@
         
         <article class="media">
             
+            <a href="/2020/03/29/git-1/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git&amp;github(2)">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
+                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git&amp;github(2)</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2020/03/15/git/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)">
@@ -948,25 +1025,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/21/My-first-blog/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="My first blog">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-21T12:59:45.000Z">2018-12-21</time></div>
-                    <a href="/2018/12/21/My-first-blog/" class="has-link-black-ter is-size-6">My first blog</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/others/">others</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -985,7 +1043,7 @@
                     <span class="level-item">March 2020</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
