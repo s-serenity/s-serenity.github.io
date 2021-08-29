@@ -2,7 +2,7 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Category: development tools - s-serenity</title>
+<title>Categoria: development tools - s-serenity</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -132,13 +132,126 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Categories</a></li>
+            <li><a href="/categories">Categorias</a></li>
             
             <li class="is-active"><a href="#" aria-current="page">development tools</a></li>
         </ul>
         </nav>
     </div>
 </div>
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-07-03T09:41:15.000Z">2021-07-03</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 808 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/07/03/git-2/">第六篇 git相关(3)-分支与合并</a>
+            
+        </h1>
+        <div class="content">
+            <h3><span id="git分支">git分支</span></h3><p>git分支是git的一大特性，git 的分支本质上仅仅是指向提交对象的可变指针，是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，这也是为什么git分支的创建和销毁都异常高效的原因，创建新分支时，就是在当前所在的提交对象上创建一个指针，而git是通过一个名为HEAD的特殊指针来记录自己的当前位置的。</p>
+<p>与git分支相关的命令有：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch -- 查看本地分支</span><br><span class="line">git branch -v -- 查看本地分支每个分支的最后一次提交</span><br><span class="line">git branch -vv -- 查看本地分支每个分支跟踪的远程分支</span><br><span class="line">git checkout -b dev -- 新建dev分支，并切换到dev分支(此后HEAD会指向dev分支,工作目录也会变为dev分支指向的快照内容)</span><br><span class="line">git checkout master -- 切换到master分支(此后HEAD会指向master分支,工作目录也会变为master分支指向的快照内容)</span><br><span class="line">git merge dev -- 合并dev分支到当前分支</span><br><span class="line">git branch -d dev -- 删除dev分支</span><br></pre></td></tr></table></figure>
+<h4><span id="分支切换">分支切换</span></h4><p>注意在切换分支时，git会重置工作目录，自动添加、删除、修改文件以确保此时你的工作目录和这个分支最后一次提交时的样子一模一样，因此在切换分支前，要注意暂存当前的工作进度，可以使用<code>git stash</code>命令暂存当前工作。</p>
+<h4><span id="分支合并">分支合并</span></h4><p>在合并时，可能会看到fast-forward这个词，这是指当前分支是合并分支的直接上游，两者合并不会产生冲突，而只是指针向前移动了，所以叫做fast-forward。</p>
+<p>如果两个分支已经分叉开来，进行合并时，git会根据两个分支的共同祖先来做一个三方合并，此时的合并就不是简单的指针向前移动了，而是将三方合并的结果生成一个新的快照并创建一个新的提交指向它。</p>
+<p>有时候合并会发生冲突，靠git自动合并已经无法解决，就需要人工去解决冲突，git会在有冲突的文件中加入标记，使用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>和<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>、<code>=======</code>标识了冲突的位置，<code>=======</code>将两个分支的冲突位置内容分隔开来，为了解决冲突，只能选择其中一个，手动地将标识的片段改为你选择的内容即可，修改完冲突之后，还要使用<code>git add</code>来表示冲突已经解决，<code>git commit</code>来完成合并提交。</p>
+<h4><span id="远程分支">远程分支</span></h4><p>远程分支以 <code>(remote)/(branch)</code> 形式命名，本地分支与远程分支交互相关的命令如下：</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push (remote) (branch):(remote branch) --推从到远程分支</span><br><span class="line">git fetch (remote) --拉取远程仓库的内容，不会修改工作目录</span><br><span class="line">git pull (remote) --拉取并合并远程仓库的内容到本地</span><br><span class="line">git push (remote) --delete (branch) --删除远程分支</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 695 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2020/03/29/git-1/">第四篇 git相关(2)-git&amp;github</a>
+            
+        </h1>
+        <div class="content">
+            <h3><span id="远程仓库">远程仓库</span></h3><p>远程仓库是指托管在因特网或其他网络中的你的项目的版本库。</p>
+<h4><span id="github">github</span></h4><p>GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git作为唯一的版本库格式进行托管，故名GitHub。</p>
+<h3><span id="一次练习">一次练习</span></h3><p>最近在学java，也想巩固一下之前学习过的算法和学习新的算法，就打算用java实现，就用这个项目来加强git的使用练习。</p>
+<p>首先在IDEA下java学习的项目里，新建了一个algorithms module，在此文件下，进入Git Bash，新建本地仓库，此时只有一个用来测试排序算法的java文件和一个iml项目配置文件。</p>
+<p><img src="/2020/03/29/git-1/image-20200322125951038.png" alt="image-20200322125951038"></p>
+<p>目前java文件的内容还是空的，</p>
+<p><img src="/2020/03/29/git-1/image-20200322130352882.png" alt="image-20200322130352882"></p>
+<p>编辑一下，加入main函数，文件被编辑之后，再次使用<code>git status</code>查看文件状态，会发现文件状态已经变成了modified，再次add，然后开始commit。</p>
+<p><img src="/2020/03/29/git-1/image-20200322130657131.png" alt="image-20200322130657131"></p>
+<p>commit之后，会显示此次提交的一些信息。</p>
+<p><img src="/2020/03/29/git-1/image-20200322131655585.png" alt="image-20200322131655585"></p>
+<p>前面展示了一些Git本地的基本操作，现在假如本地文件修改好了，或者工作暂停了，准备放到github上，那么先去github上Create a new repository，最初创建的时候只有一个readme文件，下面将本地仓库同步到远程仓库上。</p>
+<p><img src="/2020/03/29/git-1/image-20200322132218647.png" alt="image-20200322132218647"></p>
+<p><img src="/2020/03/29/git-1/image-20200322133650342.png" alt="image-20200322133650342"></p>
+<p>建立完之后，在本地仓库，将远程仓库的URL复制下来，添加远程仓库。</p>
+<p><img src="/2020/03/29/git-1/image-20200322133352132.png" alt="image-20200322133352132"></p>
+<p>现在本地仓库里是没有readme文件的，如果此时想要直接push，将本地仓库推送到远程仓库的话，看看会发生什么。</p>
+<p><img src="/2020/03/29/git-1/image-20200322134210602.png" alt="image-20200322134210602"></p>
+<p>跟随这个报错信息的指示，使用pull，看又会发生什么。这个原因是因为目前本地仓库和远程仓库没有任何相同的文件，根本不相干，所以会被告知无法合并，更加方便的流程是先从远程仓库拉取下来，再把本地文件加入到远程仓库下载到本地的库，然后再提交。</p>
+<p><img src="/2020/03/29/git-1/image-20200322135255020.png" alt="image-20200322135255020"></p>
+<p>那就没有解决办法了嘛？不是的，可以使用一个强制的方法，添加一个可选项–allow-unrelated-histories，问题终于得以解决。</p>
+<p><img src="/2020/03/29/git-1/image-20200322140334095.png" alt="image-20200322140334095"></p>
+<p>现在再去github上看看，就会发现提交成功而且push成功啦，开森，撒花~之后就要坚持练习写代码啦，刚把得勒~</p>
+<p><img src="/2020/03/29/git-1/image-20200322140554220.png" alt="image-20200322140554220"></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
 
     <div class="card">
     
@@ -156,7 +269,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    13 minutes read (About 1930 words)
+                    13 minutes read (About 1880 words)
                 </span>
                 
             </div>
@@ -168,8 +281,7 @@
             
         </h1>
         <div class="content">
-            <h2><span id="什么是git">什么是Git</span></h2><p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
-<h2><span id="什么是github">什么是GitHub</span></h2><p>GitHub是一个面向开源及私有软件项目的托管平台，因为只支持git 作为唯一的版本库格式进行托管，故名GitHub。</p>
+            <h3><span id="什么是git">什么是git</span></h3><p>Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.</p>
 <h3><span id="使用git">使用Git</span></h3><p>假设已经在电脑上安装好了Git，并配好了环境，在windows下，文件夹下右击出现了</p>
 <p>Git Bash Here，就说明已经安装好了。</p>
 <p>使用git需要首先建立一个仓库，之后就可以在这个仓库中对代码进行各种操作，过程中会使用到各种git命令，下面就介绍一下每个git命令的具体作用。</p>
@@ -223,7 +335,7 @@
         <nav class="level">
             <div class="level-item has-text-centered">
                 <div>
-                    <img class="image is-128x128 has-mb-6" src="/images/tx.jpg" alt="s-serenity">
+                    <img class="image is-128x128 has-mb-6" src="/images/tx.png" alt="s-serenity">
                     
                     <p class="is-size-4 is-block">
                         s-serenity
@@ -247,37 +359,37 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        14
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        7
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        7
                     </p>
                 </div>
             </div>
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/s-serenity">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -364,16 +476,32 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/computer-system/">
+            <span class="level-start">
+                <span class="level-item">computer system</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/database/">
+            <span class="level-start">
+                <span class="level-item">database</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/development-tools/">
             <span class="level-start">
                 <span class="level-item">development tools</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/others/">
@@ -384,9 +512,25 @@
                 <span class="level-item tag">3</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/programming-language/">
+            <span class="level-start">
+                <span class="level-item">programming language</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/theory/">
             <span class="level-start">
                 <span class="level-item">theory</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/web-development/">
+            <span class="level-start">
+                <span class="level-item">web development</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -401,9 +545,9 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            Nube de etiquetas
         </h3>
-        <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a>
+        <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 15px;">python</a>
     </div>
 </div>
 
@@ -415,23 +559,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2021/08/07/git-2/" class="media-left">
+            <a href="/2021/08/08/python-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第六篇 git相关(3)-分支与合并">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T09:41:15.000Z">2021-08-07</time></div>
-                    <a href="/2021/08/07/git-2/" class="has-link-black-ter is-size-6">第六篇 git相关(3)-分支与合并</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-08T08:56:36.000Z">2021-08-08</time></div>
+                    <a href="/2021/08/08/python-1/" class="has-link-black-ter is-size-6">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/web-development/">web development</a>
                     </p>
                 </div>
             </div>
@@ -439,18 +583,18 @@
         
         <article class="media">
             
-            <a href="/2020/04/04/sort/" class="media-left">
+            <a href="/2021/08/07/SQL/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第五篇 算法(1)--排序">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十篇 SQL(1)-数据统计">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T15:34:12.000Z">2020-04-04</time></div>
-                    <a href="/2020/04/04/sort/" class="has-link-black-ter is-size-6">第五篇 算法(1)--排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T13:39:46.000Z">2021-08-07</time></div>
+                    <a href="/2021/08/07/SQL/" class="has-link-black-ter is-size-6">第十篇 SQL(1)-数据统计</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/database/">database</a>
                     </p>
                 </div>
             </div>
@@ -458,18 +602,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/29/git-1/" class="media-left">
+            <a href="/2021/07/30/python/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git相关(2)-git&amp;github">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第九篇 python(1)-语法进阶">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
-                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git相关(2)-git&amp;github</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-30T13:39:18.000Z">2021-07-30</time></div>
+                    <a href="/2021/07/30/python/" class="has-link-black-ter is-size-6">第九篇 python(1)-语法进阶</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -477,18 +621,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/15/git/" class="media-left">
+            <a href="/2021/07/09/linux-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)-git基础原理与命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第七篇 Linux相关(2)-进程管理与性能分析">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-15T15:58:57.000Z">2020-03-15</time></div>
-                    <a href="/2020/03/15/git/" class="has-link-black-ter is-size-6">第三篇 git相关(1)-git基础原理与命令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:38:39.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/linux-1/" class="has-link-black-ter is-size-6">第七篇 Linux相关(2)-进程管理与性能分析</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                        <a class="has-link-grey -link" href="/categories/computer-system/">computer system</a>
                     </p>
                 </div>
             </div>
@@ -496,18 +640,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/14/linux/" class="media-left">
+            <a href="/2021/07/09/java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二篇 Linux相关(1)">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第八篇 java(1)-面向对象">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-14T12:40:00.000Z">2020-03-14</time></div>
-                    <a href="/2020/03/14/linux/" class="has-link-black-ter is-size-6">第二篇 Linux相关(1)</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:26:51.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/java/" class="has-link-black-ter is-size-6">第八篇 java(1)-面向对象</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -521,7 +665,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -531,7 +675,18 @@
                     <span class="level-item">August 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -589,9 +744,20 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
                 
                 <li>
                     <a class="level is-marginless" href="/tags/Markdown/">
@@ -605,12 +771,34 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/git/">
                         <span class="level-start">
                             <span class="level-item">git</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -622,6 +810,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -646,23 +845,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2021/08/07/git-2/" class="media-left">
+            <a href="/2021/08/08/python-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第六篇 git相关(3)-分支与合并">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T09:41:15.000Z">2021-08-07</time></div>
-                    <a href="/2021/08/07/git-2/" class="has-link-black-ter is-size-6">第六篇 git相关(3)-分支与合并</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-08T08:56:36.000Z">2021-08-08</time></div>
+                    <a href="/2021/08/08/python-1/" class="has-link-black-ter is-size-6">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/web-development/">web development</a>
                     </p>
                 </div>
             </div>
@@ -670,18 +869,18 @@
         
         <article class="media">
             
-            <a href="/2020/04/04/sort/" class="media-left">
+            <a href="/2021/08/07/SQL/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第五篇 算法(1)--排序">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十篇 SQL(1)-数据统计">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T15:34:12.000Z">2020-04-04</time></div>
-                    <a href="/2020/04/04/sort/" class="has-link-black-ter is-size-6">第五篇 算法(1)--排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T13:39:46.000Z">2021-08-07</time></div>
+                    <a href="/2021/08/07/SQL/" class="has-link-black-ter is-size-6">第十篇 SQL(1)-数据统计</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/database/">database</a>
                     </p>
                 </div>
             </div>
@@ -689,18 +888,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/29/git-1/" class="media-left">
+            <a href="/2021/07/30/python/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git相关(2)-git&amp;github">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第九篇 python(1)-语法进阶">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
-                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git相关(2)-git&amp;github</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-30T13:39:18.000Z">2021-07-30</time></div>
+                    <a href="/2021/07/30/python/" class="has-link-black-ter is-size-6">第九篇 python(1)-语法进阶</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -708,18 +907,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/15/git/" class="media-left">
+            <a href="/2021/07/09/linux-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)-git基础原理与命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第七篇 Linux相关(2)-进程管理与性能分析">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-15T15:58:57.000Z">2020-03-15</time></div>
-                    <a href="/2020/03/15/git/" class="has-link-black-ter is-size-6">第三篇 git相关(1)-git基础原理与命令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:38:39.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/linux-1/" class="has-link-black-ter is-size-6">第七篇 Linux相关(2)-进程管理与性能分析</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                        <a class="has-link-grey -link" href="/categories/computer-system/">computer system</a>
                     </p>
                 </div>
             </div>
@@ -727,18 +926,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/14/linux/" class="media-left">
+            <a href="/2021/07/09/java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二篇 Linux相关(1)">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第八篇 java(1)-面向对象">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-14T12:40:00.000Z">2020-03-14</time></div>
-                    <a href="/2020/03/14/linux/" class="has-link-black-ter is-size-6">第二篇 Linux相关(1)</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:26:51.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/java/" class="has-link-black-ter is-size-6">第八篇 java(1)-面向对象</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -752,7 +951,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -762,7 +961,18 @@
                     <span class="level-item">August 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -820,9 +1030,20 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
                 
                 <li>
                     <a class="level is-marginless" href="/tags/Markdown/">
@@ -836,12 +1057,34 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/git/">
                         <span class="level-start">
                             <span class="level-item">git</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -853,6 +1096,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1010,10 +1264,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',

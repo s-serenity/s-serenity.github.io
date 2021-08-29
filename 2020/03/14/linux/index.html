@@ -2,23 +2,23 @@
 <html>
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>第二篇 Linux相关(1) - s-serenity</title>
+<title>第二篇 Linux相关(1)-文件管理与文本编辑 - s-serenity</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Basic skillsCommand of LinuxFile operationCommands that I have been familar with:lsllcdmkdircpmvrm  Runnohup&amp;amp; vi/vimcommand:i   begin to insert:wq   save and quit:q  quit   operation key:gg:move t">
-<meta name="keywords" content="Algorithm study development">
+    <meta name="description" content="文件操作相关命令查看目录和文件12345678ls -- 当前目录下文件展示ll -- 当前目录下文件展示 详细tree --树状图形式展示pwd --显示当前工作目录find --按照指定条件来查找文件所对应的位置cd -- 打开目录，.表示当前目录，..表示上一级目录，-表示回到刚才所在的路径下。which 命令 --查看命令所在路径file 文件名 --查看文件类型 查看文件内容123456">
+<meta name="keywords" content="Linux">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第二篇 Linux相关(1)">
+<meta property="og:title" content="第二篇 Linux相关(1)-文件管理与文本编辑">
 <meta property="og:url" content="http://yoursite.com/2020/03/14/linux/index.html">
 <meta property="og:site_name" content="s-serenity">
-<meta property="og:description" content="Basic skillsCommand of LinuxFile operationCommands that I have been familar with:lsllcdmkdircpmvrm  Runnohup&amp;amp; vi/vimcommand:i   begin to insert:wq   save and quit:q  quit   operation key:gg:move t">
+<meta property="og:description" content="文件操作相关命令查看目录和文件12345678ls -- 当前目录下文件展示ll -- 当前目录下文件展示 详细tree --树状图形式展示pwd --显示当前工作目录find --按照指定条件来查找文件所对应的位置cd -- 打开目录，.表示当前目录，..表示上一级目录，-表示回到刚才所在的路径下。which 命令 --查看命令所在路径file 文件名 --查看文件类型 查看文件内容123456">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-03-15T15:58:01.282Z">
+<meta property="og:updated_time" content="2021-08-29T09:03:13.675Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="第二篇 Linux相关(1)">
-<meta name="twitter:description" content="Basic skillsCommand of LinuxFile operationCommands that I have been familar with:lsllcdmkdircpmvrm  Runnohup&amp;amp; vi/vimcommand:i   begin to insert:wq   save and quit:q  quit   operation key:gg:move t">
+<meta name="twitter:title" content="第二篇 Linux相关(1)-文件管理与文本编辑">
+<meta name="twitter:description" content="文件操作相关命令查看目录和文件12345678ls -- 当前目录下文件展示ll -- 当前目录下文件展示 详细tree --树状图形式展示pwd --显示当前工作目录find --按照指定条件来查找文件所对应的位置cd -- 打开目录，.表示当前目录，..表示上一级目录，-表示回到刚才所在的路径下。which 命令 --查看命令所在路径file 文件名 --查看文件类型 查看文件内容123456">
 
 
 
@@ -84,7 +84,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="第二篇 Linux相关(1)" height="28">
+                <img src="/images/logo.svg" alt="第二篇 Linux相关(1)-文件管理与文本编辑" height="28">
             
             </a>
         </div>
@@ -137,11 +137,15 @@
             <div class="level-left">
                 <time class="level-item has-text-grey" datetime="2020-03-14T12:40:00.000Z">2020-03-14</time>
                 
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/computer-system/">computer system</a>
+                </div>
+                
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 69 words)
+                    5 minutes read (About 726 words)
                 </span>
                 
             </div>
@@ -149,15 +153,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                第二篇 Linux相关(1)
+                第二篇 Linux相关(1)-文件管理与文本编辑
             
         </h1>
         <div class="content">
-            <h1><span id="basic-skills">Basic skills</span></h1><h2><span id="command-of-linux">Command of Linux</span></h2><h3><span id="file-operation">File operation</span></h3><p>Commands that I have been familar with:<br>ls<br>ll<br>cd<br>mkdir<br>cp<br>mv<br>rm </p>
-<h3><span id="run">Run</span></h3><p>nohup<br>&amp;</p>
-<h3><span id="vivim">vi/vim</span></h3><h4><span id="command">command</span></h4><p>:i   begin to insert<br>:wq   save and quit<br>:q  quit  </p>
-<h4><span id="operation-key">operation key:</span></h4><p>gg:move to the first line<br>dd: delete one line<br>yy: copy one line<br><code>[Ctrl] + [f]</code>: Page Down<br><code>[Ctrl] + [b]</code>: Page up<br><code>/</code>:search<br>u:undo<br><code>[Ctrl]+r</code>:redo<br>p,P: paste</p>
+            <h3><span id="文件操作相关命令">文件操作相关命令</span></h3><h4><span id="查看目录和文件">查看目录和文件</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ls -- 当前目录下文件展示</span><br><span class="line">ll -- 当前目录下文件展示 详细</span><br><span class="line">tree --树状图形式展示</span><br><span class="line">pwd --显示当前工作目录</span><br><span class="line">find --按照指定条件来查找文件所对应的位置</span><br><span class="line">cd -- 打开目录，.表示当前目录，..表示上一级目录，-表示回到刚才所在的路径下。</span><br><span class="line">which 命令 --查看命令所在路径</span><br><span class="line">file 文件名 --查看文件类型</span><br></pre></td></tr></table></figure>
+<h4><span id="查看文件内容">查看文件内容</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat 文件名 -- 从第一行开始显示文件内容</span><br><span class="line">head [-n number] 文件名 -- 只看头几行</span><br><span class="line">tail [-n number] 文件名 -- 只看尾巴几行，tail -f 可以实时查看文件更新内容</span><br><span class="line">more 文件名 -- 一页一页显示内容</span><br><span class="line">less 文件名 -- 一页一页显示内容,相比less可以向上翻页</span><br><span class="line">nl 文件名 -- 显示行号</span><br><span class="line">stat 文件名 --查看文件的具体存储细节和时间等信息</span><br><span class="line">wc 文件名 --统计指定文本文件的行数、字数或字节数</span><br><span class="line">grep 文件名 --按行提取文本内容</span><br><span class="line">cut 文件名 --按列提取文本内容</span><br><span class="line">diff [参数] 文件名称A 文件名称B --比较多个文件之间内容的差异</span><br></pre></td></tr></table></figure>
+<h4><span id="处理目录和文件">处理目录和文件</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mkdir -- 创建目录</span><br><span class="line">rmdir -- 删除空目录</span><br><span class="line">cp source dest --复制source到dest</span><br><span class="line">mv source dest -- 移动source到dest/重命名</span><br><span class="line">rm -- 删除</span><br><span class="line">touch --创建空白文件</span><br><span class="line">tar -czvf 压缩包名称.tar.gz 要打包的目录 -- 把指定的文件进行打包压缩</span><br><span class="line">tar -xzvf 压缩包名称.tar.gz -C 解压到的路径 --解压到指定路径</span><br></pre></td></tr></table></figure>
+<h4><span id="磁盘管理">磁盘管理</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">df -- 列出文件系统的整体磁盘使用量</span><br><span class="line">du -- 检查磁盘空间使用量</span><br><span class="line">du -ah --max-depth=1 查看当前目录下的第一级使用量</span><br><span class="line">mount --磁盘挂载</span><br><span class="line">umount --磁盘卸载</span><br></pre></td></tr></table></figure>
+<h3><span id="文本编辑器vivim">文本编辑器vi/vim</span></h3><h4><span id="命令模式">命令模式(:)</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">:i   -- 进入编辑模式</span><br><span class="line">:wq   -- 保存并退出</span><br><span class="line">:q  -- 退出</span><br><span class="line">:q! --强制退出</span><br><span class="line">:w [filename] --另存为</span><br><span class="line">:set nu --显示行号</span><br><span class="line">:set nonu --取消行号</span><br><span class="line">:1,$s/word1/word2/g -- 从第一行到最后一行寻找 word1 字符串，并将该字符串取代为 word2 </span><br><span class="line">:n1,n2s/word1/word2/g -- 在第 n1 与 n2 行之间寻找 word1 这个字符串，并将该字符串取代为 word2 </span><br><span class="line">:10,20s#^#//#g -- 在 10 - 20 行添加 // 注释</span><br><span class="line">:10,20s#^//##g -- 在 10 - 20 行删除 // 注释</span><br><span class="line">:10,20s/^/#/g -- 在 10 - 20 行添加 # 注释</span><br><span class="line">::10,20s/#//g -- 在 10 - 20 行删除 # 注释</span><br></pre></td></tr></table></figure>
+<h4><span id="操作键">操作键:</span></h4><figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">gg -- 转到第一行</span><br><span class="line">G -- 转到最后一行</span><br><span class="line">nG -- 转到第n行</span><br><span class="line">dd -- 删除光标所在行</span><br><span class="line">yy -- 复制光标所在行</span><br><span class="line">[Ctrl] + [f] -- 往上翻页</span><br><span class="line">[Ctrl] + [b] -- 往下翻页</span><br><span class="line">/ -- 搜索，如/word就是搜索word</span><br><span class="line">u -- 撤销上一步</span><br><span class="line">[Ctrl]+r -- 重复上一步</span><br><span class="line">p,P -- 粘贴复制内容,p是复制到光标所在下一行，P是复制到光标所在上一行。</span><br></pre></td></tr></table></figure>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/Linux/">Linux</a>
+                </div>
+            </div>
         </div>
         
         
@@ -196,7 +211,7 @@
 
 <div class="card">
     <div class="card-content">
-        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        <h3 class="title is-5 has-text-weight-normal">Comentarios</h3>
         
 <div id="comment-container"></div>
 <link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
@@ -230,7 +245,7 @@
         <nav class="level">
             <div class="level-item has-text-centered">
                 <div>
-                    <img class="image is-128x128 has-mb-6" src="/images/tx.jpg" alt="s-serenity">
+                    <img class="image is-128x128 has-mb-6" src="/images/tx.png" alt="s-serenity">
                     
                     <p class="is-size-4 is-block">
                         s-serenity
@@ -254,37 +269,37 @@
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Posts
+                        Entradas
                     </p>
                     <p class="title has-text-weight-normal">
-                        9
+                        14
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Categories
+                        Categorias
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        7
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Tags
+                        Etiquetas
                     </p>
                     <p class="title has-text-weight-normal">
-                        3
+                        7
                     </p>
                 </div>
             </div>
         </nav>
         <div class="level">
             <a class="level-item button is-link is-rounded" href="http://github.com/s-serenity">
-                Follow</a>
+                SEGUIR</a>
         </div>
         
         
@@ -371,16 +386,32 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Categories
+                Categorias
             </h3>
             <ul class="menu-list">
             <li>
+        <a class="level is-marginless" href="/categories/computer-system/">
+            <span class="level-start">
+                <span class="level-item">computer system</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/database/">
+            <span class="level-start">
+                <span class="level-item">database</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/development-tools/">
             <span class="level-start">
                 <span class="level-item">development tools</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">1</span>
+                <span class="level-item tag">3</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/others/">
@@ -391,9 +422,25 @@
                 <span class="level-item tag">3</span>
             </span>
         </a></li><li>
+        <a class="level is-marginless" href="/categories/programming-language/">
+            <span class="level-start">
+                <span class="level-item">programming language</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/theory/">
             <span class="level-start">
                 <span class="level-item">theory</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/web-development/">
+            <span class="level-start">
+                <span class="level-item">web development</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
@@ -408,9 +455,9 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Tag Cloud
+            Nube de etiquetas
         </h3>
-        <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a>
+        <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/git/" style="font-size: 20px;">git</a> <a href="/tags/java/" style="font-size: 10px;">java</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 15px;">python</a>
     </div>
 </div>
 
@@ -422,23 +469,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2021/08/07/git-2/" class="media-left">
+            <a href="/2021/08/08/python-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第六篇 git相关(3)-分支与合并">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T09:41:15.000Z">2021-08-07</time></div>
-                    <a href="/2021/08/07/git-2/" class="has-link-black-ter is-size-6">第六篇 git相关(3)-分支与合并</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-08T08:56:36.000Z">2021-08-08</time></div>
+                    <a href="/2021/08/08/python-1/" class="has-link-black-ter is-size-6">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/web-development/">web development</a>
                     </p>
                 </div>
             </div>
@@ -446,18 +493,18 @@
         
         <article class="media">
             
-            <a href="/2020/04/04/sort/" class="media-left">
+            <a href="/2021/08/07/SQL/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第五篇 算法(1)--排序">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十篇 SQL(1)-数据统计">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T15:34:12.000Z">2020-04-04</time></div>
-                    <a href="/2020/04/04/sort/" class="has-link-black-ter is-size-6">第五篇 算法(1)--排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T13:39:46.000Z">2021-08-07</time></div>
+                    <a href="/2021/08/07/SQL/" class="has-link-black-ter is-size-6">第十篇 SQL(1)-数据统计</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/database/">database</a>
                     </p>
                 </div>
             </div>
@@ -465,18 +512,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/29/git-1/" class="media-left">
+            <a href="/2021/07/30/python/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git相关(2)-git&amp;github">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第九篇 python(1)-语法进阶">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
-                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git相关(2)-git&amp;github</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-30T13:39:18.000Z">2021-07-30</time></div>
+                    <a href="/2021/07/30/python/" class="has-link-black-ter is-size-6">第九篇 python(1)-语法进阶</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -484,18 +531,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/15/git/" class="media-left">
+            <a href="/2021/07/09/linux-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)-git基础原理与命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第七篇 Linux相关(2)-进程管理与性能分析">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-15T15:58:57.000Z">2020-03-15</time></div>
-                    <a href="/2020/03/15/git/" class="has-link-black-ter is-size-6">第三篇 git相关(1)-git基础原理与命令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:38:39.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/linux-1/" class="has-link-black-ter is-size-6">第七篇 Linux相关(2)-进程管理与性能分析</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                        <a class="has-link-grey -link" href="/categories/computer-system/">computer system</a>
                     </p>
                 </div>
             </div>
@@ -503,18 +550,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/14/linux/" class="media-left">
+            <a href="/2021/07/09/java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二篇 Linux相关(1)">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第八篇 java(1)-面向对象">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-14T12:40:00.000Z">2020-03-14</time></div>
-                    <a href="/2020/03/14/linux/" class="has-link-black-ter is-size-6">第二篇 Linux相关(1)</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:26:51.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/java/" class="has-link-black-ter is-size-6">第八篇 java(1)-面向对象</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -528,7 +575,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -538,7 +585,18 @@
                     <span class="level-item">August 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -596,9 +654,20 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
                 
                 <li>
                     <a class="level is-marginless" href="/tags/Markdown/">
@@ -612,12 +681,34 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/git/">
                         <span class="level-start">
                             <span class="level-item">git</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -629,6 +720,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -653,23 +755,23 @@
 <div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
-            Recent
+            Recientes
         </h3>
         
         <article class="media">
             
-            <a href="/2021/08/07/git-2/" class="media-left">
+            <a href="/2021/08/08/python-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第六篇 git相关(3)-分支与合并">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T09:41:15.000Z">2021-08-07</time></div>
-                    <a href="/2021/08/07/git-2/" class="has-link-black-ter is-size-6">第六篇 git相关(3)-分支与合并</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-08T08:56:36.000Z">2021-08-08</time></div>
+                    <a href="/2021/08/08/python-1/" class="has-link-black-ter is-size-6">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/web-development/">web development</a>
                     </p>
                 </div>
             </div>
@@ -677,18 +779,18 @@
         
         <article class="media">
             
-            <a href="/2020/04/04/sort/" class="media-left">
+            <a href="/2021/08/07/SQL/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第五篇 算法(1)--排序">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第十篇 SQL(1)-数据统计">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-04-04T15:34:12.000Z">2020-04-04</time></div>
-                    <a href="/2020/04/04/sort/" class="has-link-black-ter is-size-6">第五篇 算法(1)--排序</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-08-07T13:39:46.000Z">2021-08-07</time></div>
+                    <a href="/2021/08/07/SQL/" class="has-link-black-ter is-size-6">第十篇 SQL(1)-数据统计</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/database/">database</a>
                     </p>
                 </div>
             </div>
@@ -696,18 +798,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/29/git-1/" class="media-left">
+            <a href="/2021/07/30/python/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第四篇 git相关(2)-git&amp;github">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第九篇 python(1)-语法进阶">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-29T15:19:52.000Z">2020-03-29</time></div>
-                    <a href="/2020/03/29/git-1/" class="has-link-black-ter is-size-6">第四篇 git相关(2)-git&amp;github</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-30T13:39:18.000Z">2021-07-30</time></div>
+                    <a href="/2021/07/30/python/" class="has-link-black-ter is-size-6">第九篇 python(1)-语法进阶</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -715,18 +817,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/15/git/" class="media-left">
+            <a href="/2021/07/09/linux-1/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第三篇 git相关(1)-git基础原理与命令">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第七篇 Linux相关(2)-进程管理与性能分析">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-15T15:58:57.000Z">2020-03-15</time></div>
-                    <a href="/2020/03/15/git/" class="has-link-black-ter is-size-6">第三篇 git相关(1)-git基础原理与命令</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:38:39.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/linux-1/" class="has-link-black-ter is-size-6">第七篇 Linux相关(2)-进程管理与性能分析</a>
                     <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/development-tools/">development tools</a>
+                        <a class="has-link-grey -link" href="/categories/computer-system/">computer system</a>
                     </p>
                 </div>
             </div>
@@ -734,18 +836,18 @@
         
         <article class="media">
             
-            <a href="/2020/03/14/linux/" class="media-left">
+            <a href="/2021/07/09/java/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二篇 Linux相关(1)">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第八篇 java(1)-面向对象">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2020-03-14T12:40:00.000Z">2020-03-14</time></div>
-                    <a href="/2020/03/14/linux/" class="has-link-black-ter is-size-6">第二篇 Linux相关(1)</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-07-09T13:26:51.000Z">2021-07-09</time></div>
+                    <a href="/2021/07/09/java/" class="has-link-black-ter is-size-6">第八篇 java(1)-面向对象</a>
                     <p class="is-size-7 is-uppercase">
-                        
+                        <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
                     </p>
                 </div>
             </div>
@@ -759,7 +861,7 @@
     <div class="card-content">
         <div class="menu">
         <h3 class="menu-label">
-            Archives
+            Archivos
         </h3>
         <ul class="menu-list">
         
@@ -769,7 +871,18 @@
                     <span class="level-item">August 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -827,9 +940,20 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                Tags
+                Etiquetas
             </h3>
             <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
                 
                 <li>
                     <a class="level is-marginless" href="/tags/Markdown/">
@@ -843,12 +967,34 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/git/">
                         <span class="level-start">
                             <span class="level-item">git</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">2</span>
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -860,6 +1006,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -881,7 +1038,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="第二篇 Linux相关(1)" height="28">
+                    <img src="/images/logo.svg" alt="第二篇 Linux相关(1)-文件管理与文本编辑" height="28">
                 
                 </a>
                 <p class="is-size-7">
@@ -1017,10 +1174,10 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: 'Posts',
+                POSTS: 'Entradas',
                 PAGES: 'Pages',
-                CATEGORIES: 'Categories',
-                TAGS: 'Tags',
+                CATEGORIES: 'Categorias',
+                TAGS: 'Etiquetas',
                 UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
