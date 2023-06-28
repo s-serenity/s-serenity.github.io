@@ -1,0 +1,1607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.8.0">
+    <meta charset="utf-8">
+<title>image task - s-serenity</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+
+    <meta name="description" content="Object detectionObject detection is the field of computer vision that deals with the localization and classification of objects contained in an image or video.Deep learning-based approaches use neural">
+<meta name="keywords" content="Algorithm study development">
+<meta property="og:type" content="article">
+<meta property="og:title" content="image task">
+<meta property="og:url" content="http://yoursite.com/2023/06/09/image-task/index.html">
+<meta property="og:site_name" content="s-serenity">
+<meta property="og:description" content="Object detectionObject detection is the field of computer vision that deals with the localization and classification of objects contained in an image or video.Deep learning-based approaches use neural">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2023-06-27T13:44:57.645Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="image task">
+<meta name="twitter:description" content="Object detectionObject detection is the field of computer vision that deals with the localization and classification of objects contained in an image or video.Deep learning-based approaches use neural">
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
+
+
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+
+    
+    
+    
+    
+
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="image task" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item" href="/">Home</a>
+                
+                <a class="navbar-item" href="/archives">Archives</a>
+                
+                <a class="navbar-item" href="/categories">Categories</a>
+                
+                <a class="navbar-item" href="/tags">Tags</a>
+                
+                <a class="navbar-item" href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                    
+                    
+                    <a class="navbar-item" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                    
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 minutes read (About 1832 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                image task
+            
+        </h1>
+        <div class="content">
+            <h2><span id="object-detection">Object detection</span></h2><p>Object detection is the field of computer vision that deals with the localization and classification of objects contained in an image or video.<br>Deep learning-based approaches use neural network architectures like RetinaNet, YOLO (You Only Look Once), CenterNet, SSD (Single Shot Multibox detector), Region proposals (R-CNN, Fast-RCNN, Faster RCNN, Cascade R-CNN) for feature detection of the object, and then identification into labels.The YOLO series current provide the SOTA of object detection in real-time.</p>
+<h3><span id="metric">metric</span></h3><p>Mean average precision (mAP).The AP metric is based on precision-recall metrics. The AP metric incorporates the Intersection over Union (IoU) measure to assess the quality of the predicted bounding boxes.This metric provides a balanced assessment of precision and recall by considering the area under the precision-recall curve.</p>
+<h4><span id="intersection-over-unioniou">Intersection over Union(IoU)</span></h4><p>IoU is the ratio of the intersection area to the union area of the predicted bounding box and the ground truth bounding box. It measures the overlap between the ground truth and predicted bounding boxes.</p>
+<h3><span id="datasets">datasets</span></h3><p>PASCAL VOC 2007, VOC 2012, Microsoft COCO (Common Objects in Context).<br>UA-DETRAC: <a href="https://detrac-db.rit.albany.edu/" target="_blank" rel="noopener">https://detrac-db.rit.albany.edu/</a>  <a href="https://www.kaggle.com/datasets/patrikskalos/ua-detrac-fix-masks-two-wheelers?resource=download" target="_blank" rel="noopener">https://www.kaggle.com/datasets/patrikskalos/ua-detrac-fix-masks-two-wheelers?resource=download</a> <a href="https://colab.research.google.com/github/hardik0/Multi-Object-Tracking-Google-Colab/blob/main/Towards-Realtime-MOT-Vehicle-Tracking.ipynb#scrollTo=y6KZeLt9ViDe" target="_blank" rel="noopener">https://colab.research.google.com/github/hardik0/Multi-Object-Tracking-Google-Colab/blob/main/Towards-Realtime-MOT-Vehicle-Tracking.ipynb#scrollTo=y6KZeLt9ViDe</a><br><a href="https://github.com/wy17646051/UA-DETRAC-Format-Converter/tree/main" target="_blank" rel="noopener">https://github.com/wy17646051/UA-DETRAC-Format-Converter/tree/main</a><br>MIO-TCD:<a href="https://tcd.miovision.com/" target="_blank" rel="noopener">https://tcd.miovision.com/</a><br>KITTI:<a href="https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark" target="_blank" rel="noopener">https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark</a><br>TRANCOS: <a href="https://gram.web.uah.es/data/datasets/trancos/index.html" target="_blank" rel="noopener">https://gram.web.uah.es/data/datasets/trancos/index.html</a><br>STREETS:<a href="https://www.kaggle.com/datasets/ryankraus/traffic-camera-object-detection" target="_blank" rel="noopener">https://www.kaggle.com/datasets/ryankraus/traffic-camera-object-detection</a>: single class<br>VERI-Wild: <a href="https://github.com/PKU-IMRE/VERI-Wild" target="_blank" rel="noopener">https://github.com/PKU-IMRE/VERI-Wild</a></p>
+<h3><span id="model-history">Model History</span></h3><p>Traditionally, object detection is done by Viola Jones Detector \cite{viola2001rapid}, Histogram of Oriented Gradients (HOG) detector, or Deformable Part-based Model (DPM) before deep learning took off. With deep learning, object detection generally is categorized into 2 categories: one-stage detector and two-stage detector. Two-stage detector is started by Regions with CNN features (RCNN). Spatial Pyramid Pooling Networks (SPPNet), Fast RCNN, Faster RCNN, and Feature Pyramid Networks (FPN) were proposed after it. Limited by the poor speed of the two-stage detector, the one-stage detector came with the first representative You Only Look Once (YOLO). Subsequent versions of YOLO, Single Shot MultiBox Detector (SSD), RetinaNet, CornerNet, CenterNet,DETR were proposed latter. YOLOv7 performs best compared to most detectors.  </p>
+<h3><span id="rcnn">RCNN</span></h3><p>The object detection system consists of three modules. The first generates category-independent region proposals. These proposals define the set of candidate detections available to our detector. The second module is a large convolutional neural network that extracts a fixed-length feature vector from each region. The third module is a set of classspecific linear SVMs.</p>
+<h3><span id="yolo-series">YOLO series</span></h3><p>The history of YOLO (You Only Look Once) dates back to 2015 when the original YOLO algorithm was introduced in “You Only Look Once: Unified, Real-Time Object Detection,” .The original YOLO architecture used a convolutional neural network (CNN) to process the entire image and output a fixed number of bounding boxes along with their associated class probabilities. It divided the image into a grid and applied convolutional operations to predict bounding boxes within each grid cell, considering multiple scales and aspect ratios.In subsequent years, YOLO underwent several iterations and improvements to enhance its accuracy and speed. YOLOv2 was introduced in 2016, featuring an updated architecture that incorporated anchor boxes and multi-scale predictions. YOLOv3 followed in 2018, introducing further advancements, including feature pyramid networks (FPN) and Darknet-53 as the backbone architecture.</p>
+<h4><span id="yolo-you-only-look-once">YOLO (You Only Look Once)</span></h4><p>Network architecture is inspired by the GoogLeNet model for image classification.The network has 24 convolutional layers followed by 2 fully connected layers. They pretrain our convolutional layers on the ImageNet 1000-class competition dataset.For pretraining they use the first 20 convolutional layers followed by a average-pooling layer and a fully connected layer. Then they add four convolutional layers and two fully connected layers with randomly initialized weights. The final layer predicts both class probabilities and bounding box coordinates. They optimize for sum-squared error in the output of the model by increasing the loss from bounding box coordinate predictions and decreasing the loss from confidence predictions for boxes that don’t contain objects and predicting the square root of the bounding box width and height instead of the width and height directly. They design the loss to handle the problem that the sum-squared error weights localization error equally with classification error and also equally weights errors in large boxes and small boxes.</p>
+<h5><span id="googlenet">GoogLeNet</span></h5><p>GoogLeNet was designed to address the challenges of deep neural networks, such as computational efficiency and overfitting, while maintaining high accuracy in image classification tasks. It introduced several novel concepts and architectural innovations that made it stand out from previous CNN architectures at the time.</p>
+<p>The key feature of GoogLeNet is the Inception module, which utilizes parallel convolutional filters of different sizes (1x1, 3x3, 5x5) to capture features at various scales. This allows the network to learn and represent both local and global features effectively. Additionally, it incorporates 1x1 convolutions for dimensionality reduction and introduces a technique called “bottleneck” layers to reduce the computational complexity.</p>
+<h5><span id="inception">Inception</span></h5><p>In the context of computer vision, “inception” refers to the Inception module or the Inception architecture used in deep convolutional neural networks (CNNs). The Inception module was introduced in the GoogLeNet architecture (also known as Inception-v1) as a key component for efficient and effective feature extraction.</p>
+<p>The Inception module aims to capture multi-scale features by employing multiple parallel convolutional filters of different sizes within the same layer. By using a combination of 1x1, 3x3, and 5x5 convolutional filters, the Inception module allows the network to learn and extract features at various spatial scales.</p>
+<h4><span id="yolov7">YOLOv7</span></h4><h5><span id="model-reparameterization">model reparameterization</span></h5><p>Model re-parametrization techniques merge multiple computational modules into one at inference stage. The model re-parameterization technique can be regarded as an ensemble technique, and we can divide it into two categories, i.e., module-level ensemble and model-level ensemble.</p>
+<h5><span id="model-scaling">Model scaling</span></h5><p>Model scaling is a way to scale up or down an already designed model and make it fit in different computing devices.Network architecture search (NAS) is one of the commonly used model scaling methods.</p>
+<h5><span id="efficient-layer-aggregation-networkselan">efficient layer aggregation networks(ELAN)</span></h5><h5><span id="dynamic-label-assignment">dynamic label assignment</span></h5><h3><span id="non-maximum-suppression-nms">Non-Maximum Suppression (NMS)</span></h3><p>Non-Maximum Suppression (NMS) is a post-processing technique used in object detection algorithms to reduce the number of overlapping bounding boxes and improve the overall detection quality.</p>
+<h2><span id="image-segmentation">Image segmentation</span></h2><p>Image segmentation is a sub-domain of computer vision and digital image processing which aims at grouping similar regions or segments of an image under their respective class labels. </p>
+<h3><span id="semantic-segmentation">Semantic segmentation</span></h3><p>Semantic segmentation refers to the classification of pixels in an image into semantic classes.</p>
+<h3><span id="instance-segmentation">Instance segmentation</span></h3><p>Instance segmentation models classify pixels into categories on the basis of “instances” rather than classes. </p>
+<h3><span id="panoptic-segmentation">Panoptic segmentation</span></h3><p>Panoptic segmentation can be expressed as the combination of semantic segmentation and instance segmentation where each instance of an object in the image is segregated and the object’s identity is predicted. </p>
+<p>Neural networks that perform segmentation typically use an encoder-decoder structure where the encoder is followed by a bottleneck and a decoder or upsampling layers directly from the bottleneck (like in the FCN). </p>
+<h2><span id="important-networks-in-the-history-of-computer-vision">Important networks in the history of computer vision</span></h2><h3><span id="lenet-5">LeNet-5</span></h3><p>LeNet-5, developed by Yann LeCun et al. in 1998, was one of the first successful convolutional neural networks (CNNs) for handwritten digit recognition. It laid the foundation for modern CNN architectures and demonstrated the power of deep learning in computer vision tasks. “Gradient-Based Learning Applied to Document Recognition” by Yann LeCun et al. (1998).</p>
+<h3><span id="alexnet">AlexNet</span></h3><p>AlexNet, introduced by Alex Krizhevsky et al. in 2012, was a breakthrough CNN architecture that won the ImageNet competition and popularized deep learning in computer vision. It demonstrated the effectiveness of deep CNNs for image classification tasks and paved the way for subsequent advancements.”ImageNet Classification with Deep Convolutional Neural Networks” by Alex Krizhevsky et al. (2012).</p>
+<h3><span id="vggnet">VGGNet</span></h3><p>The VGGNet, proposed by Karen Simonyan and Andrew Zisserman in 2014, is known for its simplicity and depth. It consisted of deep networks with stacked 3x3 convolutional layers, showing that increasing network depth led to improved performance on image classification tasks.”Very Deep Convolutional Networks for Large-Scale Image Recognition” by Karen Simonyan and Andrew Zisserman (2014).</p>
+<h3><span id="googlenet-inception-v1">GoogLeNet (Inception-v1)</span></h3><p>GoogLeNet, presented by Christian Szegedy et al. in 2015, introduced the Inception module and demonstrated the importance of multi-scale feature extraction. It achieved high accuracy while maintaining computational efficiency, inspiring subsequent Inception versions and influencing network designs.<br>“Going Deeper with Convolutions” by Christian Szegedy et al. (2015).</p>
+<h3><span id="resnet">ResNet</span></h3><p>ResNet, developed by Kaiming He et al. in 2015, introduced the concept of residual learning. It utilized skip connections or shortcuts to address the vanishing gradient problem and enabled training of extremely deep networks, leading to significant performance gains in image classification and other tasks.”Deep Residual Learning for Image Recognition” by Kaiming He et al. (2015).</p>
+<h3><span id="densenet">DenseNet</span></h3><p> DenseNet, introduced by Gao Huang et al. in 2016, focused on dense connectivity patterns between layers. It aimed to alleviate the vanishing gradient problem, promote feature reuse, and encourage better gradient flow. DenseNet achieved competitive results while reducing the number of parameters compared to other architectures. “Densely Connected Convolutional Networks” by Gao Huang et al. (2016).’</p>
+<h2><span id="basic-architecture">Basic architecture</span></h2><h3><span id="cnn">CNN</span></h3><p>Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.<br>Convolution leverages three important ideas that can help improve a machine learning system: sparse interactions, parameter sharing and equivariant representations. Moreover, convolution provides a means for working with inputs of variable size.</p>
+<p>We assume that the size of the input image is n<em>n, and the size of the filter is f</em>f (note that f is generally an odd number). The size of the output image after convolution is (n-f+1)* (n-f+1).During the convolution process, padding is sometimes necessary to avoid information loss. Additionally, adjusting the stride allows for compression of some information.If we want to perform convolution on a three-channel RGB image, the corresponding filter group would also have three channels. The process involves convolving each individual channel with its corresponding filter, summing up the results, and then adding the sums of the three channels together. The resulting sum of the 27 multiplications is considered as one pixel value of the output image. The filters for different channels can be different. When the input has specific height, width, and channel dimensions, the filters can have different height and width, but the number of channels must match the input.Pooling layers are commonly included in many CNNs. The purpose of pooling layers is to reduce the size of the model, improve computational speed, and simultaneously decrease noise to enhance the robustness of the extracted features.</p>
+<h2><span id="references">references</span></h2><p><a href="https://zhuanlan.zhihu.com/p/183261974" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/183261974</a><br><a href="https://juejin.cn/post/7104845694225088525" target="_blank" rel="noopener">https://juejin.cn/post/7104845694225088525</a><br><a href="https://www.showmeai.tech/article-detail/221" target="_blank" rel="noopener">https://www.showmeai.tech/article-detail/221</a></p>
+
+        </div>
+        
+        
+        
+        
+<div class="sharethis-inline-share-buttons"></div>
+<script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js" async="async"></script>
+
+        
+    </div>
+</div>
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2023/06/19/large-model/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">large model</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2023/05/16/time-complexity/">
+                <span class="level-item">time complexity</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<div id="comment-container"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+	var gitment = new Gitment({
+		id: '2023/06/09/image-task/',
+		owner: 'xxxxxxxx',
+		repo: 'xxxxxxxx',
+		oauth: {
+			client_id: 'xxxxxxxx',
+			client_secret: 'xxxxxxxx',
+		},
+	})
+	gitment.render('comment-container')
+</script>
+
+    </div>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <img class="image is-128x128 has-mb-6" src="/images/tx.png" alt="s-serenity">
+                    
+                    <p class="is-size-4 is-block">
+                        s-serenity
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        learner
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Shanghai</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        40
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        16
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="http://github.com/s-serenity">
+                Follow</a>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Github" href="http://github.com/s-serenity">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Facebook" href="http://facebook.com">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Twitter" href="http://twitter.com">
+                
+                <i class="fab fa-twitter"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="Dribbble" href="http://dribbble.com">
+                
+                <i class="fab fa-dribbble"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank" title="RSS" href="/">
+                
+                <i class="fas fa-rss"></i>
+                
+            </a>
+            
+        </div>
+        
+    </div>
+</div>
+    
+        
+    
+        
+
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
+        
+            <li>
+                <a class="level is-mobile" href="https://hexo.io" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Hexo</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">https://hexo.io</span>
+                    </span>
+                </a>
+            </li>
+        
+            <li>
+                <a class="level is-mobile" href="https://github.com/s-serenity" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">s-serenity</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">https://github.com/s-serenity</span>
+                    </span>
+                </a>
+            </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Categories
+            </h3>
+            <ul class="menu-list">
+            <li>
+        <a class="level is-marginless" href="/categories/algorithm/">
+            <span class="level-start">
+                <span class="level-item">algorithm</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/computer-system/">
+            <span class="level-start">
+                <span class="level-item">computer system</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">2</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/database/">
+            <span class="level-start">
+                <span class="level-item">database</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/development-tools/">
+            <span class="level-start">
+                <span class="level-item">development tools</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/others/">
+            <span class="level-start">
+                <span class="level-item">others</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">3</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/programming-language/">
+            <span class="level-start">
+                <span class="level-item">programming language</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">5</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/theory/">
+            <span class="level-start">
+                <span class="level-item">theory</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">4</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/web-development/">
+            <span class="level-start">
+                <span class="level-item">web development</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/python-4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/19/large-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/09/image-task/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/05/16/time-complexity/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/05/05/object-detection/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2022/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2022</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2022/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2022</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/KTH/">
+                        <span class="level-start">
+                            <span class="level-item">KTH</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Markdown/">
+                        <span class="level-start">
+                            <span class="level-item">Markdown</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/deep-learning/">
+                        <span class="level-start">
+                            <span class="level-item">deep learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/git/">
+                        <span class="level-start">
+                            <span class="level-item">git</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/machine-learning/">
+                        <span class="level-start">
+                            <span class="level-item">machine learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">5</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/probability/">
+                        <span class="level-start">
+                            <span class="level-item">probability</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">5</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/reinforcement-learning/">
+                        <span class="level-start">
+                            <span class="level-item">reinforcement learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Recent
+        </h3>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/python-4/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/19/large-model/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/09/image-task/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/05/16/time-complexity/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/05/05/object-detection/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2022/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2022</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2022/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2022</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/11/">
+                <span class="level-start">
+                    <span class="level-item">November 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/09/">
+                <span class="level-start">
+                    <span class="level-item">September 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">5</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/08/">
+                <span class="level-start">
+                    <span class="level-item">August 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">7</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2021/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2021</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2020/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2020</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/12/">
+                <span class="level-start">
+                    <span class="level-item">December 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <ul class="menu-list">
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/KTH/">
+                        <span class="level-start">
+                            <span class="level-item">KTH</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Linux/">
+                        <span class="level-start">
+                            <span class="level-item">Linux</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Markdown/">
+                        <span class="level-start">
+                            <span class="level-item">Markdown</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/SQL/">
+                        <span class="level-start">
+                            <span class="level-item">SQL</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/deep-learning/">
+                        <span class="level-start">
+                            <span class="level-item">deep learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/git/">
+                        <span class="level-start">
+                            <span class="level-item">git</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">3</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/java/">
+                        <span class="level-start">
+                            <span class="level-item">java</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/machine-learning/">
+                        <span class="level-start">
+                            <span class="level-item">machine learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">5</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/probability/">
+                        <span class="level-start">
+                            <span class="level-item">probability</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/python/">
+                        <span class="level-start">
+                            <span class="level-item">python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">5</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/reinforcement-learning/">
+                        <span class="level-start">
+                            <span class="level-item">reinforcement learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="image task" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2023 s-serenity&nbsp;
+                Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Creative Commons" href="https://creativecommons.org/">
+                        
+                        <i class="fab fa-creative-commons"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/">
+                        
+                        <i class="fab fa-creative-commons-by"></i>
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

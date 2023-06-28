@@ -135,13 +135,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time>
+                <time class="level-item has-text-grey" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 28 words)
+                    a few seconds read (About 37 words)
                 </span>
                 
             </div>
@@ -149,12 +149,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2022/12/23/Network-Representation-Learning/">Network Representation Learning</a>
+                <a class="has-link-black-ter" href="/2023/06/28/python-4/">python-4</a>
             
         </h1>
         <div class="content">
-            <h2><span id="background">background</span></h2><p>Recording studying during KTH. First blog about network representation learning, a project belongs to machine learning, advanced course.</p>
-<h2><span id="line">LINE</span></h2><p>Reproduce paper “LINE: Large-scale Information Network Embedding”.</p>
+            <h2><span id="subprocess">subprocess</span></h2><p>You can use the Python subprocess module to create new processes, connect to their input and output, and retrieve their return codes and/or output of the process. </p>
+<h2><span id="reference">reference</span></h2><p><a href="https://www.datacamp.com/tutorial/python-subprocess" target="_blank" rel="noopener">https://www.datacamp.com/tutorial/python-subprocess</a></p>
 
         </div>
         
@@ -173,13 +173,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2022-12-03T10:24:13.986Z">2022-12-03</time>
+                <time class="level-item has-text-grey" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 4 words)
+                    5 minutes read (About 798 words)
                 </span>
                 
             </div>
@@ -187,11 +187,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2022/12/03/Inference on Graphical Model/"></a>
+                <a class="has-link-black-ter" href="/2023/06/19/large-model/">large model</a>
             
         </h1>
         <div class="content">
-            <h2><span id="inference-on-graphical-models">Inference on Graphical Models</span></h2>
+            <h1><span id="basic-ideas">basic ideas</span></h1><h2><span id="zero-shot-learning">Zero-Shot Learning</span></h2><p>zero-shot learning, in which your model learns how to classify classes that it hasn’t seen before.</p>
+<h3><span id="contrastive-language-image-pretraining-clip">Contrastive Language-Image Pretraining (CLIP)</span></h3><p>Just like traditional supervised models, CLIP has two stages: the training stage (learning) and the inference stage (making predictions).<br>In the training stage, CLIP learns about images by “reading” auxiliary text (i.e. sentences) corresponding to each image. CLIP aims to minimize the difference between the encodings of the image and it’s corresponding text.<br>In the inference stage, we setup the typical classification task by first obtaining a list of all possible labels.Each label will then be encoded by the pretrained text encoder from Step 1.Now that we have the label encodings, T₁ to Tₙ, we can take the image that we want to classify, feed it through the pretrained image encoder, and compute how similar the image encoding is to each text label encoding using a distance metric called cosine similarity.</p>
+<h4><span id="contrastive-learning">contrastive learning</span></h4><p>Contrastive learning is a machine learning technique used to learn the general features of a dataset without labels by teaching the model which data points are similar or different.It looks at which pairs of data points are “similar” and “different” in order to learn higher-level features about the data, before even having a task such as classification or segmentation.</p>
+<h5><span id="simclrv2">SimCLRv2</span></h5><p>The entire process can be described concisely in three basic steps:</p>
+<p>For each image in our dataset, we can perform two augmentation combinations (i.e. crop + resize + recolor, resize + recolor, crop + recolor, etc.). We want the model to learn that these two images are “similar” since they are essentially different versions of the same image.</p>
+<p>To do so, we can feed these two images into our deep learning model (Big-CNN such as ResNet) to create vector representations for each image. The goal is to train the model to output similar representations for similar images.</p>
+<p>Lastly, we try to maximize the similarity of the two vector representations by minimizing a contrastive loss function.</p>
+<h2><span id="meta-learning">Meta-learning</span></h2><p>The idea of meta-learning is to learn the learning process.</p>
+<h3><span id="in-context-learning">In-context Learning</span></h3><p>uring in-context learning, we give the LM a prompt that consists of a list of input-output pairs that demonstrate a task. At the end of the prompt, we append a test input and allow the LM to make a prediction just by conditioning on the prompt and predicting the next tokens. </p>
+<h2><span id="instruction-learning">Instruction learning</span></h2><p>Instruction learning is an idea proposed by the team led by Quoc V. Le at Google DeepMind in a paper titled ‘Finetuned Language Models Are Zero-Shot Learners’ in 2021. The purpose of instruction learning and prompt learning is to explore the knowledge inherent in language models. The difference is that prompts aim to stimulate the completion ability of the language model, such as generating the second half of a sentence based on the first half or filling in the blanks. Instructions aim to stimulate the understanding ability of the language model by providing more explicit instructions, enabling the model to take correct actions. The advantage of instruction learning is that after fine-tuning through multitask learning, it can also perform zero-shot learning on other tasks, while prompt learning is specific to one task. Its generalization ability is not as strong as instruction learning.</p>
+<h2><span id="diffusion-model">Diffusion Model</span></h2><p>In machine learning, the Diffusion Model refers to a class of algorithms or models that utilize diffusion processes for various tasks, such as data clustering, image segmentation, or graph-based learning. The basic principle of the Diffusion Model in machine learning is to propagate information or labels through the connections or edges of a graph or network. The diffusion process starts with initial information or labels assigned to some nodes in the graph, and it gradually spreads and influences the neighboring nodes based on certain rules or algorithms.</p>
+<h3><span id="stable-diffusion">Stable Diffusion</span></h3><p>Stable Diffusion is a deep learning, text-to-image model released in 2022. It is primarily used to generate detailed images conditioned on text descriptions.</p>
+<h2><span id="llama">LLaMA</span></h2><p>LLaMA, a collection of foundation language models ranging from 7B to 65B parameters.</p>
+<h2><span id="prompt-engineering">Prompt engineering</span></h2><p>Prompt engineering is a relatively new discipline for developing and optimizing prompts to efficiently use language models (LMs) for a wide variety of applications and research topics.Prompt engineering focuses on crafting the optimal textual input by selecting the appropriate words, phrases, sentence structures, and punctuation.</p>
+<h2><span id="fastchat">FastChat</span></h2><h1><span id="references">references</span></h1><p><a href="https://towardsdatascience.com/understanding-zero-shot-learning-making-ml-more-human-4653ac35ccab" target="_blank" rel="noopener">https://towardsdatascience.com/understanding-zero-shot-learning-making-ml-more-human-4653ac35ccab</a><br><a href="https://towardsdatascience.com/understanding-contrastive-learning-d5b19fd96607" target="_blank" rel="noopener">https://towardsdatascience.com/understanding-contrastive-learning-d5b19fd96607</a><br><a href="http://ai.stanford.edu/blog/understanding-incontext/" target="_blank" rel="noopener">http://ai.stanford.edu/blog/understanding-incontext/</a><br><a href="https://www.8btc.com/article/6813626" target="_blank" rel="noopener">https://www.8btc.com/article/6813626</a><br><a href="https://en.wikipedia.org/wiki/Stable_Diffusion" target="_blank" rel="noopener">https://en.wikipedia.org/wiki/Stable_Diffusion</a><br>LLaMA: Open and Efficient Foundation Language Models<br><a href="https://www.promptingguide.ai/" target="_blank" rel="noopener">https://www.promptingguide.ai/</a></p>
+
         </div>
         
         
@@ -209,7 +224,145 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time>
+                <time class="level-item has-text-grey" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    12 minutes read (About 1832 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2023/06/09/image-task/">image task</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="object-detection">Object detection</span></h2><p>Object detection is the field of computer vision that deals with the localization and classification of objects contained in an image or video.<br>Deep learning-based approaches use neural network architectures like RetinaNet, YOLO (You Only Look Once), CenterNet, SSD (Single Shot Multibox detector), Region proposals (R-CNN, Fast-RCNN, Faster RCNN, Cascade R-CNN) for feature detection of the object, and then identification into labels.The YOLO series current provide the SOTA of object detection in real-time.</p>
+<h3><span id="metric">metric</span></h3><p>Mean average precision (mAP).The AP metric is based on precision-recall metrics. The AP metric incorporates the Intersection over Union (IoU) measure to assess the quality of the predicted bounding boxes.This metric provides a balanced assessment of precision and recall by considering the area under the precision-recall curve.</p>
+<h4><span id="intersection-over-unioniou">Intersection over Union(IoU)</span></h4><p>IoU is the ratio of the intersection area to the union area of the predicted bounding box and the ground truth bounding box. It measures the overlap between the ground truth and predicted bounding boxes.</p>
+<h3><span id="datasets">datasets</span></h3><p>PASCAL VOC 2007, VOC 2012, Microsoft COCO (Common Objects in Context).<br>UA-DETRAC: <a href="https://detrac-db.rit.albany.edu/" target="_blank" rel="noopener">https://detrac-db.rit.albany.edu/</a>  <a href="https://www.kaggle.com/datasets/patrikskalos/ua-detrac-fix-masks-two-wheelers?resource=download" target="_blank" rel="noopener">https://www.kaggle.com/datasets/patrikskalos/ua-detrac-fix-masks-two-wheelers?resource=download</a> <a href="https://colab.research.google.com/github/hardik0/Multi-Object-Tracking-Google-Colab/blob/main/Towards-Realtime-MOT-Vehicle-Tracking.ipynb#scrollTo=y6KZeLt9ViDe" target="_blank" rel="noopener">https://colab.research.google.com/github/hardik0/Multi-Object-Tracking-Google-Colab/blob/main/Towards-Realtime-MOT-Vehicle-Tracking.ipynb#scrollTo=y6KZeLt9ViDe</a><br><a href="https://github.com/wy17646051/UA-DETRAC-Format-Converter/tree/main" target="_blank" rel="noopener">https://github.com/wy17646051/UA-DETRAC-Format-Converter/tree/main</a><br>MIO-TCD:<a href="https://tcd.miovision.com/" target="_blank" rel="noopener">https://tcd.miovision.com/</a><br>KITTI:<a href="https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark" target="_blank" rel="noopener">https://www.cvlibs.net/datasets/kitti/eval_object.php?obj_benchmark</a><br>TRANCOS: <a href="https://gram.web.uah.es/data/datasets/trancos/index.html" target="_blank" rel="noopener">https://gram.web.uah.es/data/datasets/trancos/index.html</a><br>STREETS:<a href="https://www.kaggle.com/datasets/ryankraus/traffic-camera-object-detection" target="_blank" rel="noopener">https://www.kaggle.com/datasets/ryankraus/traffic-camera-object-detection</a>: single class<br>VERI-Wild: <a href="https://github.com/PKU-IMRE/VERI-Wild" target="_blank" rel="noopener">https://github.com/PKU-IMRE/VERI-Wild</a></p>
+<h3><span id="model-history">Model History</span></h3><p>Traditionally, object detection is done by Viola Jones Detector \cite{viola2001rapid}, Histogram of Oriented Gradients (HOG) detector, or Deformable Part-based Model (DPM) before deep learning took off. With deep learning, object detection generally is categorized into 2 categories: one-stage detector and two-stage detector. Two-stage detector is started by Regions with CNN features (RCNN). Spatial Pyramid Pooling Networks (SPPNet), Fast RCNN, Faster RCNN, and Feature Pyramid Networks (FPN) were proposed after it. Limited by the poor speed of the two-stage detector, the one-stage detector came with the first representative You Only Look Once (YOLO). Subsequent versions of YOLO, Single Shot MultiBox Detector (SSD), RetinaNet, CornerNet, CenterNet,DETR were proposed latter. YOLOv7 performs best compared to most detectors.  </p>
+<h3><span id="rcnn">RCNN</span></h3><p>The object detection system consists of three modules. The first generates category-independent region proposals. These proposals define the set of candidate detections available to our detector. The second module is a large convolutional neural network that extracts a fixed-length feature vector from each region. The third module is a set of classspecific linear SVMs.</p>
+<h3><span id="yolo-series">YOLO series</span></h3><p>The history of YOLO (You Only Look Once) dates back to 2015 when the original YOLO algorithm was introduced in “You Only Look Once: Unified, Real-Time Object Detection,” .The original YOLO architecture used a convolutional neural network (CNN) to process the entire image and output a fixed number of bounding boxes along with their associated class probabilities. It divided the image into a grid and applied convolutional operations to predict bounding boxes within each grid cell, considering multiple scales and aspect ratios.In subsequent years, YOLO underwent several iterations and improvements to enhance its accuracy and speed. YOLOv2 was introduced in 2016, featuring an updated architecture that incorporated anchor boxes and multi-scale predictions. YOLOv3 followed in 2018, introducing further advancements, including feature pyramid networks (FPN) and Darknet-53 as the backbone architecture.</p>
+<h4><span id="yolo-you-only-look-once">YOLO (You Only Look Once)</span></h4><p>Network architecture is inspired by the GoogLeNet model for image classification.The network has 24 convolutional layers followed by 2 fully connected layers. They pretrain our convolutional layers on the ImageNet 1000-class competition dataset.For pretraining they use the first 20 convolutional layers followed by a average-pooling layer and a fully connected layer. Then they add four convolutional layers and two fully connected layers with randomly initialized weights. The final layer predicts both class probabilities and bounding box coordinates. They optimize for sum-squared error in the output of the model by increasing the loss from bounding box coordinate predictions and decreasing the loss from confidence predictions for boxes that don’t contain objects and predicting the square root of the bounding box width and height instead of the width and height directly. They design the loss to handle the problem that the sum-squared error weights localization error equally with classification error and also equally weights errors in large boxes and small boxes.</p>
+<h5><span id="googlenet">GoogLeNet</span></h5><p>GoogLeNet was designed to address the challenges of deep neural networks, such as computational efficiency and overfitting, while maintaining high accuracy in image classification tasks. It introduced several novel concepts and architectural innovations that made it stand out from previous CNN architectures at the time.</p>
+<p>The key feature of GoogLeNet is the Inception module, which utilizes parallel convolutional filters of different sizes (1x1, 3x3, 5x5) to capture features at various scales. This allows the network to learn and represent both local and global features effectively. Additionally, it incorporates 1x1 convolutions for dimensionality reduction and introduces a technique called “bottleneck” layers to reduce the computational complexity.</p>
+<h5><span id="inception">Inception</span></h5><p>In the context of computer vision, “inception” refers to the Inception module or the Inception architecture used in deep convolutional neural networks (CNNs). The Inception module was introduced in the GoogLeNet architecture (also known as Inception-v1) as a key component for efficient and effective feature extraction.</p>
+<p>The Inception module aims to capture multi-scale features by employing multiple parallel convolutional filters of different sizes within the same layer. By using a combination of 1x1, 3x3, and 5x5 convolutional filters, the Inception module allows the network to learn and extract features at various spatial scales.</p>
+<h4><span id="yolov7">YOLOv7</span></h4><h5><span id="model-reparameterization">model reparameterization</span></h5><p>Model re-parametrization techniques merge multiple computational modules into one at inference stage. The model re-parameterization technique can be regarded as an ensemble technique, and we can divide it into two categories, i.e., module-level ensemble and model-level ensemble.</p>
+<h5><span id="model-scaling">Model scaling</span></h5><p>Model scaling is a way to scale up or down an already designed model and make it fit in different computing devices.Network architecture search (NAS) is one of the commonly used model scaling methods.</p>
+<h5><span id="efficient-layer-aggregation-networkselan">efficient layer aggregation networks(ELAN)</span></h5><h5><span id="dynamic-label-assignment">dynamic label assignment</span></h5><h3><span id="non-maximum-suppression-nms">Non-Maximum Suppression (NMS)</span></h3><p>Non-Maximum Suppression (NMS) is a post-processing technique used in object detection algorithms to reduce the number of overlapping bounding boxes and improve the overall detection quality.</p>
+<h2><span id="image-segmentation">Image segmentation</span></h2><p>Image segmentation is a sub-domain of computer vision and digital image processing which aims at grouping similar regions or segments of an image under their respective class labels. </p>
+<h3><span id="semantic-segmentation">Semantic segmentation</span></h3><p>Semantic segmentation refers to the classification of pixels in an image into semantic classes.</p>
+<h3><span id="instance-segmentation">Instance segmentation</span></h3><p>Instance segmentation models classify pixels into categories on the basis of “instances” rather than classes. </p>
+<h3><span id="panoptic-segmentation">Panoptic segmentation</span></h3><p>Panoptic segmentation can be expressed as the combination of semantic segmentation and instance segmentation where each instance of an object in the image is segregated and the object’s identity is predicted. </p>
+<p>Neural networks that perform segmentation typically use an encoder-decoder structure where the encoder is followed by a bottleneck and a decoder or upsampling layers directly from the bottleneck (like in the FCN). </p>
+<h2><span id="important-networks-in-the-history-of-computer-vision">Important networks in the history of computer vision</span></h2><h3><span id="lenet-5">LeNet-5</span></h3><p>LeNet-5, developed by Yann LeCun et al. in 1998, was one of the first successful convolutional neural networks (CNNs) for handwritten digit recognition. It laid the foundation for modern CNN architectures and demonstrated the power of deep learning in computer vision tasks. “Gradient-Based Learning Applied to Document Recognition” by Yann LeCun et al. (1998).</p>
+<h3><span id="alexnet">AlexNet</span></h3><p>AlexNet, introduced by Alex Krizhevsky et al. in 2012, was a breakthrough CNN architecture that won the ImageNet competition and popularized deep learning in computer vision. It demonstrated the effectiveness of deep CNNs for image classification tasks and paved the way for subsequent advancements.”ImageNet Classification with Deep Convolutional Neural Networks” by Alex Krizhevsky et al. (2012).</p>
+<h3><span id="vggnet">VGGNet</span></h3><p>The VGGNet, proposed by Karen Simonyan and Andrew Zisserman in 2014, is known for its simplicity and depth. It consisted of deep networks with stacked 3x3 convolutional layers, showing that increasing network depth led to improved performance on image classification tasks.”Very Deep Convolutional Networks for Large-Scale Image Recognition” by Karen Simonyan and Andrew Zisserman (2014).</p>
+<h3><span id="googlenet-inception-v1">GoogLeNet (Inception-v1)</span></h3><p>GoogLeNet, presented by Christian Szegedy et al. in 2015, introduced the Inception module and demonstrated the importance of multi-scale feature extraction. It achieved high accuracy while maintaining computational efficiency, inspiring subsequent Inception versions and influencing network designs.<br>“Going Deeper with Convolutions” by Christian Szegedy et al. (2015).</p>
+<h3><span id="resnet">ResNet</span></h3><p>ResNet, developed by Kaiming He et al. in 2015, introduced the concept of residual learning. It utilized skip connections or shortcuts to address the vanishing gradient problem and enabled training of extremely deep networks, leading to significant performance gains in image classification and other tasks.”Deep Residual Learning for Image Recognition” by Kaiming He et al. (2015).</p>
+<h3><span id="densenet">DenseNet</span></h3><p> DenseNet, introduced by Gao Huang et al. in 2016, focused on dense connectivity patterns between layers. It aimed to alleviate the vanishing gradient problem, promote feature reuse, and encourage better gradient flow. DenseNet achieved competitive results while reducing the number of parameters compared to other architectures. “Densely Connected Convolutional Networks” by Gao Huang et al. (2016).’</p>
+<h2><span id="basic-architecture">Basic architecture</span></h2><h3><span id="cnn">CNN</span></h3><p>Convolutional networks are simply neural networks that use convolution in place of general matrix multiplication in at least one of their layers.<br>Convolution leverages three important ideas that can help improve a machine learning system: sparse interactions, parameter sharing and equivariant representations. Moreover, convolution provides a means for working with inputs of variable size.</p>
+<p>We assume that the size of the input image is n<em>n, and the size of the filter is f</em>f (note that f is generally an odd number). The size of the output image after convolution is (n-f+1)* (n-f+1).During the convolution process, padding is sometimes necessary to avoid information loss. Additionally, adjusting the stride allows for compression of some information.If we want to perform convolution on a three-channel RGB image, the corresponding filter group would also have three channels. The process involves convolving each individual channel with its corresponding filter, summing up the results, and then adding the sums of the three channels together. The resulting sum of the 27 multiplications is considered as one pixel value of the output image. The filters for different channels can be different. When the input has specific height, width, and channel dimensions, the filters can have different height and width, but the number of channels must match the input.Pooling layers are commonly included in many CNNs. The purpose of pooling layers is to reduce the size of the model, improve computational speed, and simultaneously decrease noise to enhance the robustness of the extracted features.</p>
+<h2><span id="references">references</span></h2><p><a href="https://zhuanlan.zhihu.com/p/183261974" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/183261974</a><br><a href="https://juejin.cn/post/7104845694225088525" target="_blank" rel="noopener">https://juejin.cn/post/7104845694225088525</a><br><a href="https://www.showmeai.tech/article-detail/221" target="_blank" rel="noopener">https://www.showmeai.tech/article-detail/221</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1064 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2023/05/16/time-complexity/">time complexity</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="time-complexity">time complexity</span></h2><h3><span id="big-o-notation">big O notation</span></h3><p>Big O notation measures the asymptotic growth of a function. f (n) = O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n).</p>
+<h3><span id="ω-and-θ-notation">Ω and Θ notation</span></h3><p>We say f (n) = Ω(g(n)) if g(n) = O(f (n)).<br>We say f (n) = Θ(g(n)) if f (n) = O(g(n)) and g(n) = O(f (n)).</p>
+<h3><span id="types-of-complexity">types of complexity</span></h3><p>Worst-case complexity: what is the largest possible running time on any input of size n?<br>Average-case complexity: what is the average running time on a random input of size n?<br>Best-case complexity: what is the smallest possible running time on any input of size n?</p>
+<h2><span id="graph-algorithm">Graph algorithm</span></h2><h3><span id="ways-of-representing-graphs">ways of representing graphs</span></h3><h4><span id="adjacency-matrix">adjacency matrix</span></h4><p>For graph with n vertices this is an n × n matrix A, where $A_{ij}$ = 1 if there is an edge from node i to node j, $A_{ij}$ = 0 otherwise.<br>If the graph is undirected, the matrix is symmetric</p>
+<h4><span id="adjacency-lists">adjacency lists</span></h4><p>For each vertex, keep a list of its neighbors.</p>
+<h4><span id="incidence-matrix">incidence matrix</span></h4><p>The incidence matrix of an undirected graph with n vertices and m edges is an n × m matrix B where $B_{ij}$ = 1 if the i’th vertex is part of the j’th edge, $B_{ij}$ = 0 otherwise.</p>
+<h3><span id="two-fundamental-graph-exploration-algorithms">Two fundamental graph exploration algorithms</span></h3><h4><span id="depth-first-search-dfs">Depth First Search (DFS)</span></h4><h4><span id="breadth-first-search-bfs">Breadth First Search (BFS)</span></h4><p>For the BFS tree, this gives the shortest (fewest number of steps) paths from s to all other nodes</p>
+<h2><span id="greedy-algorithms">Greedy Algorithms</span></h2><p>Greedy algorithms are algorithms that build a solution step by step by always choosing the currently best option. </p>
+<h3><span id="interval-scheduling">Interval Scheduling</span></h3><p>Input: A list of intervals<br>Output: Maximum number of these intervals that can be chosen without getting any overlaps.<br>Solution:Pick the one that ends first.<br>Prove correctness of such an algorithm: Common strategy for analyzing greedy algorithms: prove that the algorithm always “stays ahead” of the optimal solution.</p>
+<h3><span id="job-scheduling-with-minimum-lateness">Job Scheduling With Minimum Lateness</span></h3><p>Input: A list of jobs, each job has a deadline di<br>, and a duration ti<br>(how long it takes to finish the job)<br>Output: Smallest possible maximum lateness in a schedule for doing<br>all jobs.<br>Solution: Pick the job with smallest di.</p>
+<h3><span id="shortest-path">Shortest path</span></h3><p>It is helpful to instead consider a more general problem. Let us try<br>to find the shortest paths from s to all other vertices: Dijkstra’s algorithm: we have some set D of vertices we have found<br>the shortest path to, and each step we add a new vertex to D. add the vertex outside D which is closest to<br>s when using only vertices in D as intermediate vertices.</p>
+<h2><span id="divide-amp-conquer">Divide &amp; Conquer</span></h2><p>Algorithms that split the input into significantly smaller parts, recursively solves each part, and then combines the subresults (somehow).</p>
+<h3><span id="merge-sort">Merge sort</span></h3><p>O(n log n).</p>
+<h3><span id="polynomial-multiplication">Polynomial multiplication</span></h3><p>$T(n) = O(n^{1.59})$.<br>Using FFT, get time O(n log n) for Polynomial Multiplication</p>
+<h2><span id="unit-cost-model-and-bit-cost-model">Unit cost model and Bit cost model</span></h2><p>Unit cost model: assume all numbers fit in machine registers so that basic arithmetic operations take constant time.<br>Bit cost model: account for size of numbers and the time it takes to manipulate them.</p>
+<h3><span id="integer-multiplication">Integer multiplication</span></h3><p>Karatsuba’s algorithm: $T(n) = O(n^{1.59})$.</p>
+<h3><span id="master-theorem">Master Theorem</span></h3><h2><span id="dynamic-programming">Dynamic Programming</span></h2><p>Split a problem into smaller subproblems such that results from one<br>subproblem can be reused when solving others</p>
+<h3><span id="fibonacci-numbers">Fibonacci numbers</span></h3><p>The Fibonacci numbers are a classic number sequence in<br>mathematics, defined by the linear recurrence<br>f0 = 0; f1 = 1; and fn = fn−1 + fn−2 for n ≥ 2</p>
+<h3><span id="weighted-interval-scheduling">Weighted Interval Scheduling</span></h3><p>Input: A list of intervals [s1; t1]; [s2; t2]; : : : ; [sn; tn], each interval<br>[si<br>; ti<br>] has a weight wi<br>Output: What is the maximum total weight of these intervals that<br>can be chosen without getting any overlaps</p>
+<h3><span id="knapsack">Knapsack</span></h3><p>Input: A capacity C and a list of objects, each object has a value vi<br>and weight wi<br>Output: Subset S of objects such that<br>$\sum_{i∈S} wi ≤ C$ and $\sum_{i∈S} vi$ is maximized.</p>
+<h3><span id="top-down-and-bottom-up-fashion">top-down and bottom-up fashion</span></h3><p>top-down fashion: we start at the end result and<br>recursively compute results for relevant subproblems.</p>
+<p> bottom-up fashion: we iteratively compute results for larger and larger subproblems.</p>
+<h3><span id="characteristics-of-dynamic-programming">Characteristics of dynamic programming</span></h3><p>A problem is amenable to dynamic program if we can define a set<br>of subproblems such that:</p>
+<ol>
+<li>The number of different subproblems is as small as possible.</li>
+<li>There is some ordering of subproblems from “small” to “large”</li>
+<li>The value of a subproblem can be efficiently computed given<br>the values of some set of smaller subproblems.</li>
+</ol>
+<h3><span id="sequence-alignment">Sequence Alignment</span></h3><p>Input: Strings x and y of lengths m and n, parameters ‹ and ¸<br>Output: Minimum cost of an alignment of x and y with parameters $\sigma$ and $\alpha$.<br>$\alpha is the cost of aligning two different characters with each other<br>$\sigma$ is the cost of not aligning a character</p>
+<h3><span id="matrix-chain-multiplication">Matrix Chain Multiplication</span></h3><h2><span id="network-flow">Network Flow</span></h2><h3><span id="the-max-flow-problem">The Max-Flow problem</span></h3><p>Input: Flow network G.<br>Output: Flow f maximizing the value v(f ).<br>Solution: The Ford-Fulkerson Algorithm O(C(m + n))<br> or the scaling algorithm with O(m2<br>log(C)) or Edmonds-Karp algorithm with O(nm(n + m)) .</p>
+<h3><span id="edge-cuts">Edge Cuts</span></h3><p>An edge cut of a graph is a set of edges such that their removal would disconnect the graph.</p>
+<h3><span id="minimum-s-t-cut">Minimum s-t-Cut</span></h3><p>Input: A flow network G with source s and sink t.<br>Output: An s-t cut A; B of G minimizing the capacity c(A; B).</p>
+<h3><span id="the-max-flow-min-cut-theorem">The Max-Flow-Min-Cut Theorem</span></h3><p>For every flow network G, the maximum flow from s to t equals the<br>minimum capacity of an s-t cut in G.</p>
+<h3><span id="vertex-cuts">Vertex Cuts</span></h3><p>A vertex cut in a graph is a set of vertices such that if we remove<br>them, the graph splits into more than one connected component.</p>
+<h3><span id="matchings">Matchings</span></h3><p>A matching in a graph is a set M of edges such that no vertex appears in more than one edge of M.Of particular interest to us will be bipartite graphs.</p>
+<h3><span id="maximum-bipartite-matching">Maximum Bipartite Matching</span></h3><p>Input: A bipartite graph G<br>Output: A matching M in G of maximum possible size.</p>
+<h3><span id="edge-disjoint-paths">Edge-Disjoint Paths</span></h3><p>Given a directed graph with source and sink, what is maximum<br>number of edge-disjoint paths from s to t?<br>(edge-disjoint = no edge used by more than one path)</p>
+<h3><span id="project-selection">Project Selection?</span></h3>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time>
                 
                 
                 <span class="level-item has-text-grey">
@@ -223,7 +376,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2022/03/13/thoughts/">thoughts</a>
+                <a class="has-link-black-ter" href="/2023/05/05/object-detection/">object detection</a>
             
         </h1>
         <div class="content">
@@ -245,13 +398,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time>
+                <time class="level-item has-text-grey" datetime="2023-05-05T09:15:45.000Z">2023-05-05</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a minute read (About 154 words)
                 </span>
                 
             </div>
@@ -259,130 +412,14 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/11/15/ML-5/">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+                <a class="has-link-black-ter" href="/2023/05/05/speech-embedding/">speech embedding</a>
             
         </h1>
         <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-10-01T11:37:23.000Z">2021-10-01</time>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/10/01/java-2/">java-2</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-30T19:30:14.000Z">2021-09-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/theory/">theory</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 50 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/09/30/OR/">第二十二篇 运筹优化(1)-整数规划</a>
-            
-        </h1>
-        <div class="content">
-            <h3><span id="整数规划">整数规划</span></h3><p>全部变量限制为整数的规划问题。下面介绍一下整数规划常见的解法：割平面法和分支定界法。</p>
-<h4><span id="割平面法">割平面法</span></h4>
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-26T20:05:21.000Z">2021-09-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 93 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/09/26/java-1/">第二十一篇 java(2)- 集合框架</a>
-            
-        </h1>
-        <div class="content">
-            <h3><span id="集合框架">集合框架</span></h3><p>java集合框架包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对(两个对象)的映射表。</p>
-<h4><span id="collection">Collection</span></h4><p>Collection下包括Set、List、Queue，各自又包含了使用不同方式的实现。</p>
-<h5><span id="set">Set</span></h5><p>Set下包括TreeSet，HashSet，LinkedHashSet。其中TreeSet基于红黑树实现。</p>
+            <h2><span id="contrastive-predictive-coding">Contrastive Predictive Coding</span></h2><p>Contrastive Predictive Coding (CPC) learns self-supervised representations by predicting the future in latent space by using powerful autoregressive models. The model uses a probabilistic contrastive loss which induces the latent space to capture information that is maximally useful to predict future samples. It describes a form of unidirectional modeling in the feature space,<br>where the model learns to predict the near future frames in<br>an acoustic sequence while contrasting with frames from other<br>sequences or frames from a more distant time.</p>
+<h2><span id="autoregressive-predictive-coding">Autoregressive Predictive Coding</span></h2><p>The APC approach uses an autoregressive model to encode<br>temporal information of past acoustic sequence; the model then<br>predicts future frames like a recurrent-based LM while<br>conditioning on past frames.</p>
+<h2><span id="tera">TERA</span></h2><p>TERA, which stands for Transformer Encoder Representations from Alteration, is a self-supervised speech pre-training<br>method. </p>
+<h2><span id="experiment-design">experiment design</span></h2><p>Amount of labeled data needed to perform well.<br>with pre-trained and without pre-trained.</p>
 
         </div>
         
@@ -401,17 +438,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-26T19:10:33.000Z">2021-09-26</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/theory/">theory</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2023-04-25T09:59:30.000Z">2023-04-25</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a minute read (About 155 words)
+                    4 minutes read (About 646 words)
                 </span>
                 
             </div>
@@ -419,12 +452,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/09/26/ML-4/">第二十篇 机器学习(4)-uplift模型</a>
+                <a class="has-link-black-ter" href="/2023/04/25/Turing-Machines/">Turing Machines and Undecidability</a>
             
         </h1>
         <div class="content">
-            <h3><span id="uplift模型">uplift模型</span></h3><p>uplift模型中文为增益模型，是工业界因果推断与机器学习结合最成熟的算法之一。传统的监督学习模型，往往是对输入x去预测一个y，而增益模型注重于x的变化对y的影响，以广告为例，传统的监督学习往往是给定这个特征去预测用户是否会点击，而增益模型注重的是给这个客户投放广告与否对客户是否购买广告商品所产生的影响。</p>
-<h3><span id="因果推断">因果推断</span></h3>
+            <h2><span id="mathematical-model-of-computation">mathematical model of computation</span></h2><h3><span id="turing-machines">Turing Machines</span></h3><p>Turing machines are primarily a mathematical construction. A Turing machine (TM) consists of:A finite set of states: initial state(when the TM starts, it is in this state) and accepting states(if the TM ends in one of these states, it says yes); Transition rules that determine what to do based on current state and content of memory tape at current position; An alphabet, the set of symbols that can be stored on the memory tape.</p>
+<h4><span id="the-church-turing-hypothesis">The Church-Turing Hypothesis</span></h4><p>Anything which can be computed by any automatic method, can also be computed by a Turing machine.</p>
+<p>If a model can also do everything that a Turing machine can, then it is called a Turing-complete model of computation.</p>
+<h3><span id="the-ram-model">The RAM Model</span></h3><p>Models the way modern computers operate, with registers and memory cells that can be immediately accessed.</p>
+<h3><span id="comparison-based-sorting">Comparison-Based Sorting</span></h3><p>We will prove that any such algorithm must make Ω(n log n)<br>comparisons (and thus take Ω(n log n) time)</p>
+<h2><span id="undecidability">Undecidability</span></h2><h3><span id="decision-problems">decision problems</span></h3><p>The answer is just a single bit of information,“yes” or “no”.A decision problem is decidable if there exists an algorithm for solving the problem without any efficiency considerations.</p>
+<h3><span id="the-halting-problem">The Halting Problem</span></h3><p>Turing machine M, and input x to M. Does M halt when run on the input x?<br>The Halting Problem is undecidable.</p>
+<h3><span id="halting-on-empty-input">Halting On Empty Input</span></h3><p>It is undecidable.</p>
+<h3><span id="halting-on-all-inputs">Halting on All Inputs</span></h3><p>It is undecidable.</p>
+<h3><span id="recursively-enumerable-problems">Recursively Enumerable Problems</span></h3><p>There exists an “algorithm” which terminates whenever the answer is<br>“yes” but does not terminate on “no” instances.Problems which have algorithms like this are called recursively enumerable.</p>
+<h2><span id="turing-reduction">Turing reduction</span></h2><p>A Turing reduction (also called Cook reduction) from a problem<br>X to a problem Y is an efficient algorithm for problem X which is<br>allowed to assume an algorithm for Y as a black box.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><h3><span id="independent-set">Independent Set</span></h3><h3><span id="set-cover">Set Cover</span></h3><h3><span id="3-sat">3-Sat</span></h3><h2><span id="karp-reductions">Karp Reductions</span></h2><p>X ≤p Y if given any instance A of problem X, we can in<br>polynomial time construct an instance f (A) of problem Y such that<br>the answer to A is the same as the answer to f (A).</p>
+<p>Turing reduction is a type of reduction that is stronger than Karp reduction. A problem A is Turing-reducible to problem B if there exists a Turing machine that can solve problem A by making a polynomial number of calls to a black-box subroutine for problem B. In other words, if we can use an algorithm for problem B to solve problem A, then A is Turing-reducible to B. Turing reduction preserves the complexity class of a problem, meaning that if A is Turing-reducible to B and B is in a certain complexity class, then A is also in that complexity class.</p>
+<p>Karp reduction, also known as polynomial-time reduction, is a weaker form of reduction than Turing reduction. A problem A is Karp-reducible to problem B if there exists a polynomial-time algorithm that can transform any instance of problem A into an instance of problem B such that the answer to the transformed instance is the same as the answer to the original instance of problem A. In other words, if we can use an algorithm for problem B to solve a transformed version of problem A in polynomial time, then A is Karp-reducible to B. Karp reduction preserves the complexity class up to polynomial factors, meaning that if A is Karp-reducible to B and B is in a certain complexity class, then A is also in that complexity class up to polynomial factors.</p>
+<h2><span id="good-reference">Good reference</span></h2><p><a href="https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html" target="_blank" rel="noopener">https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html</a><br><a href="http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html" target="_blank" rel="noopener">http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html</a><br><a href="https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php" target="_blank" rel="noopener">https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php</a></p>
+
         </div>
         
         
@@ -442,17 +489,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-25T14:43:07.000Z">2021-09-25</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/theory/">theory</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2023-04-25T08:33:57.000Z">2023-04-25</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    4 minutes read (About 573 words)
                 </span>
                 
             </div>
@@ -460,11 +503,24 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/09/25/DL/">第十九篇 深度学习(1)-梯度下降</a>
+                <a class="has-link-black-ter" href="/2023/04/25/Randomized-Algorithms/">Randomized Algorithms</a>
             
         </h1>
         <div class="content">
-            
+            <h2><span id="randomized-algorithms-and-approximation-algorithm">Randomized Algorithms and  approximation algorithm</span></h2><p>A randomized algorithm is an algorithm that uses randomness to<br>make some of its choices.</p>
+<h3><span id="las-vegas-algorithms">Las Vegas Algorithms</span></h3><p>A Las Vegas algorithm is a randomized algorithm that always finds<br>the correct answer, but the running time of the algorithm might<br>vary significantly depending on the random choices made.</p>
+<h3><span id="monte-carlo-algorithms">Monte Carlo Algorithms</span></h3><p>A Monte Carlo algorithm is a randomized algorithm where the<br>output of the algorithm may be incorrect, but we have a guarantee<br>that this only happens with small probability.</p>
+<h3><span id="random-number-generator">Random Number Generator</span></h3><p> True RNG: gets randomness from measuring physical phenomena<br>(e.g. background radiation) that we believe is sufficiently random<br>Pseudo-RNG: starting from a small random seed, new numbers are<br>generated in a completely deterministic way.</p>
+<h3><span id="randomized-min-cut-algorithm">Randomized Min-Cut Algorithm</span></h3><p>while G has more than 2 vertices:Pick a uniformly random edge of G and contract it.<br>the total runtime is $O(n^2m)$. However this algorithm can be refined and running time improved to $O(n^2log(n))$ (relatively simple algorithm) or<br>$O(m log^3(n))$ (more complicated algorithm).</p>
+<h2><span id="approximation-algorithm">approximation algorithm</span></h2><h3><span id="the-maximum-cut-problem">The Maximum Cut Problem</span></h3><p>Partition of vertices of G into two non-empty sets A and B such that number of edges between A and B is maximized. It is a NP-hard problem. Let us lower the ambition and try to find a fast algorithm that finds a “reasonably good” cut: Random algorithm:Put each vertex in either A or B independently with probability 1/2.The random assignment algorithm cuts (in expectation) at least half of all the edges in the graph.This is an example of an approximation algorithm.</p>
+<h3><span id="finding-good-but-maybe-not-optimal-solutions">finding “good but maybe not optimal” solutions</span></h3><h4><span id="heuristic-algorithms">Heuristic Algorithms</span></h4><p>Work well in some or even many cases, but with no guarantees<br>about how well they perform.</p>
+<h4><span id="approximation-algorithms">Approximation Algorithms</span></h4><p>Algorithms with provable guarantee that the solution found is relatively good compared to the optimum solution, for all instances.<br>For a minimization problem, an algorithm has approximation ratio $\alpha ≥ 1$ if for every instance it holds that $ Alg ≤ \alpha Opt$.<br>For a maximization problem, the inequality goes the other way: we have approximation ratio $\alpha ≤ 1$ if $ Alg ≥ \alpha Opt$.</p>
+<h3><span id="alpha-approximation-algorithm">alpha-approximation algorithm</span></h3><p>approximation ratio: $\alpha$.</p>
+<h3><span id="minimum-load-balancing">Minimum Load Balancing</span></h3><p>NP-hard problem.<br> Given Lengths t1; : : : ; tn of n jobs to be run on m machines, to find Minimum possible makespan of a schedule for the n jobs.<br>Approximation Algorithm for Load Balancing:Assign job i to the machine j with the smallest load. </p>
+<h3><span id="how-to-prove-it">how to prove it</span></h3><p>The main difficulty in analyzing approximation<br>algorithms is to get some handle on the Opt value. We need to find Opt, but finding Opt is NP-hard, so we find lower bounds on Opt. </p>
+<h3><span id="minimum-vertex-cover">Minimum Vertex Cover</span></h3><p>A vertex cover in a graph G is a set of vertices that “touches” every edge of G.What is the size of a minimum vertex cover of G? Approximation Algorithm for Minimum Vertex Cover:while there exists an edge e = (u; v) such that u /∈ S and v /∈ S, add (u,v) into S. The algorithm is a 2-approximation algorithm.<br>“Unique Games Conjecture”: it is known that Vertex Cover cannot be approximated better than<br>within a factor 2.</p>
+<h3><span id="minimum-set-cover">Minimum Set Cover</span></h3><p>A collection of sets S1; : : : ; Sm ⊆ U over some universe U, What is minimum number of Si’s whose union equals U?</p>
+<h3><span id="analysis-of-greedy-set-cover-finale">Analysis of Greedy Set Cover Finale?</span></h3>
         </div>
         
         
@@ -482,17 +538,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-22T19:19:09.000Z">2021-09-22</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2023-04-02T14:17:48.000Z">2023-04-02</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 10 words)
+                    a minute read (About 185 words)
                 </span>
                 
             </div>
@@ -500,11 +552,60 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/09/22/python-3/">第十八篇 python(3)-多进程</a>
+                <a class="has-link-black-ter" href="/2023/04/02/Elasticsearch/">Elasticsearch</a>
             
         </h1>
         <div class="content">
-            <h3><span id="协程-线程与进程">协程、线程与进程</span></h3><h4><span id="协程">协程</span></h4>
+            <h2><span id="elk-stack">ELK Stack</span></h2><p>Elasticsearch, Logstash and Kibana</p>
+<h2><span id="elasticsearch">Elasticsearch</span></h2><p>Elasticsearch is a NoSQL database.When you feed data into Elasticsearch, the data is placed into Apache Lucene indexes.</p>
+<h3><span id="apache-lucene">Apache Lucene</span></h3><p>Apache Lucene™ is a high-performance, full-featured search engine library written entirely in Java.</p>
+<h3><span id="api">API</span></h3><h2><span id="logstash">Logstash</span></h2><p>Using more than 50 input plugins for different platforms, databases and applications, Logstash can be defined to collect and process data from these sources and send them to other systems for storage and analysis.</p>
+<h2><span id="project">project</span></h2><p><a href="https://trecpodcasts.github.io/" target="_blank" rel="noopener">https://trecpodcasts.github.io/</a><br><a href="https://doc.yonyoucloud.com/doc/mastering-elasticsearch/chapter-2/21_README.html" target="_blank" rel="noopener">https://doc.yonyoucloud.com/doc/mastering-elasticsearch/chapter-2/21_README.html</a><br><a href="https://cloud.tencent.com/developer/article/1600163" target="_blank" rel="noopener">https://cloud.tencent.com/developer/article/1600163</a><br><a href="https://www.elastic.co/cn/blog/how-to-improve-elasticsearch-search-relevance-with-boolean-queries" target="_blank" rel="noopener">https://www.elastic.co/cn/blog/how-to-improve-elasticsearch-search-relevance-with-boolean-queries</a><br><a href="https://www.elastic.co/guide/en/app-search/current/relevance-tuning-guide.html" target="_blank" rel="noopener">https://www.elastic.co/guide/en/app-search/current/relevance-tuning-guide.html</a><br><a href="https://medium.com/mlearning-ai/enhancing-information-retrieval-via-semantic-and-relevance-matching-64973ff81818" target="_blank" rel="noopener">https://medium.com/mlearning-ai/enhancing-information-retrieval-via-semantic-and-relevance-matching-64973ff81818</a><br><a href="https://www.elastic.co/cn/blog/how-to-improve-elasticsearch-search-relevance-with-boolean-queries" target="_blank" rel="noopener">https://www.elastic.co/cn/blog/how-to-improve-elasticsearch-search-relevance-with-boolean-queries</a><br><a href="https://bigdataboutique.com/blog/optimizing-elasticsearch-relevance-a-detailed-guide-c9efd3" target="_blank" rel="noopener">https://bigdataboutique.com/blog/optimizing-elasticsearch-relevance-a-detailed-guide-c9efd3</a><br>NDCG：<br><a href="https://www.javatips.net/api/MyMediaLiteJava-master/src/org/mymedialite/eval/measures/NDCG.java" target="_blank" rel="noopener">https://www.javatips.net/api/MyMediaLiteJava-master/src/org/mymedialite/eval/measures/NDCG.java</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2023-03-31T15:53:12.000Z">2023-03-31</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 204 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2023/03/31/speech/">speech</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="signal">signal</span></h2><p>spectrogram: A spectrogram of a time signal is a special two-dimensional representation that displays time in its horizontal axis and frequency in its vertical axis.</p>
+<h2><span id="short-time-fourier-analysis">short-time Fourier analysis</span></h2><p>Why use it?<br>Some regions of speech signals shorter than 100 milliseconds often appear to be periodic, so that we can use the exact definition of Fourier<br>transform.</p>
+<h3><span id="spectral-leakage">spectral leakage</span></h3><p>This phenomenon is called spectral leakage because the amplitude of one harmonic leaks over the rest and masks its value.</p>
+<h2><span id="feature-extraction">feature extraction</span></h2><p>Representation of speech signals in the frequency domain is especially useful because the frequency structure of a phoneme is generally unique.</p>
+<p>Sinusoids are important because speech signals can be decomposed as sums of sinusoids.</p>
+<p>For voiced sounds there is typically more energy at low frequencies<br>than at high frequencies, also called roll-off. To make the spectrograms easier to read, sometimes the signal is first preemphasized (typically with a first-order difference FIR filter) to boost the high frequencies<br>to counter the roll-off of natural speech.</p>
+<h2><span id="digital-systems">Digital Systems</span></h2><p>Linear Time-Invariant Systems and Linear Time-Varying Systems.</p>
+<h2><span id="the-fourier-transform">The Fourier Transform</span></h2><h2><span id="z-transform">Z-Transform</span></h2><h2><span id="digital-filter">digital filter</span></h2><h2><span id="filterbank">filterbank</span></h2><p>A filterbank is a collection of filters that span the whole frequency spectrum.</p>
+<h2><span id="short-time-analysis">short-time analysis</span></h2>
         </div>
         
         
@@ -533,6 +634,8 @@
             <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
             
         </ul>
     </nav>
@@ -578,7 +681,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        40
                     </p>
                 </div>
             </div>
@@ -598,7 +701,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        16
                     </p>
                 </div>
             </div>
@@ -749,7 +852,7 @@
                 <span class="level-item">theory</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/web-development/">
@@ -771,7 +874,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/KTH/" style="font-size: 10px;">KTH</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/java/" style="font-size: 12.5px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/operations-research/" style="font-size: 10px;">operations research</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a>
+        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
     </div>
 </div>
 
@@ -788,16 +891,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/23/Network-Representation-Learning/" class="media-left">
+            <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Network Representation Learning">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time></div>
-                    <a href="/2022/12/23/Network-Representation-Learning/" class="has-link-black-ter is-size-6">Network Representation Learning</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -807,16 +910,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/03/Inference on Graphical Model/" class="media-left">
+            <a href="/2023/06/19/large-model/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-03T10:24:13.986Z">2022-12-03</time></div>
-                    <a href="/2022/12/03/Inference on Graphical Model/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -826,16 +929,16 @@
         
         <article class="media">
             
-            <a href="/2022/03/13/thoughts/" class="media-left">
+            <a href="/2023/06/09/image-task/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="thoughts">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time></div>
-                    <a href="/2022/03/13/thoughts/" class="has-link-black-ter is-size-6">thoughts</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -845,16 +948,16 @@
         
         <article class="media">
             
-            <a href="/2021/11/15/ML-5/" class="media-left">
+            <a href="/2023/05/16/time-complexity/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二十二篇 机器学习(5)--不平衡的分类问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time></div>
-                    <a href="/2021/11/15/ML-5/" class="has-link-black-ter is-size-6">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -864,16 +967,16 @@
         
         <article class="media">
             
-            <a href="/2021/10/01/java-2/" class="media-left">
+            <a href="/2023/05/05/object-detection/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-01T11:37:23.000Z">2021-10-01</time></div>
-                    <a href="/2021/10/01/java-2/" class="has-link-black-ter is-size-6">java-2</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -892,6 +995,61 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2022/12/">
@@ -927,23 +1085,12 @@
         </li>
         
         <li>
-            <a class="level is-marginless" href="/archives/2021/10/">
-                <span class="level-start">
-                    <span class="level-item">October 2021</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
             <a class="level is-marginless" href="/archives/2021/09/">
                 <span class="level-start">
                     <span class="level-item">September 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1028,12 +1175,23 @@
             <ul class="menu-list">
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/KTH/">
                         <span class="level-start">
                             <span class="level-item">KTH</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1045,6 +1203,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -1067,6 +1236,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1116,17 +1296,6 @@
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/operations-research/">
-                        <span class="level-start">
-                            <span class="level-item">operations research</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/probability/">
                         <span class="level-start">
                             <span class="level-item">probability</span>
@@ -1143,7 +1312,7 @@
                             <span class="level-item">python</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">4</span>
+                            <span class="level-item tag">5</span>
                         </span>
                     </a>
                 </li>
@@ -1155,6 +1324,28 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1184,16 +1375,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/23/Network-Representation-Learning/" class="media-left">
+            <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Network Representation Learning">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time></div>
-                    <a href="/2022/12/23/Network-Representation-Learning/" class="has-link-black-ter is-size-6">Network Representation Learning</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1203,16 +1394,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/03/Inference on Graphical Model/" class="media-left">
+            <a href="/2023/06/19/large-model/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-03T10:24:13.986Z">2022-12-03</time></div>
-                    <a href="/2022/12/03/Inference on Graphical Model/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1222,16 +1413,16 @@
         
         <article class="media">
             
-            <a href="/2022/03/13/thoughts/" class="media-left">
+            <a href="/2023/06/09/image-task/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="thoughts">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time></div>
-                    <a href="/2022/03/13/thoughts/" class="has-link-black-ter is-size-6">thoughts</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1241,16 +1432,16 @@
         
         <article class="media">
             
-            <a href="/2021/11/15/ML-5/" class="media-left">
+            <a href="/2023/05/16/time-complexity/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二十二篇 机器学习(5)--不平衡的分类问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time></div>
-                    <a href="/2021/11/15/ML-5/" class="has-link-black-ter is-size-6">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1260,16 +1451,16 @@
         
         <article class="media">
             
-            <a href="/2021/10/01/java-2/" class="media-left">
+            <a href="/2023/05/05/object-detection/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-01T11:37:23.000Z">2021-10-01</time></div>
-                    <a href="/2021/10/01/java-2/" class="has-link-black-ter is-size-6">java-2</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1288,6 +1479,61 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2022/12/">
@@ -1323,23 +1569,12 @@
         </li>
         
         <li>
-            <a class="level is-marginless" href="/archives/2021/10/">
-                <span class="level-start">
-                    <span class="level-item">October 2021</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
             <a class="level is-marginless" href="/archives/2021/09/">
                 <span class="level-start">
                     <span class="level-item">September 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1424,12 +1659,23 @@
             <ul class="menu-list">
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/KTH/">
                         <span class="level-start">
                             <span class="level-item">KTH</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1441,6 +1687,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -1463,6 +1720,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1512,17 +1780,6 @@
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/operations-research/">
-                        <span class="level-start">
-                            <span class="level-item">operations research</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/probability/">
                         <span class="level-start">
                             <span class="level-item">probability</span>
@@ -1539,7 +1796,7 @@
                             <span class="level-item">python</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">4</span>
+                            <span class="level-item tag">5</span>
                         </span>
                     </a>
                 </li>
@@ -1551,6 +1808,28 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1576,7 +1855,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2022 s-serenity&nbsp;
+                &copy; 2023 s-serenity&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>

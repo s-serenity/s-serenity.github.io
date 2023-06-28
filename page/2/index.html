@@ -135,7 +135,314 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-09-02T20:07:25.000Z">2021-09-02</time>
+                <time class="level-item has-text-grey" datetime="2023-03-28T09:46:34.000Z">2023-03-28</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    4 minutes read (About 611 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2023/03/28/NP/">NP and reduction</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="p">P</span></h2><p>P is the set of all decision problems that can be solved in<br>Polynomial time.</p>
+<h2><span id="extended-church-turing-thesis">Extended Church-Turing Thesis</span></h2><p>Any realistic model of computation can be efficiently<br>simulated by a Turing machine.<br>(The ECT is probably false!Probable counter-example: Quantum computing,However, the ECT is true for the classic models of computation<br>underlying our laptops)</p>
+<h2><span id="np-problem">NP problem</span></h2><p>We do not know of polynomial-time algorithms for these problems, and we cannot prove that no<br>polynomial-time algorithm exists. </p>
+<p>NP stands for Nondeterministic Polynomial time.</p>
+<p>NP is a set of problems that there is a polynomial-time algorithm that verify if a solution to the problem is correct.<br>Note that showing that a problem is in NP does not mean that the problem can be solved in polynomial time. It only means that a proposed solution can be verified in polynomial time.</p>
+<p>All problems in P are also in NP, we do not know if P=NP.</p>
+<h2><span id="np-hardness">NP-hardness</span></h2><p>We say that a problem Y is NP-hard if every problem in NP can be Karp-reduced to Y. To prove NP-hardness for Y we only have to find<br>one other NP-hard problem X and reduce X to Y.</p>
+<h2><span id="np-complete-problem">NP-complete problem</span></h2><p>A large class of problems in this “gray area” has been characterized,<br>and it has been proved that they are equivalent in the following sense: a polynomial-time algorithm for any one of them would imply the existence of a polynomial-time algorithm for all of them. These are the NP-complete problems.</p>
+<p>Every problem in NP can be reduced to X. We will call such an X an NP-complete problem.</p>
+<p>To prove a problem is np-complete, we need to prove it lies in Np and it is np-hard. In NP is proved by verifying the solution in polynomial time. Np-hard is proved by using Karp-reduction from known NP-hard problem.</p>
+<p>the NP-complete problems are the hardest problems in NP</p>
+<h2><span id="the-cook-levin-theorem">The Cook-Levin Theorem</span></h2><p>The Sat problem is NP-hard.</p>
+<h3><span id="hamiltonian-cycle">Hamiltonian Cycle</span></h3><p>Reduction from Sat to Hamiltonian Cycle.</p>
+<h3><span id="travelling-salesman">Travelling Salesman</span></h3><p>Reduction from Hamiltonian Cycle</p>
+<h3><span id="graph-coloring">Graph Coloring</span></h3><p>Graph Coloring is NP-hard.<br>2-coloring is not NP-hard.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><p>we say that a set of nodes S is a vertex cover if every edge e has at least one end in S.</p>
+<h3><span id="set-cover">Set Cover</span></h3><p>Given a set U of n elements, a collection S1,…, Sm of subsets of U, and<br>a number k, does there exist a collection of at most k of these sets whose<br>union is equal to all of U?</p>
+<h2><span id="conp">CoNP</span></h2><p>The complexity class CoNP consists of all problems where a “no” answer can be efficiently verified.<br>For every NP-complete problem there is a<br>corresponding CoNP-complete problem.</p>
+<p>We do not know if NP=CoNP.</p>
+<h2><span id="pspace">PSPACE</span></h2><p>The complexity class PSPACE consists of all problems that can<br>be solved by an algorithm using at most a polynomial amount of<br>space.<br>It is strongly believed that NP != PSPACE, but we do not even<br>know with certainty whether P != PSPACE or not!</p>
+<p>For many 2-player games like Geography, deciding if there is a<br>winning strategy from a given position is a PSPACE problem</p>
+<h2><span id="bpp-and-zpp">BPP and ZPP</span></h2><h3><span id="bpp">BPP</span></h3><p>BPP (Bounded-error Probabilistic Polynomial-time)<br>consists of all decision problems for which there is a<br>polynomial-time randomized algorithms that is correct with<br>probability at least 2=3 on all instances.</p>
+<h3><span id="zpp">ZPP</span></h3><p>ZPP (Zero-error Probabilistic Polynomial Time)<br>consists of all decision problems for which there is a Las Vegas<br>algorithm running in expected polynomial time.<br>It is widely believed that P = ZPP = BPP but all three could be<br>different.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2023-01-03T12:49:28.000Z">2023-01-03</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 64 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2023/01/03/toolnotes/">toolnotes</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="背景">背景</span></h2><p>记录平时学习和开发工程中使用工具的一些备忘点。</p>
+<p>用vim时，鼠标右键不能粘贴而是进入了visual模式，解决方法：<br>：set mouse-=a</p>
+<p>远程jupyter配置<br><a href="https://juejin.cn/post/7026371559971520525" target="_blank" rel="noopener">https://juejin.cn/post/7026371559971520525</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2022-12-29T20:59:33.000Z">2022-12-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    8 minutes read (About 1239 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2022/12/29/PCA/">PCA</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="关于pca为什么要中心化">关于PCA为什么要中心化</span></h2><p>因为不做zero mean，根本做不了PCA。从线性变换的本质来说，PCA就是在线性空间做一个旋转（数据矩阵右乘协方差矩阵的特征向量矩阵），然后取低维子空间（实际上就是前n_components个特征向量张成的子空间）上的投影点来代替原本的点，以达到降维的目的，注意我说的，只做了旋转，没有平移，所以首先你要保证原本空间里的点是以原点为中心分布的，这就是zero mean的目的。另外如果自己手撸过PCA的算法就知道了，explained_variance_和explained_variance_ratio_是怎么实现的？explained_variance就是协方差矩阵的每个特征值除以sample数，而explained_variance_ratio_是每个特征值除以所有特征值之和。为什么这么简单呢？这也和zero mean有关，如果你用最大投影长度的证法去证明PCA就会在过程中很自然的发现这一点，在这里我就不展开了。</p>
+<p>链接：<a href="https://www.zhihu.com/question/40956812/answer/848527057" target="_blank" rel="noopener">https://www.zhihu.com/question/40956812/answer/848527057</a></p>
+<p>PCA 去中心化不一定是必需的，这一结论成立的前提是严格使用协方差矩阵的定义式 S=XXT−nμμT，而不是用 XXT 来当作协方差矩阵。</p>
+<p> Centering is an important pre-processing step because it ensures that the resulting components are only looking at the variance within the dataset, and not capturing the overall mean of the dataset as an important variable (dimension). Without mean-centering, the first principal component found by PCA might correspond with the mean of the data instead of the direction of maximum variance.<br> <a href="https://towardsdatascience.com/tidying-up-with-pca-an-introduction-to-principal-components-analysis-f876599af383" target="_blank" rel="noopener">https://towardsdatascience.com/tidying-up-with-pca-an-introduction-to-principal-components-analysis-f876599af383</a></p>
+<p> Why is minimizing squared residuals equivalent to maximizing variance?<br> Consider a datapoint  (row  of ). Then the contribution of that datapoint to the variance is , or equivalently the squared Euclidean length . Applying the Pythagorean theorem shows that this total variance equals the sum of variance lost (the squared residual) and variance remaining. Thus, it is equivalent to either maximize remaining variance or minimize lost variance to find the principal components. </p>
+<p> <a href="http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/" target="_blank" rel="noopener">http://alexhwilliams.info/itsneuronalblog/2016/03/27/pca/</a></p>
+<p> PCA can only be interpreted as the singular value decomposition of a data matrix when the columns have first been centered by their means.<br> <a href="https://stats.stackexchange.com/questions/29781/when-conducting-multiple-regression-when-should-you-center-your-predictor-varia" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/29781/when-conducting-multiple-regression-when-should-you-center-your-predictor-varia</a></p>
+<p> PCA focuses on “explaining” the data matrix using the sample means plus the eigencomponents.  When the column mean is far from the origin, the first right singular value is usually quite highly correlated with column mean - thus using PCA concentrates on the second, third and sometimes higher order singular vectors.  This is a loss of information when the mean is informative for the process under study.  On the other hand, when the scatterplot of the data is roughly elliptical, the PCs typically align with the major axes of the ellipse.  Due to the uncorrelatedness constraint, if the mean is far from the origin, the first singular vector will be close to the mean and the others will be tilted away form the major axes of the ellipse.  Thus the first singular vector will not be informative about the spread of the data, and the second and third singular values will not be in the most informative directions.  Generally, PCA will be more informative, particularly as a method for plotting the data, than uncentered SVD.<br> <a href="https://online.stat.psu.edu/stat555/node/94/" target="_blank" rel="noopener">https://online.stat.psu.edu/stat555/node/94/</a></p>
+<p> Since X is zero centered we can think of them as capturing the spread of the data around the mean in a sense reminiscent of PCA.<br> <a href="https://intoli.com/blog/pca-and-svd/" target="_blank" rel="noopener">https://intoli.com/blog/pca-and-svd/</a></p>
+<p> that reconstruction error is minimized by taking as columns of W some k orthonormal vectors maximizing the total variance of the projection.<br> <a href="https://stats.stackexchange.com/questions/130721/what-norm-of-the-reconstruction-error-is-minimized-by-the-low-rank-approximation" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/130721/what-norm-of-the-reconstruction-error-is-minimized-by-the-low-rank-approximation</a></p>
+<p> PCA is a regressional model without intercept1. Thus, principal components inevitably come through the origin. If you forget to center your data, the 1st principal component may pierce the cloud not along the main direction of the cloud, and will be (for statistics purposes) misleading.<br><a href="https://stats.stackexchange.com/questions/22329/how-does-centering-the-data-get-rid-of-the-intercept-in-regression-and-pca" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/22329/how-does-centering-the-data-get-rid-of-the-intercept-in-regression-and-pca</a></p>
+<p>Centering brings in a big difference. PCA with centering maximizes SS deviations from the mean (i.e. variance); PCA on raw data maximizes SS deviations from the zero point.<br><a href="https://stats.stackexchange.com/questions/489037/principal-components-with-and-without-centering?noredirect=1&amp;lq=1" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/489037/principal-components-with-and-without-centering?noredirect=1&amp;lq=1</a></p>
+<h2><span id="svd-and-pca">SVD and PCA</span></h2><p>  <a href="https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca" target="_blank" rel="noopener">https://stats.stackexchange.com/questions/134282/relationship-between-svd-and-pca-how-to-use-svd-to-perform-pca</a></p>
+<h2><span id="singular-value-decomposition">singular value decomposition</span></h2><p> SVD is basically a matrix factorization technique, which decomposes any matrix into 3 generic and familiar matrices.</p>
+<h2><span id="eigenvalues-and-eigenvectors">Eigenvalues and Eigenvectors</span></h2><p> The concept of eigenvectors is applicable only for square matrices. The vector space spanned by an eigenvector is called an eigenspace.<br> A square matrix is called a diagonalizable matrix if it can be written in the format: $ A=PDP^{-1} $, D is the diagonal matrix comprises of the eigenvalues as diagonal elements<br> A Symmetric Matrix where the matrix is equal to the transpose of itself.<br> Special properties of a Symmetric Matrix with respect to eigenvalues and eigenvectors:Has only Real eigenvalues;Always diagonalizable;Has orthogonal eigenvectors.<br> A matrix is called an Orthogonal Matrix if the transpose of the matrix is the inverse of that matrix.<br>ince the eigenvectors of a Symmetric matrix are orthogonal to each other, matrix P in the diagonalized matrix A is an orthogonal matrix. So we say that any Symmetric Matrix is Orthogonally Diagonalizable.</p>
+<p><a href="https://towardsdatascience.com/singular-value-decomposition-and-its-applications-in-principal-component-analysis-5b7a5f08d0bd" target="_blank" rel="noopener">https://towardsdatascience.com/singular-value-decomposition-and-its-applications-in-principal-component-analysis-5b7a5f08d0bd</a></p>
+<p>% For the PCA derived from maximal preserved variance \cite{lee2007nonlinear}, we have the covariance<br>% of $\mathbf{y}$, which is<br>% \begin{equation}<br>% \mathbf{C}_{\mathbf{y} \mathbf{y}}=E\left{\mathbf{y} \mathbf{y}^T\right}<br>% \end{equation}<br>% This equation is valid only when $\mathbf{y}$ is centered.<br> The goal of PCA is to maximize the variance of the data along each of the principal components. Centering is an important step because it ensures that the resulting components are only looking at the variance of features, and not capturing the means of the features as important. Without mean-centering, the first principal component found by PCA might correspond with the mean of the data instead of the direction of maximum variance.</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 169 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2022/12/23/Network-Representation-Learning/">Network Representation Learning</a>
+            
+        </h1>
+        <div class="content">
+            <h2><span id="background">background</span></h2><p>Recording studying during KTH. First blog about network representation learning, a project belongs to machine learning, advanced course.</p>
+<h2><span id="line">LINE</span></h2><p>Reproduce paper “LINE: Large-scale Information Network Embedding”.</p>
+<h3><span id="alias-table-method">Alias Table Method</span></h3><p>It’s a method of effiently drawing samples from discrete distribution.<br>reference:<br><a href="https://www.keithschwarz.com/darts-dice-coins/" target="_blank" rel="noopener">https://www.keithschwarz.com/darts-dice-coins/</a><br><a href="https://blog.csdn.net/haolexiao/article/details/65157026" target="_blank" rel="noopener">https://blog.csdn.net/haolexiao/article/details/65157026</a></p>
+<h3><span id="negative-sampling">Negative Sampling</span></h3><h4><span id="word2vec">word2vec</span></h4><p>Original paper:<br>Efficient estimation of word representations in vector space.<br>reference:<br>word2vec Explained: Deriving Mikolov et al.’s<br>Negative-Sampling Word-Embedding Method</p>
+<h4><span id="skip-gram-model">Skip-Gram Model</span></h4><p>Original papaer:Distributed Representations of Words and Phrases<br>and their Compositionality.<br>The idea behind the word2vec models is that the words that appear in the same context (near each other) should have similar word vectors. Therefore, we should consider some notion of similarity in our objective when training the model. This is done using the dot product since when vectors are similar, their dot product is larger.<br>reference:<br><a href="https://www.baeldung.com/cs/nlps-word2vec-negative-sampling" target="_blank" rel="noopener">https://www.baeldung.com/cs/nlps-word2vec-negative-sampling</a></p>
+<h2><span id="graphsage">graphSage</span></h2>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 0 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2022/03/13/thoughts/">thoughts</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 0 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/11/15/ML-5/">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-09-26T20:05:21.000Z">2021-09-26</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 93 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/09/26/java-1/">第二十一篇 java(2)- 集合框架</a>
+            
+        </h1>
+        <div class="content">
+            <h3><span id="集合框架">集合框架</span></h3><p>java集合框架包括 Collection 和 Map 两种，Collection 存储着对象的集合，而 Map 存储着键值对(两个对象)的映射表。</p>
+<h4><span id="collection">Collection</span></h4><p>Collection下包括Set、List、Queue，各自又包含了使用不同方式的实现。</p>
+<h5><span id="set">Set</span></h5><p>Set下包括TreeSet，HashSet，LinkedHashSet。其中TreeSet基于红黑树实现。</p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-09-26T19:10:33.000Z">2021-09-26</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/theory/">theory</a>
@@ -145,7 +452,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 72 words)
+                    a minute read (About 155 words)
                 </span>
                 
             </div>
@@ -153,13 +460,12 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/09/02/RL/">第十七篇 强化学习(1)-马尔可夫决策过程</a>
+                <a class="has-link-black-ter" href="/2021/09/26/ML-4/">第二十篇 机器学习(4)-uplift模型</a>
             
         </h1>
         <div class="content">
-            <h3><span id="马尔可夫决策过程">马尔可夫决策过程</span></h3><p>马尔可夫性质：当前状态可以完全表征过程。</p>
-<p>对于任意有限的马尔可夫决策过程，都存在一个最优策略，不差于其他所有可能的策略。</p>
-<h4><span id="贝尔曼方程">贝尔曼方程</span></h4>
+            <h3><span id="uplift模型">uplift模型</span></h3><p>uplift模型中文为增益模型，是工业界因果推断与机器学习结合最成熟的算法之一。传统的监督学习模型，往往是对输入x去预测一个y，而增益模型注重于x的变化对y的影响，以广告为例，传统的监督学习往往是给定这个特征去预测用户是否会点击，而增益模型注重的是给这个客户投放广告与否对客户是否购买广告商品所产生的影响。</p>
+<h3><span id="因果推断">因果推断</span></h3>
         </div>
         
         
@@ -177,7 +483,47 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-31T19:38:04.000Z">2021-08-31</time>
+                <time class="level-item has-text-grey" datetime="2021-09-25T14:43:07.000Z">2021-09-25</time>
+                
+                <div class="level-item">
+                <a class="has-link-grey -link" href="/categories/theory/">theory</a>
+                </div>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 0 words)
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/2021/09/25/DL/">第十九篇 深度学习(1)-梯度下降</a>
+            
+        </h1>
+        <div class="content">
+            
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2021-09-22T19:19:09.000Z">2021-09-22</time>
                 
                 <div class="level-item">
                 <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
@@ -187,7 +533,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 0 words)
+                    a few seconds read (About 10 words)
                 </span>
                 
             </div>
@@ -195,350 +541,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2021/08/31/python-2/">第十六篇 python(2)-matplotlib绘图</a>
+                <a class="has-link-black-ter" href="/2021/09/22/python-3/">第十八篇 python(4)-多进程</a>
             
         </h1>
         <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-29T17:07:36.000Z">2021-08-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/algorithm/">algorithm</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/29/ML-3/">第十五篇 机器学习(4)-决策树</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-29T17:07:20.000Z">2021-08-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/algorithm/">algorithm</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/29/ML-2/">第十四篇 机器学习(3)-支持向量机</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-29T17:04:04.000Z">2021-08-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/algorithm/">algorithm</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/29/ML-1/">第十三篇 机器学习(2)-朴素贝叶斯</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-29T16:59:15.000Z">2021-08-29</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/algorithm/">algorithm</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 24 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/29/ML/">第十二篇 机器学习(1)-逻辑回归</a>
-            
-        </h1>
-        <div class="content">
-            <h3><span id="逻辑回归">逻辑回归</span></h3><p>逻辑回归名为回归，其实主要是用在分类上。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-08T14:56:36.000Z">2021-08-08</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/web-development/">web development</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/08/python-1/">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-08-07T19:39:46.000Z">2021-08-07</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/database/">database</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    a few seconds read (About 0 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/08/07/SQL/">第十篇 SQL(1)-数据统计</a>
-            
-        </h1>
-        <div class="content">
-            
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-07-30T19:39:18.000Z">2021-07-30</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 minutes read (About 426 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/07/30/python/">第九篇 python(1)-语法进阶</a>
-            
-        </h1>
-        <div class="content">
-            <h3><span id="yield">yield</span></h3><p>yield可以暂停一个函数的运行，返回值给函数调用者，并使得函数可以从上次离开的地方接着运行。通常我们可以借助yield来实现一个生成器。</p>
-<h3><span id="生成器">生成器</span></h3><p>生成器是一个可以产生一个序列的函数，调用生成器函数会产生一个生成器对象，并不会开始启动函数，只有当执行<code>__next__()</code>时函数才会执行。生成器时一个一次性操作，和我们常见的列表、字典等可以迭代的对象不同，列表等是可以无限次迭代的。</p>
-<h3><span id="装饰器">装饰器</span></h3><p>python中函数是一等对象，所以函数可以像普通变量一样当作参数传给另一个函数的，装饰器可以在不改变另一个函数的情况下用来封装另一个函数以拓展这个被封装函数的功能，有了装饰器，我们就可以抽离出大量与函数功能本身无关的雷同代码到装饰器中并继续重用。</p>
-<p>装饰器不仅可以是函数，也可以是类。使用类装饰器主要依靠类的<code>__call__</code>方法。我们可以直接定义一个装饰器函数或者装饰器类，但是有个缺点是原函数的元信息不见了，比如函数的<code>docstring</code>、<code>__name__</code>都会发生改变，此时我们可以使用<strong>functools.wraps</strong>，<code>wraps</code>本身也是一个装饰器，它能把原函数的元信息拷贝到装饰器里面的函数中。</p>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2021-07-16T19:26:51.000Z">2021-07-16</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/programming-language/">programming language</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    8 minutes read (About 1133 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2021/07/16/java/">第八篇 java(1)-面向对象</a>
-            
-        </h1>
-        <div class="content">
-            <h3><span id="类与对象">类与对象</span></h3><p>类就是用户定义好的原型，可以通过类创建对象，类中定义好了一系列的属性或者是函数。对象是真正的实体。当为一个类创建了对象，也可以说是实例化了这个类，java中有几种创建类的方式。</p>
-<p>当只是简单地声明一个类变量时，如<code>Object a</code>，不同于原始变量int、double等声明变量时就分配好了内存，这样的声明方式并没有创建好一个对象，需要通过new关键字来触发类构造器，并为这个对象分配好内存。所有类都至少有一个构造函数，如果没有定义，Java编译器会自动创建一个无参构造函数。这个构造器会调用其父类的无参构造函数。</p>
-<h3><span id="封装-继承与多态">封装、继承与多态</span></h3><h4><span id="修饰符">修饰符</span></h4><p>在介绍封装、继承与多态之前，需要先了解java中的修饰符，修饰符有两类：</p>
-<p>一类是控制访问权限的，一类是实现其他功能的。控制访问权限的修饰符有</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 以下为类修饰符</span><br><span class="line">public --任何类均可访问。</span><br><span class="line">default --没有指定修饰符时的默认修饰符，只有同一个包中的类可以访问。</span><br><span class="line">// 以下为属性、方法修饰符</span><br><span class="line">public --任何类均可访问。</span><br><span class="line">private --只有声明的类中可以访问。</span><br><span class="line">protected --只有同一个包中的类和其子类可以访问。</span><br><span class="line">default --没有指定修饰符时的默认修饰符，只有同一个包中的类可以访问。</span><br></pre></td></tr></table></figure>
-<p>实现其他功能的修饰符有：</p>
-<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">// 以下为类修饰符</span><br><span class="line">final --此类不能被其他类继承。</span><br><span class="line">abstract --抽象类，此类不能用来创建对象。</span><br><span class="line">// 以下为属性、方法修饰符</span><br><span class="line">final --属性、方法不能被重载。</span><br><span class="line">static --属性、方法属于类而不是对象。</span><br><span class="line">abstract -- 只能用在抽象类中的方法上。</span><br><span class="line">transient -- 序列化对象时跳过此属性和方法。</span><br><span class="line">synchronized -- 此方法一次只能被一个线程访问。</span><br><span class="line">volatile --此属性的值不是线程内部缓存，而是从主内存中读取。</span><br></pre></td></tr></table></figure>
-<h4><span id="封装">封装</span></h4><p>封装可以将实现细节隐藏起来，其最主要的功能在于我们能修改自己的实现代码，而不用修改那些调用我们代码的程序片段。</p>
-<h4><span id="继承">继承</span></h4><p>在继承中，先了解两个概念：父类和子类，父类就是被继承的类，子类就是继承其他类的类，在jva中，继承使用<strong>extends</strong>关键字或<strong>implements</strong>关键字。java中类的继承是单一继承，一个子类只能拥有一个父类。所有 Java 的类均是由<strong>java.lang.Object </strong>类继承而来的。通过使用关键字 <strong>extends</strong> ，子类可以继承父类的除 private 属性外所有的属性。<strong>Implements</strong> 关键字在类继承接口的情况下使用，可以多继承接口。</p>
-<h4><span id="重写override与重载overload">重写(Override)与重载(Overload)</span></h4><h5><span id="重写override">重写(Override)</span></h5><p>重写是子类对父类的允许访问的方法的实现过程进行重新编写！返回值和形参都不能改变。</p>
-<p>子类在声明变量时，可以使用父类类型，这是因为在编译阶段，只是检查参数的引用类型，然而在运行时，Java 虚拟机 (JVM) 指定对象的类型并且运行该对象的方法。需要注意的是构造方法不能被重写。需要在子类中调用父类的被重写方法时，要使用 super 关键字。</p>
-<h5><span id="重载overload">重载(Overload)</span></h5><p>重载 (overloading) 是在一个类里面，方法名字相同，而参数不同。返回类型可以相同也可以不同。构造函数是可以重载的。</p>
-<h4><span id="多态">多态</span></h4><p>通过继承、重写、重载可以以多种不同的方式实现某个操作，便可以实现多态。除此之外，java中还有接口和抽象类以实现多态。</p>
-<h4><span id="接口">接口</span></h4><p>接口通常以interface来声明。一个实现接口的类，必须实现接口内所描述的所有方法，否则就必须声明为抽象类。</p>
-
+            <h3><span id="协程-线程与进程">协程、线程与进程</span></h3><h4><span id="协程">协程</span></h4>
         </div>
         
         
@@ -567,6 +574,8 @@
             <li><a class="pagination-link is-current" href="/page/2/">2</a></li>
             
             <li><a class="pagination-link has-text-black-ter" href="/page/3/">3</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/4/">4</a></li>
             
         </ul>
     </nav>
@@ -612,7 +621,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        30
+                        40
                     </p>
                 </div>
             </div>
@@ -632,7 +641,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        12
+                        16
                     </p>
                 </div>
             </div>
@@ -783,7 +792,7 @@
                 <span class="level-item">theory</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">5</span>
+                <span class="level-item tag">4</span>
             </span>
         </a></li><li>
         <a class="level is-marginless" href="/categories/web-development/">
@@ -805,7 +814,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/KTH/" style="font-size: 10px;">KTH</a> <a href="/tags/Linux/" style="font-size: 12.5px;">Linux</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/java/" style="font-size: 12.5px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/operations-research/" style="font-size: 10px;">operations research</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 17.5px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a>
+        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
     </div>
 </div>
 
@@ -822,16 +831,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/23/Network-Representation-Learning/" class="media-left">
+            <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Network Representation Learning">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time></div>
-                    <a href="/2022/12/23/Network-Representation-Learning/" class="has-link-black-ter is-size-6">Network Representation Learning</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -841,16 +850,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/03/Inference on Graphical Model/" class="media-left">
+            <a href="/2023/06/19/large-model/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-03T10:24:13.986Z">2022-12-03</time></div>
-                    <a href="/2022/12/03/Inference on Graphical Model/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -860,16 +869,16 @@
         
         <article class="media">
             
-            <a href="/2022/03/13/thoughts/" class="media-left">
+            <a href="/2023/06/09/image-task/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="thoughts">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time></div>
-                    <a href="/2022/03/13/thoughts/" class="has-link-black-ter is-size-6">thoughts</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -879,16 +888,16 @@
         
         <article class="media">
             
-            <a href="/2021/11/15/ML-5/" class="media-left">
+            <a href="/2023/05/16/time-complexity/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二十二篇 机器学习(5)--不平衡的分类问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time></div>
-                    <a href="/2021/11/15/ML-5/" class="has-link-black-ter is-size-6">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -898,16 +907,16 @@
         
         <article class="media">
             
-            <a href="/2021/10/01/java-2/" class="media-left">
+            <a href="/2023/05/05/object-detection/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-01T11:37:23.000Z">2021-10-01</time></div>
-                    <a href="/2021/10/01/java-2/" class="has-link-black-ter is-size-6">java-2</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -926,6 +935,61 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2022/12/">
@@ -961,23 +1025,12 @@
         </li>
         
         <li>
-            <a class="level is-marginless" href="/archives/2021/10/">
-                <span class="level-start">
-                    <span class="level-item">October 2021</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
             <a class="level is-marginless" href="/archives/2021/09/">
                 <span class="level-start">
                     <span class="level-item">September 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1062,12 +1115,23 @@
             <ul class="menu-list">
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/KTH/">
                         <span class="level-start">
                             <span class="level-item">KTH</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1079,6 +1143,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -1101,6 +1176,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1150,17 +1236,6 @@
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/operations-research/">
-                        <span class="level-start">
-                            <span class="level-item">operations research</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/probability/">
                         <span class="level-start">
                             <span class="level-item">probability</span>
@@ -1177,7 +1252,7 @@
                             <span class="level-item">python</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">4</span>
+                            <span class="level-item tag">5</span>
                         </span>
                     </a>
                 </li>
@@ -1189,6 +1264,28 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1218,16 +1315,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/23/Network-Representation-Learning/" class="media-left">
+            <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Network Representation Learning">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-23T15:44:05.000Z">2022-12-23</time></div>
-                    <a href="/2022/12/23/Network-Representation-Learning/" class="has-link-black-ter is-size-6">Network Representation Learning</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1237,16 +1334,16 @@
         
         <article class="media">
             
-            <a href="/2022/12/03/Inference on Graphical Model/" class="media-left">
+            <a href="/2023/06/19/large-model/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="large model">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-12-03T10:24:13.986Z">2022-12-03</time></div>
-                    <a href="/2022/12/03/Inference on Graphical Model/" class="has-link-black-ter is-size-6"></a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-19T15:00:21.000Z">2023-06-19</time></div>
+                    <a href="/2023/06/19/large-model/" class="has-link-black-ter is-size-6">large model</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1256,16 +1353,16 @@
         
         <article class="media">
             
-            <a href="/2022/03/13/thoughts/" class="media-left">
+            <a href="/2023/06/09/image-task/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="thoughts">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="image task">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2022-03-13T20:05:16.000Z">2022-03-13</time></div>
-                    <a href="/2022/03/13/thoughts/" class="has-link-black-ter is-size-6">thoughts</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-09T13:49:42.000Z">2023-06-09</time></div>
+                    <a href="/2023/06/09/image-task/" class="has-link-black-ter is-size-6">image task</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1275,16 +1372,16 @@
         
         <article class="media">
             
-            <a href="/2021/11/15/ML-5/" class="media-left">
+            <a href="/2023/05/16/time-complexity/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="第二十二篇 机器学习(5)--不平衡的分类问题">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-11-15T19:44:05.000Z">2021-11-15</time></div>
-                    <a href="/2021/11/15/ML-5/" class="has-link-black-ter is-size-6">第二十二篇 机器学习(5)--不平衡的分类问题</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
+                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1294,16 +1391,16 @@
         
         <article class="media">
             
-            <a href="/2021/10/01/java-2/" class="media-left">
+            <a href="/2023/05/05/object-detection/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="java-2">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2021-10-01T11:37:23.000Z">2021-10-01</time></div>
-                    <a href="/2021/10/01/java-2/" class="has-link-black-ter is-size-6">java-2</a>
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
+                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1322,6 +1419,61 @@
             Archives
         </h3>
         <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2023/01/">
+                <span class="level-start">
+                    <span class="level-item">January 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
         
         <li>
             <a class="level is-marginless" href="/archives/2022/12/">
@@ -1357,23 +1509,12 @@
         </li>
         
         <li>
-            <a class="level is-marginless" href="/archives/2021/10/">
-                <span class="level-start">
-                    <span class="level-item">October 2021</span>
-                </span>
-                <span class="level-end">
-                    <span class="level-item tag">1</span>
-                </span>
-            </a>
-        </li>
-        
-        <li>
             <a class="level is-marginless" href="/archives/2021/09/">
                 <span class="level-start">
                     <span class="level-item">September 2021</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">6</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -1458,12 +1599,23 @@
             <ul class="menu-list">
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/Algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">Algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/KTH/">
                         <span class="level-start">
                             <span class="level-item">KTH</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">1</span>
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1475,6 +1627,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Machine-Learning/">
+                        <span class="level-start">
+                            <span class="level-item">Machine Learning</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
                         </span>
                     </a>
                 </li>
@@ -1497,6 +1660,17 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/algorithm/">
+                        <span class="level-start">
+                            <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1546,17 +1720,6 @@
                 </li>
                 
                 <li>
-                    <a class="level is-marginless" href="/tags/operations-research/">
-                        <span class="level-start">
-                            <span class="level-item">operations research</span>
-                        </span>
-                        <span class="level-end">
-                            <span class="level-item tag">1</span>
-                        </span>
-                    </a>
-                </li>
-                
-                <li>
                     <a class="level is-marginless" href="/tags/probability/">
                         <span class="level-start">
                             <span class="level-item">probability</span>
@@ -1573,7 +1736,7 @@
                             <span class="level-item">python</span>
                         </span>
                         <span class="level-end">
-                            <span class="level-item tag">4</span>
+                            <span class="level-item tag">5</span>
                         </span>
                     </a>
                 </li>
@@ -1585,6 +1748,28 @@
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/speech/">
+                        <span class="level-start">
+                            <span class="level-item">speech</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/tools/">
+                        <span class="level-start">
+                            <span class="level-item">tools</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
                         </span>
                     </a>
                 </li>
@@ -1610,7 +1795,7 @@
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2022 s-serenity&nbsp;
+                &copy; 2023 s-serenity&nbsp;
                 Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> & <a href="http://github.com/ppoffice/hexo-theme-icarus">Icarus</a>
                 </p>
             </div>
