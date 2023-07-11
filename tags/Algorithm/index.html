@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tag: algorithm - s-serenity</title>
+<title>Tag: Algorithm - s-serenity</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -11,7 +11,7 @@
 <meta name="keywords" content="Algorithm study development">
 <meta property="og:type" content="website">
 <meta property="og:title" content="s-serenity">
-<meta property="og:url" content="http://yoursite.com/tags/algorithm/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/Algorithm/index.html">
 <meta property="og:site_name" content="s-serenity">
 <meta property="og:description" content="Recording and sharing my learning process.">
 <meta property="og:locale" content="en">
@@ -133,7 +133,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">algorithm</a></li>
+            <li class="is-active"><a href="#" aria-current="page">Algorithm</a></li>
         </ul>
         </nav>
     </div>
@@ -145,13 +145,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time>
+                <time class="level-item has-text-grey" datetime="2023-04-25T09:59:30.000Z">2023-04-25</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    7 minutes read (About 1064 words)
+                    4 minutes read (About 646 words)
                 </span>
                 
             </div>
@@ -159,48 +159,26 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2023/05/16/time-complexity/">time complexity</a>
+                <a class="has-link-black-ter" href="/2023/04/25/Turing-Machines/">Turing Machines and Undecidability</a>
             
         </h1>
         <div class="content">
-            <h2><span id="time-complexity">time complexity</span></h2><h3><span id="big-o-notation">big O notation</span></h3><p>Big O notation measures the asymptotic growth of a function. f (n) = O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n).</p>
-<h3><span id="ω-and-θ-notation">Ω and Θ notation</span></h3><p>We say f (n) = Ω(g(n)) if g(n) = O(f (n)).<br>We say f (n) = Θ(g(n)) if f (n) = O(g(n)) and g(n) = O(f (n)).</p>
-<h3><span id="types-of-complexity">types of complexity</span></h3><p>Worst-case complexity: what is the largest possible running time on any input of size n?<br>Average-case complexity: what is the average running time on a random input of size n?<br>Best-case complexity: what is the smallest possible running time on any input of size n?</p>
-<h2><span id="graph-algorithm">Graph algorithm</span></h2><h3><span id="ways-of-representing-graphs">ways of representing graphs</span></h3><h4><span id="adjacency-matrix">adjacency matrix</span></h4><p>For graph with n vertices this is an n × n matrix A, where $A_{ij}$ = 1 if there is an edge from node i to node j, $A_{ij}$ = 0 otherwise.<br>If the graph is undirected, the matrix is symmetric</p>
-<h4><span id="adjacency-lists">adjacency lists</span></h4><p>For each vertex, keep a list of its neighbors.</p>
-<h4><span id="incidence-matrix">incidence matrix</span></h4><p>The incidence matrix of an undirected graph with n vertices and m edges is an n × m matrix B where $B_{ij}$ = 1 if the i’th vertex is part of the j’th edge, $B_{ij}$ = 0 otherwise.</p>
-<h3><span id="two-fundamental-graph-exploration-algorithms">Two fundamental graph exploration algorithms</span></h3><h4><span id="depth-first-search-dfs">Depth First Search (DFS)</span></h4><h4><span id="breadth-first-search-bfs">Breadth First Search (BFS)</span></h4><p>For the BFS tree, this gives the shortest (fewest number of steps) paths from s to all other nodes</p>
-<h2><span id="greedy-algorithms">Greedy Algorithms</span></h2><p>Greedy algorithms are algorithms that build a solution step by step by always choosing the currently best option. </p>
-<h3><span id="interval-scheduling">Interval Scheduling</span></h3><p>Input: A list of intervals<br>Output: Maximum number of these intervals that can be chosen without getting any overlaps.<br>Solution:Pick the one that ends first.<br>Prove correctness of such an algorithm: Common strategy for analyzing greedy algorithms: prove that the algorithm always “stays ahead” of the optimal solution.</p>
-<h3><span id="job-scheduling-with-minimum-lateness">Job Scheduling With Minimum Lateness</span></h3><p>Input: A list of jobs, each job has a deadline di<br>, and a duration ti<br>(how long it takes to finish the job)<br>Output: Smallest possible maximum lateness in a schedule for doing<br>all jobs.<br>Solution: Pick the job with smallest di.</p>
-<h3><span id="shortest-path">Shortest path</span></h3><p>It is helpful to instead consider a more general problem. Let us try<br>to find the shortest paths from s to all other vertices: Dijkstra’s algorithm: we have some set D of vertices we have found<br>the shortest path to, and each step we add a new vertex to D. add the vertex outside D which is closest to<br>s when using only vertices in D as intermediate vertices.</p>
-<h2><span id="divide-amp-conquer">Divide &amp; Conquer</span></h2><p>Algorithms that split the input into significantly smaller parts, recursively solves each part, and then combines the subresults (somehow).</p>
-<h3><span id="merge-sort">Merge sort</span></h3><p>O(n log n).</p>
-<h3><span id="polynomial-multiplication">Polynomial multiplication</span></h3><p>$T(n) = O(n^{1.59})$.<br>Using FFT, get time O(n log n) for Polynomial Multiplication</p>
-<h2><span id="unit-cost-model-and-bit-cost-model">Unit cost model and Bit cost model</span></h2><p>Unit cost model: assume all numbers fit in machine registers so that basic arithmetic operations take constant time.<br>Bit cost model: account for size of numbers and the time it takes to manipulate them.</p>
-<h3><span id="integer-multiplication">Integer multiplication</span></h3><p>Karatsuba’s algorithm: $T(n) = O(n^{1.59})$.</p>
-<h3><span id="master-theorem">Master Theorem</span></h3><h2><span id="dynamic-programming">Dynamic Programming</span></h2><p>Split a problem into smaller subproblems such that results from one<br>subproblem can be reused when solving others</p>
-<h3><span id="fibonacci-numbers">Fibonacci numbers</span></h3><p>The Fibonacci numbers are a classic number sequence in<br>mathematics, defined by the linear recurrence<br>f0 = 0; f1 = 1; and fn = fn−1 + fn−2 for n ≥ 2</p>
-<h3><span id="weighted-interval-scheduling">Weighted Interval Scheduling</span></h3><p>Input: A list of intervals [s1; t1]; [s2; t2]; : : : ; [sn; tn], each interval<br>[si<br>; ti<br>] has a weight wi<br>Output: What is the maximum total weight of these intervals that<br>can be chosen without getting any overlaps</p>
-<h3><span id="knapsack">Knapsack</span></h3><p>Input: A capacity C and a list of objects, each object has a value vi<br>and weight wi<br>Output: Subset S of objects such that<br>$\sum_{i∈S} wi ≤ C$ and $\sum_{i∈S} vi$ is maximized.</p>
-<h3><span id="top-down-and-bottom-up-fashion">top-down and bottom-up fashion</span></h3><p>top-down fashion: we start at the end result and<br>recursively compute results for relevant subproblems.</p>
-<p> bottom-up fashion: we iteratively compute results for larger and larger subproblems.</p>
-<h3><span id="characteristics-of-dynamic-programming">Characteristics of dynamic programming</span></h3><p>A problem is amenable to dynamic program if we can define a set<br>of subproblems such that:</p>
-<ol>
-<li>The number of different subproblems is as small as possible.</li>
-<li>There is some ordering of subproblems from “small” to “large”</li>
-<li>The value of a subproblem can be efficiently computed given<br>the values of some set of smaller subproblems.</li>
-</ol>
-<h3><span id="sequence-alignment">Sequence Alignment</span></h3><p>Input: Strings x and y of lengths m and n, parameters ‹ and ¸<br>Output: Minimum cost of an alignment of x and y with parameters $\sigma$ and $\alpha$.<br>$\alpha is the cost of aligning two different characters with each other<br>$\sigma$ is the cost of not aligning a character</p>
-<h3><span id="matrix-chain-multiplication">Matrix Chain Multiplication</span></h3><h2><span id="network-flow">Network Flow</span></h2><h3><span id="the-max-flow-problem">The Max-Flow problem</span></h3><p>Input: Flow network G.<br>Output: Flow f maximizing the value v(f ).<br>Solution: The Ford-Fulkerson Algorithm O(C(m + n))<br> or the scaling algorithm with O(m2<br>log(C)) or Edmonds-Karp algorithm with O(nm(n + m)) .</p>
-<h3><span id="edge-cuts">Edge Cuts</span></h3><p>An edge cut of a graph is a set of edges such that their removal would disconnect the graph.</p>
-<h3><span id="minimum-s-t-cut">Minimum s-t-Cut</span></h3><p>Input: A flow network G with source s and sink t.<br>Output: An s-t cut A; B of G minimizing the capacity c(A; B).</p>
-<h3><span id="the-max-flow-min-cut-theorem">The Max-Flow-Min-Cut Theorem</span></h3><p>For every flow network G, the maximum flow from s to t equals the<br>minimum capacity of an s-t cut in G.</p>
-<h3><span id="vertex-cuts">Vertex Cuts</span></h3><p>A vertex cut in a graph is a set of vertices such that if we remove<br>them, the graph splits into more than one connected component.</p>
-<h3><span id="matchings">Matchings</span></h3><p>A matching in a graph is a set M of edges such that no vertex appears in more than one edge of M.Of particular interest to us will be bipartite graphs.</p>
-<h3><span id="maximum-bipartite-matching">Maximum Bipartite Matching</span></h3><p>Input: A bipartite graph G<br>Output: A matching M in G of maximum possible size.</p>
-<h3><span id="edge-disjoint-paths">Edge-Disjoint Paths</span></h3><p>Given a directed graph with source and sink, what is maximum<br>number of edge-disjoint paths from s to t?<br>(edge-disjoint = no edge used by more than one path)</p>
-<h3><span id="project-selection">Project Selection?</span></h3>
+            <h2><span id="mathematical-model-of-computation">mathematical model of computation</span></h2><h3><span id="turing-machines">Turing Machines</span></h3><p>Turing machines are primarily a mathematical construction. A Turing machine (TM) consists of:A finite set of states: initial state(when the TM starts, it is in this state) and accepting states(if the TM ends in one of these states, it says yes); Transition rules that determine what to do based on current state and content of memory tape at current position; An alphabet, the set of symbols that can be stored on the memory tape.</p>
+<h4><span id="the-church-turing-hypothesis">The Church-Turing Hypothesis</span></h4><p>Anything which can be computed by any automatic method, can also be computed by a Turing machine.</p>
+<p>If a model can also do everything that a Turing machine can, then it is called a Turing-complete model of computation.</p>
+<h3><span id="the-ram-model">The RAM Model</span></h3><p>Models the way modern computers operate, with registers and memory cells that can be immediately accessed.</p>
+<h3><span id="comparison-based-sorting">Comparison-Based Sorting</span></h3><p>We will prove that any such algorithm must make Ω(n log n)<br>comparisons (and thus take Ω(n log n) time)</p>
+<h2><span id="undecidability">Undecidability</span></h2><h3><span id="decision-problems">decision problems</span></h3><p>The answer is just a single bit of information,“yes” or “no”.A decision problem is decidable if there exists an algorithm for solving the problem without any efficiency considerations.</p>
+<h3><span id="the-halting-problem">The Halting Problem</span></h3><p>Turing machine M, and input x to M. Does M halt when run on the input x?<br>The Halting Problem is undecidable.</p>
+<h3><span id="halting-on-empty-input">Halting On Empty Input</span></h3><p>It is undecidable.</p>
+<h3><span id="halting-on-all-inputs">Halting on All Inputs</span></h3><p>It is undecidable.</p>
+<h3><span id="recursively-enumerable-problems">Recursively Enumerable Problems</span></h3><p>There exists an “algorithm” which terminates whenever the answer is<br>“yes” but does not terminate on “no” instances.Problems which have algorithms like this are called recursively enumerable.</p>
+<h2><span id="turing-reduction">Turing reduction</span></h2><p>A Turing reduction (also called Cook reduction) from a problem<br>X to a problem Y is an efficient algorithm for problem X which is<br>allowed to assume an algorithm for Y as a black box.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><h3><span id="independent-set">Independent Set</span></h3><h3><span id="set-cover">Set Cover</span></h3><h3><span id="3-sat">3-Sat</span></h3><h2><span id="karp-reductions">Karp Reductions</span></h2><p>X ≤p Y if given any instance A of problem X, we can in<br>polynomial time construct an instance f (A) of problem Y such that<br>the answer to A is the same as the answer to f (A).</p>
+<p>Turing reduction is a type of reduction that is stronger than Karp reduction. A problem A is Turing-reducible to problem B if there exists a Turing machine that can solve problem A by making a polynomial number of calls to a black-box subroutine for problem B. In other words, if we can use an algorithm for problem B to solve problem A, then A is Turing-reducible to B. Turing reduction preserves the complexity class of a problem, meaning that if A is Turing-reducible to B and B is in a certain complexity class, then A is also in that complexity class.</p>
+<p>Karp reduction, also known as polynomial-time reduction, is a weaker form of reduction than Turing reduction. A problem A is Karp-reducible to problem B if there exists a polynomial-time algorithm that can transform any instance of problem A into an instance of problem B such that the answer to the transformed instance is the same as the answer to the original instance of problem A. In other words, if we can use an algorithm for problem B to solve a transformed version of problem A in polynomial time, then A is Karp-reducible to B. Karp reduction preserves the complexity class up to polynomial factors, meaning that if A is Karp-reducible to B and B is in a certain complexity class, then A is also in that complexity class up to polynomial factors.</p>
+<h2><span id="good-reference">Good reference</span></h2><p><a href="https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html" target="_blank" rel="noopener">https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html</a><br><a href="http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html" target="_blank" rel="noopener">http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html</a><br><a href="https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php" target="_blank" rel="noopener">https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php</a></p>
+
         </div>
         
         
@@ -218,13 +196,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2023-04-25T08:33:57.000Z">2023-04-25</time>
+                <time class="level-item has-text-grey" datetime="2023-03-28T09:46:34.000Z">2023-03-28</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 573 words)
+                    4 minutes read (About 611 words)
                 </span>
                 
             </div>
@@ -232,24 +210,34 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2023/04/25/Randomized-Algorithms/">Randomized Algorithms</a>
+                <a class="has-link-black-ter" href="/2023/03/28/NP/">NP and reduction</a>
             
         </h1>
         <div class="content">
-            <h2><span id="randomized-algorithms-and-approximation-algorithm">Randomized Algorithms and  approximation algorithm</span></h2><p>A randomized algorithm is an algorithm that uses randomness to<br>make some of its choices.</p>
-<h3><span id="las-vegas-algorithms">Las Vegas Algorithms</span></h3><p>A Las Vegas algorithm is a randomized algorithm that always finds<br>the correct answer, but the running time of the algorithm might<br>vary significantly depending on the random choices made.</p>
-<h3><span id="monte-carlo-algorithms">Monte Carlo Algorithms</span></h3><p>A Monte Carlo algorithm is a randomized algorithm where the<br>output of the algorithm may be incorrect, but we have a guarantee<br>that this only happens with small probability.</p>
-<h3><span id="random-number-generator">Random Number Generator</span></h3><p> True RNG: gets randomness from measuring physical phenomena<br>(e.g. background radiation) that we believe is sufficiently random<br>Pseudo-RNG: starting from a small random seed, new numbers are<br>generated in a completely deterministic way.</p>
-<h3><span id="randomized-min-cut-algorithm">Randomized Min-Cut Algorithm</span></h3><p>while G has more than 2 vertices:Pick a uniformly random edge of G and contract it.<br>the total runtime is $O(n^2m)$. However this algorithm can be refined and running time improved to $O(n^2log(n))$ (relatively simple algorithm) or<br>$O(m log^3(n))$ (more complicated algorithm).</p>
-<h2><span id="approximation-algorithm">approximation algorithm</span></h2><h3><span id="the-maximum-cut-problem">The Maximum Cut Problem</span></h3><p>Partition of vertices of G into two non-empty sets A and B such that number of edges between A and B is maximized. It is a NP-hard problem. Let us lower the ambition and try to find a fast algorithm that finds a “reasonably good” cut: Random algorithm:Put each vertex in either A or B independently with probability 1/2.The random assignment algorithm cuts (in expectation) at least half of all the edges in the graph.This is an example of an approximation algorithm.</p>
-<h3><span id="finding-good-but-maybe-not-optimal-solutions">finding “good but maybe not optimal” solutions</span></h3><h4><span id="heuristic-algorithms">Heuristic Algorithms</span></h4><p>Work well in some or even many cases, but with no guarantees<br>about how well they perform.</p>
-<h4><span id="approximation-algorithms">Approximation Algorithms</span></h4><p>Algorithms with provable guarantee that the solution found is relatively good compared to the optimum solution, for all instances.<br>For a minimization problem, an algorithm has approximation ratio $\alpha ≥ 1$ if for every instance it holds that $ Alg ≤ \alpha Opt$.<br>For a maximization problem, the inequality goes the other way: we have approximation ratio $\alpha ≤ 1$ if $ Alg ≥ \alpha Opt$.</p>
-<h3><span id="alpha-approximation-algorithm">alpha-approximation algorithm</span></h3><p>approximation ratio: $\alpha$.</p>
-<h3><span id="minimum-load-balancing">Minimum Load Balancing</span></h3><p>NP-hard problem.<br> Given Lengths t1; : : : ; tn of n jobs to be run on m machines, to find Minimum possible makespan of a schedule for the n jobs.<br>Approximation Algorithm for Load Balancing:Assign job i to the machine j with the smallest load. </p>
-<h3><span id="how-to-prove-it">how to prove it</span></h3><p>The main difficulty in analyzing approximation<br>algorithms is to get some handle on the Opt value. We need to find Opt, but finding Opt is NP-hard, so we find lower bounds on Opt. </p>
-<h3><span id="minimum-vertex-cover">Minimum Vertex Cover</span></h3><p>A vertex cover in a graph G is a set of vertices that “touches” every edge of G.What is the size of a minimum vertex cover of G? Approximation Algorithm for Minimum Vertex Cover:while there exists an edge e = (u; v) such that u /∈ S and v /∈ S, add (u,v) into S. The algorithm is a 2-approximation algorithm.<br>“Unique Games Conjecture”: it is known that Vertex Cover cannot be approximated better than<br>within a factor 2.</p>
-<h3><span id="minimum-set-cover">Minimum Set Cover</span></h3><p>A collection of sets S1; : : : ; Sm ⊆ U over some universe U, What is minimum number of Si’s whose union equals U?</p>
-<h3><span id="analysis-of-greedy-set-cover-finale">Analysis of Greedy Set Cover Finale?</span></h3>
+            <h2><span id="p">P</span></h2><p>P is the set of all decision problems that can be solved in<br>Polynomial time.</p>
+<h2><span id="extended-church-turing-thesis">Extended Church-Turing Thesis</span></h2><p>Any realistic model of computation can be efficiently<br>simulated by a Turing machine.<br>(The ECT is probably false!Probable counter-example: Quantum computing,However, the ECT is true for the classic models of computation<br>underlying our laptops)</p>
+<h2><span id="np-problem">NP problem</span></h2><p>We do not know of polynomial-time algorithms for these problems, and we cannot prove that no<br>polynomial-time algorithm exists. </p>
+<p>NP stands for Nondeterministic Polynomial time.</p>
+<p>NP is a set of problems that there is a polynomial-time algorithm that verify if a solution to the problem is correct.<br>Note that showing that a problem is in NP does not mean that the problem can be solved in polynomial time. It only means that a proposed solution can be verified in polynomial time.</p>
+<p>All problems in P are also in NP, we do not know if P=NP.</p>
+<h2><span id="np-hardness">NP-hardness</span></h2><p>We say that a problem Y is NP-hard if every problem in NP can be Karp-reduced to Y. To prove NP-hardness for Y we only have to find<br>one other NP-hard problem X and reduce X to Y.</p>
+<h2><span id="np-complete-problem">NP-complete problem</span></h2><p>A large class of problems in this “gray area” has been characterized,<br>and it has been proved that they are equivalent in the following sense: a polynomial-time algorithm for any one of them would imply the existence of a polynomial-time algorithm for all of them. These are the NP-complete problems.</p>
+<p>Every problem in NP can be reduced to X. We will call such an X an NP-complete problem.</p>
+<p>To prove a problem is np-complete, we need to prove it lies in Np and it is np-hard. In NP is proved by verifying the solution in polynomial time. Np-hard is proved by using Karp-reduction from known NP-hard problem.</p>
+<p>the NP-complete problems are the hardest problems in NP</p>
+<h2><span id="the-cook-levin-theorem">The Cook-Levin Theorem</span></h2><p>The Sat problem is NP-hard.</p>
+<h3><span id="hamiltonian-cycle">Hamiltonian Cycle</span></h3><p>Reduction from Sat to Hamiltonian Cycle.</p>
+<h3><span id="travelling-salesman">Travelling Salesman</span></h3><p>Reduction from Hamiltonian Cycle</p>
+<h3><span id="graph-coloring">Graph Coloring</span></h3><p>Graph Coloring is NP-hard.<br>2-coloring is not NP-hard.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><p>we say that a set of nodes S is a vertex cover if every edge e has at least one end in S.</p>
+<h3><span id="set-cover">Set Cover</span></h3><p>Given a set U of n elements, a collection S1,…, Sm of subsets of U, and<br>a number k, does there exist a collection of at most k of these sets whose<br>union is equal to all of U?</p>
+<h2><span id="conp">CoNP</span></h2><p>The complexity class CoNP consists of all problems where a “no” answer can be efficiently verified.<br>For every NP-complete problem there is a<br>corresponding CoNP-complete problem.</p>
+<p>We do not know if NP=CoNP.</p>
+<h2><span id="pspace">PSPACE</span></h2><p>The complexity class PSPACE consists of all problems that can<br>be solved by an algorithm using at most a polynomial amount of<br>space.<br>It is strongly believed that NP != PSPACE, but we do not even<br>know with certainty whether P != PSPACE or not!</p>
+<p>For many 2-player games like Geography, deciding if there is a<br>winning strategy from a given position is a PSPACE problem</p>
+<h2><span id="bpp-and-zpp">BPP and ZPP</span></h2><h3><span id="bpp">BPP</span></h3><p>BPP (Bounded-error Probabilistic Polynomial-time)<br>consists of all decision problems for which there is a<br>polynomial-time randomized algorithms that is correct with<br>probability at least 2=3 on all instances.</p>
+<h3><span id="zpp">ZPP</span></h3><p>ZPP (Zero-error Probabilistic Polynomial Time)<br>consists of all decision problems for which there is a Las Vegas<br>algorithm running in expected polynomial time.<br>It is widely believed that P = ZPP = BPP but all three could be<br>different.</p>
+
         </div>
         
         
@@ -302,7 +290,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        40
+                        42
                     </p>
                 </div>
             </div>
@@ -322,7 +310,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        18
                     </p>
                 </div>
             </div>
@@ -495,7 +483,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
+        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/computer-vision/" style="font-size: 13.33px;">computer vision</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
     </div>
 </div>
 
@@ -512,16 +500,54 @@
         
         <article class="media">
             
+            <a href="/2023/07/11/Regular-Expressions/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Regular Expressions">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-07-11T16:58:49.000Z">2023-07-11</time></div>
+                    <a href="/2023/07/11/Regular-Expressions/" class="has-link-black-ter is-size-6">Regular Expressions</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/chatgpt/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="chatgpt">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T17:17:02.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/chatgpt/" class="has-link-black-ter is-size-6">chatgpt</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python(5) subprocess and logging">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
-                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python(5) subprocess and logging</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -567,44 +593,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2023/05/16/time-complexity/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
-                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2023/05/05/object-detection/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
-                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -618,12 +606,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2023/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2023/06/">
                 <span class="level-start">
                     <span class="level-item">June 2023</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -851,6 +850,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/NLP/">
+                        <span class="level-start">
+                            <span class="level-item">NLP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/SQL/">
                         <span class="level-start">
                             <span class="level-item">SQL</span>
@@ -865,6 +875,17 @@
                     <a class="level is-marginless" href="/tags/algorithm/">
                         <span class="level-start">
                             <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/computer-vision/">
+                        <span class="level-start">
+                            <span class="level-item">computer vision</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
@@ -996,16 +1017,54 @@
         
         <article class="media">
             
+            <a href="/2023/07/11/Regular-Expressions/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Regular Expressions">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-07-11T16:58:49.000Z">2023-07-11</time></div>
+                    <a href="/2023/07/11/Regular-Expressions/" class="has-link-black-ter is-size-6">Regular Expressions</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/chatgpt/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="chatgpt">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T17:17:02.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/chatgpt/" class="has-link-black-ter is-size-6">chatgpt</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python(5) subprocess and logging">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
-                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python(5) subprocess and logging</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1051,44 +1110,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2023/05/16/time-complexity/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
-                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2023/05/05/object-detection/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
-                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1102,12 +1123,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2023/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2023/06/">
                 <span class="level-start">
                     <span class="level-item">June 2023</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1335,6 +1367,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/NLP/">
+                        <span class="level-start">
+                            <span class="level-item">NLP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/SQL/">
                         <span class="level-start">
                             <span class="level-item">SQL</span>
@@ -1349,6 +1392,17 @@
                     <a class="level is-marginless" href="/tags/algorithm/">
                         <span class="level-start">
                             <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/computer-vision/">
+                        <span class="level-start">
+                            <span class="level-item">computer vision</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
@@ -1503,6 +1557,128 @@
                 
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
+                        
+                        <i class="fab fa-github"></i>
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
+    
+
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
+
+    
+    
+
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {matchFontHeight: false},
+        SVG: {matchFontHeight: false},
+        CommonHTML: {matchFontHeight: false}
+    });
+});
+</script>
+
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>   <a class="button is-white is-large" target="_blank" title="Download on GitHub" href="http://github.com/ppoffice/hexo-theme-icarus">
                         
                         <i class="fab fa-github"></i>
                         

@@ -151,7 +151,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    a few seconds read (About 37 words)
+                    4 minutes read (About 554 words)
                 </span>
                 
             </div>
@@ -159,12 +159,19 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2023/06/28/python-4/">python-4</a>
+                <a class="has-link-black-ter" href="/2023/06/28/python-4/">python(5) subprocess and logging</a>
             
         </h1>
         <div class="content">
             <h2><span id="subprocess">subprocess</span></h2><p>You can use the Python subprocess module to create new processes, connect to their input and output, and retrieve their return codes and/or output of the process. </p>
-<h2><span id="reference">reference</span></h2><p><a href="https://www.datacamp.com/tutorial/python-subprocess" target="_blank" rel="noopener">https://www.datacamp.com/tutorial/python-subprocess</a></p>
+<h3><span id="subprocess-run">subprocess run</span></h3><p>The subprocess.run() method is a convenient way to run a subprocess and wait for it to complete. Once the subprocess is started, the run() method blocks until the subprocess completes and returns a CompletedProcess object, which contains the return code and output of the subprocess.The check argument is an optional argument of the subprocess.run() function in the Python subprocess module. It is a boolean value that controls whether the function should check the return code of the command being run.When check is set to True, the function will check the return code of the command and raise a CalledProcessError exception if the return code is non-zero. The exception will have the return code, stdout, stderr, and command as attributes.</p>
+<h3><span id="subprocess-popen">subprocess Popen</span></h3><p><code>subprocess.Popen</code> is a lower-level interface to running subprocesses, while subprocess.run is a higher-level wrapper around Popen that is intended to be more convenient to use. Popen allows you to start a new process and interact with its standard input, output, and error streams. It returns a handle to the running process that can be used to wait for the process to complete, check its return code, or terminate it.<br>In general, you should use run if you just need to run a command and capture its output and Popen if you need more control over the process, such as interacting with its input and output streams.The Popen class has several methods that allow you to interact with the process, such as communicate(), poll(), wait(), terminate(), and kill().</p>
+<h3><span id="subprocess-call">subprocess call</span></h3><p><code>subprocess.call()</code> is a function in the Python subprocess module that is used to run a command in a separate process and wait for it to complete. It returns the return code of the command, which is zero if the command was successful, and non-zero if it failed.subprocess.call() is useful when you want to run a command and check the return code, but do not need to capture the output.</p>
+<h3><span id="subprocess-check_output">subprocess check_output</span></h3><p>check_output is a function in the subprocess module that is similar to run(), but it only returns the standard output of the command, and raises a CalledProcessError exception if the return code is non-zero.</p>
+<h3><span id="subprocess-pipe">Subprocess Pipe</span></h3><p>A pipe is a unidirectional communication channel that connects one process’s standard output to another’s standard input. A pipe can connect the output of one command to the input of another, allowing the output of the first command to be used as input to the second command.Pipes can be created using the subprocess module with the Popen class by specifying the stdout or stdin argument as subprocess.PIPE.</p>
+<h2><span id="logging">logging</span></h2><p>Logging provides a set of convenience functions for simple logging usage. These are debug(), info(), warning(), error() and critical().<br>The default level is WARNING, which means that only events of this level and above will be tracked, unless the logging package is configured to do otherwise.</p>
+<h3><span id="logging-config">logging config</span></h3><p>logging.basicConfig(format=’%(levelname)s %(asctime)s %(process)d %(message)s’, level=logging.DEBUG)</p>
+<h2><span id="reference">reference</span></h2><p><a href="https://www.datacamp.com/tutorial/python-subprocess" target="_blank" rel="noopener">https://www.datacamp.com/tutorial/python-subprocess</a><br><a href="https://docs.python.org/3/howto/logging.html" target="_blank" rel="noopener">https://docs.python.org/3/howto/logging.html</a></p>
 
         </div>
         
@@ -382,7 +389,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        40
+                        42
                     </p>
                 </div>
             </div>
@@ -402,7 +409,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        16
+                        18
                     </p>
                 </div>
             </div>
@@ -575,7 +582,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
+        <a href="/tags/Algorithm/" style="font-size: 13.33px;">Algorithm</a> <a href="/tags/KTH/" style="font-size: 13.33px;">KTH</a> <a href="/tags/Linux/" style="font-size: 13.33px;">Linux</a> <a href="/tags/Machine-Learning/" style="font-size: 10px;">Machine Learning</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/NLP/" style="font-size: 10px;">NLP</a> <a href="/tags/SQL/" style="font-size: 10px;">SQL</a> <a href="/tags/algorithm/" style="font-size: 13.33px;">algorithm</a> <a href="/tags/computer-vision/" style="font-size: 13.33px;">computer vision</a> <a href="/tags/deep-learning/" style="font-size: 10px;">deep learning</a> <a href="/tags/git/" style="font-size: 16.67px;">git</a> <a href="/tags/java/" style="font-size: 13.33px;">java</a> <a href="/tags/machine-learning/" style="font-size: 20px;">machine learning</a> <a href="/tags/probability/" style="font-size: 10px;">probability</a> <a href="/tags/python/" style="font-size: 20px;">python</a> <a href="/tags/reinforcement-learning/" style="font-size: 10px;">reinforcement learning</a> <a href="/tags/speech/" style="font-size: 10px;">speech</a> <a href="/tags/tools/" style="font-size: 13.33px;">tools</a>
     </div>
 </div>
 
@@ -592,16 +599,54 @@
         
         <article class="media">
             
+            <a href="/2023/07/11/Regular-Expressions/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Regular Expressions">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-07-11T16:58:49.000Z">2023-07-11</time></div>
+                    <a href="/2023/07/11/Regular-Expressions/" class="has-link-black-ter is-size-6">Regular Expressions</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/chatgpt/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="chatgpt">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T17:17:02.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/chatgpt/" class="has-link-black-ter is-size-6">chatgpt</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python(5) subprocess and logging">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
-                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python(5) subprocess and logging</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -647,44 +692,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2023/05/16/time-complexity/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
-                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2023/05/05/object-detection/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
-                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -698,12 +705,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2023/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2023/06/">
                 <span class="level-start">
                     <span class="level-item">June 2023</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -931,6 +949,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/NLP/">
+                        <span class="level-start">
+                            <span class="level-item">NLP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/SQL/">
                         <span class="level-start">
                             <span class="level-item">SQL</span>
@@ -945,6 +974,17 @@
                     <a class="level is-marginless" href="/tags/algorithm/">
                         <span class="level-start">
                             <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/computer-vision/">
+                        <span class="level-start">
+                            <span class="level-item">computer vision</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
@@ -1076,16 +1116,54 @@
         
         <article class="media">
             
+            <a href="/2023/07/11/Regular-Expressions/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="Regular Expressions">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-07-11T16:58:49.000Z">2023-07-11</time></div>
+                    <a href="/2023/07/11/Regular-Expressions/" class="has-link-black-ter is-size-6">Regular Expressions</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
+            <a href="/2023/06/28/chatgpt/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="chatgpt">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T17:17:02.000Z">2023-06-28</time></div>
+                    <a href="/2023/06/28/chatgpt/" class="has-link-black-ter is-size-6">chatgpt</a>
+                    <p class="is-size-7 is-uppercase">
+                        
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2023/06/28/python-4/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python-4">
+                    <img class="thumbnail" src="/images/thumbnail.svg" alt="python(5) subprocess and logging">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-06-28T15:50:29.000Z">2023-06-28</time></div>
-                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python-4</a>
+                    <a href="/2023/06/28/python-4/" class="has-link-black-ter is-size-6">python(5) subprocess and logging</a>
                     <p class="is-size-7 is-uppercase">
                         
                     </p>
@@ -1131,44 +1209,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2023/05/16/time-complexity/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="time complexity">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-16T11:21:18.000Z">2023-05-16</time></div>
-                    <a href="/2023/05/16/time-complexity/" class="has-link-black-ter is-size-6">time complexity</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
-        <article class="media">
-            
-            <a href="/2023/05/05/object-detection/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/thumbnail.svg" alt="object detection">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2023-05-05T09:19:36.000Z">2023-05-05</time></div>
-                    <a href="/2023/05/05/object-detection/" class="has-link-black-ter is-size-6">object detection</a>
-                    <p class="is-size-7 is-uppercase">
-                        
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -1182,12 +1222,23 @@
         <ul class="menu-list">
         
         <li>
+            <a class="level is-marginless" href="/archives/2023/07/">
+                <span class="level-start">
+                    <span class="level-item">July 2023</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
             <a class="level is-marginless" href="/archives/2023/06/">
                 <span class="level-start">
                     <span class="level-item">June 2023</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">3</span>
+                    <span class="level-item tag">4</span>
                 </span>
             </a>
         </li>
@@ -1415,6 +1466,17 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/NLP/">
+                        <span class="level-start">
+                            <span class="level-item">NLP</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/SQL/">
                         <span class="level-start">
                             <span class="level-item">SQL</span>
@@ -1429,6 +1491,17 @@
                     <a class="level is-marginless" href="/tags/algorithm/">
                         <span class="level-start">
                             <span class="level-item">algorithm</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">2</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/computer-vision/">
+                        <span class="level-start">
+                            <span class="level-item">computer vision</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">2</span>
