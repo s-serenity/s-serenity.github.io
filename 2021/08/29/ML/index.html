@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>第十二篇 机器学习(1)-逻辑回归 - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="逻辑回归逻辑回归名为回归，其实主要是用在分类上。"><meta property="og:type" content="article"><meta property="og:title" content="第十二篇 机器学习(1)-逻辑回归"><meta property="og:url" content="http://yoursite.com/2021/08/29/ML/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="逻辑回归逻辑回归名为回归，其实主要是用在分类上。"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2021-08-29T16:59:15.000Z"><meta property="article:modified_time" content="2021-09-02T14:10:49.100Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="machine learning"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2021/08/29/ML/"},"headline":"第十二篇 机器学习(1)-逻辑回归","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2021-08-29T16:59:15.000Z","dateModified":"2021-09-02T14:10:49.100Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"逻辑回归逻辑回归名为回归，其实主要是用在分类上。"}</script><link rel="canonical" href="http://yoursite.com/2021/08/29/ML/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-08-29T16:59:15.000Z" title="2021-8-29 6:59:15 ├F10: PM┤">2021-08-29</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-02T14:10:49.100Z" title="2021-9-2 4:10:49 ├F10: PM┤">2021-09-02</time></span><span class="level-item"><a class="link-muted" href="/categories/algorithm/">algorithm</a></span></div></div><h1 class="title is-3 is-size-4-mobile">第十二篇 机器学习(1)-逻辑回归</h1><div class="content"><h3><span id="逻辑回归">逻辑回归</span></h3><p>逻辑回归名为回归，其实主要是用在分类上。</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/machine-learning/">machine learning</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/29/ML-1/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">第十三篇 机器学习(2)-朴素贝叶斯</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/08/08/python-1/"><span class="level-item">第十一篇 python(2)-flask+gunicorn+supervisor的python服务部署</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

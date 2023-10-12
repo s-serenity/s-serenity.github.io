@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><title>Tag: Algorithm - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Recording and sharing my learning process."><meta property="og:type" content="website"><meta property="og:title" content="s-serenity"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="Recording and sharing my learning process."><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm study development"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"s-serenity","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"Recording and sharing my learning process."}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">Algorithm</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-04-25T09:59:30.000Z" title="2023-4-25 11:59:30 ├F10: AM┤">2023-04-25</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-05-21T20:01:11.333Z" title="2023-5-21 10:01:11 ├F10: PM┤">2023-05-21</time></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/04/25/Turing-Machines/">Turing Machines and Undecidability</a></p><div class="content"><h2><span id="mathematical-model-of-computation">mathematical model of computation</span></h2><h3><span id="turing-machines">Turing Machines</span></h3><p>Turing machines are primarily a mathematical construction. A Turing machine (TM) consists of:A finite set of states: initial state(when the TM starts, it is in this state) and accepting states(if the TM ends in one of these states, it says yes); Transition rules that determine what to do based on current state and content of memory tape at current position; An alphabet, the set of symbols that can be stored on the memory tape.</p>
+<h4><span id="the-church-turing-hypothesis">The Church-Turing Hypothesis</span></h4><p>Anything which can be computed by any automatic method, can also be computed by a Turing machine.</p>
+<p>If a model can also do everything that a Turing machine can, then it is called a Turing-complete model of computation.</p>
+<h3><span id="the-ram-model">The RAM Model</span></h3><p>Models the way modern computers operate, with registers and memory cells that can be immediately accessed.</p>
+<h3><span id="comparison-based-sorting">Comparison-Based Sorting</span></h3><p>We will prove that any such algorithm must make Ω(n log n)<br>comparisons (and thus take Ω(n log n) time)</p>
+<h2><span id="undecidability">Undecidability</span></h2><h3><span id="decision-problems">decision problems</span></h3><p>The answer is just a single bit of information,“yes” or “no”.A decision problem is decidable if there exists an algorithm for solving the problem without any efficiency considerations.</p>
+<h3><span id="the-halting-problem">The Halting Problem</span></h3><p>Turing machine M, and input x to M. Does M halt when run on the input x?<br>The Halting Problem is undecidable.</p>
+<h3><span id="halting-on-empty-input">Halting On Empty Input</span></h3><p>It is undecidable.</p>
+<h3><span id="halting-on-all-inputs">Halting on All Inputs</span></h3><p>It is undecidable.</p>
+<h3><span id="recursively-enumerable-problems">Recursively Enumerable Problems</span></h3><p>There exists an “algorithm” which terminates whenever the answer is<br>“yes” but does not terminate on “no” instances.Problems which have algorithms like this are called recursively enumerable.</p>
+<h2><span id="turing-reduction">Turing reduction</span></h2><p>A Turing reduction (also called Cook reduction) from a problem<br>X to a problem Y is an efficient algorithm for problem X which is<br>allowed to assume an algorithm for Y as a black box.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><h3><span id="independent-set">Independent Set</span></h3><h3><span id="set-cover">Set Cover</span></h3><h3><span id="3-sat">3-Sat</span></h3><h2><span id="karp-reductions">Karp Reductions</span></h2><p>X ≤p Y if given any instance A of problem X, we can in<br>polynomial time construct an instance f (A) of problem Y such that<br>the answer to A is the same as the answer to f (A).</p>
+<p>Turing reduction is a type of reduction that is stronger than Karp reduction. A problem A is Turing-reducible to problem B if there exists a Turing machine that can solve problem A by making a polynomial number of calls to a black-box subroutine for problem B. In other words, if we can use an algorithm for problem B to solve problem A, then A is Turing-reducible to B. Turing reduction preserves the complexity class of a problem, meaning that if A is Turing-reducible to B and B is in a certain complexity class, then A is also in that complexity class.</p>
+<p>Karp reduction, also known as polynomial-time reduction, is a weaker form of reduction than Turing reduction. A problem A is Karp-reducible to problem B if there exists a polynomial-time algorithm that can transform any instance of problem A into an instance of problem B such that the answer to the transformed instance is the same as the answer to the original instance of problem A. In other words, if we can use an algorithm for problem B to solve a transformed version of problem A in polynomial time, then A is Karp-reducible to B. Karp reduction preserves the complexity class up to polynomial factors, meaning that if A is Karp-reducible to B and B is in a certain complexity class, then A is also in that complexity class up to polynomial factors.</p>
+<h2><span id="good-reference">Good reference</span></h2><p><a target="_blank" rel="noopener" href="https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html">https://www.cs.rochester.edu/u/nelson/courses/csc_173/computability/undecidable.html</a><br><a target="_blank" rel="noopener" href="http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html">http://www2.lawrence.edu/fast/GREGGJ/CMSC515/chapt05/Reducibility.html</a><br><a target="_blank" rel="noopener" href="https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php">https://www.cs.princeton.edu/courses/archive/spring05/cos423/lectures.php</a></p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-28T09:46:34.000Z" title="2023-3-28 11:46:34 ├F10: AM┤">2023-03-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-05-21T21:24:08.965Z" title="2023-5-21 11:24:08 ├F10: PM┤">2023-05-21</time></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/28/NP/">NP and reduction</a></p><div class="content"><h2><span id="p">P</span></h2><p>P is the set of all decision problems that can be solved in<br>Polynomial time.</p>
+<h2><span id="extended-church-turing-thesis">Extended Church-Turing Thesis</span></h2><p>Any realistic model of computation can be efficiently<br>simulated by a Turing machine.<br>(The ECT is probably false!Probable counter-example: Quantum computing,However, the ECT is true for the classic models of computation<br>underlying our laptops)</p>
+<h2><span id="np-problem">NP problem</span></h2><p>We do not know of polynomial-time algorithms for these problems, and we cannot prove that no<br>polynomial-time algorithm exists. </p>
+<p>NP stands for Nondeterministic Polynomial time.</p>
+<p>NP is a set of problems that there is a polynomial-time algorithm that verify if a solution to the problem is correct.<br>Note that showing that a problem is in NP does not mean that the problem can be solved in polynomial time. It only means that a proposed solution can be verified in polynomial time.</p>
+<p>All problems in P are also in NP, we do not know if P&#x3D;NP.</p>
+<h2><span id="np-hardness">NP-hardness</span></h2><p>We say that a problem Y is NP-hard if every problem in NP can be Karp-reduced to Y. To prove NP-hardness for Y we only have to find<br>one other NP-hard problem X and reduce X to Y.</p>
+<h2><span id="np-complete-problem">NP-complete problem</span></h2><p>A large class of problems in this “gray area” has been characterized,<br>and it has been proved that they are equivalent in the following sense: a polynomial-time algorithm for any one of them would imply the existence of a polynomial-time algorithm for all of them. These are the NP-complete problems.</p>
+<p>Every problem in NP can be reduced to X. We will call such an X an NP-complete problem.</p>
+<p>To prove a problem is np-complete, we need to prove it lies in Np and it is np-hard. In NP is proved by verifying the solution in polynomial time. Np-hard is proved by using Karp-reduction from known NP-hard problem.</p>
+<p>the NP-complete problems are the hardest problems in NP</p>
+<h2><span id="the-cook-levin-theorem">The Cook-Levin Theorem</span></h2><p>The Sat problem is NP-hard.</p>
+<h3><span id="hamiltonian-cycle">Hamiltonian Cycle</span></h3><p>Reduction from Sat to Hamiltonian Cycle.</p>
+<h3><span id="travelling-salesman">Travelling Salesman</span></h3><p>Reduction from Hamiltonian Cycle</p>
+<h3><span id="graph-coloring">Graph Coloring</span></h3><p>Graph Coloring is NP-hard.<br>2-coloring is not NP-hard.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><p>we say that a set of nodes S is a vertex cover if every edge e has at least one end in S.</p>
+<h3><span id="set-cover">Set Cover</span></h3><p>Given a set U of n elements, a collection S1,…, Sm of subsets of U, and<br>a number k, does there exist a collection of at most k of these sets whose<br>union is equal to all of U?</p>
+<h2><span id="conp">CoNP</span></h2><p>The complexity class CoNP consists of all problems where a “no” answer can be efficiently verified.<br>For every NP-complete problem there is a<br>corresponding CoNP-complete problem.</p>
+<p>We do not know if NP&#x3D;CoNP.</p>
+<h2><span id="pspace">PSPACE</span></h2><p>The complexity class PSPACE consists of all problems that can<br>be solved by an algorithm using at most a polynomial amount of<br>space.<br>It is strongly believed that NP !&#x3D; PSPACE, but we do not even<br>know with certainty whether P !&#x3D; PSPACE or not!</p>
+<p>For many 2-player games like Geography, deciding if there is a<br>winning strategy from a given position is a PSPACE problem</p>
+<h2><span id="bpp-and-zpp">BPP and ZPP</span></h2><h3><span id="bpp">BPP</span></h3><p>BPP (Bounded-error Probabilistic Polynomial-time)<br>consists of all decision problems for which there is a<br>polynomial-time randomized algorithms that is correct with<br>probability at least 2&#x3D;3 on all instances.</p>
+<h3><span id="zpp">ZPP</span></h3><p>ZPP (Zero-error Probabilistic Polynomial Time)<br>consists of all decision problems for which there is a Las Vegas<br>algorithm running in expected polynomial time.<br>It is widely believed that P &#x3D; ZPP &#x3D; BPP but all three could be<br>different.</p>
+</div></article></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

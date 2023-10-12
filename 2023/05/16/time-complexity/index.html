@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>time complexity - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="time complexitybig O notationBig O notation measures the asymptotic growth of a function. f (n) &amp;#x3D; O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n). Ω a"><meta property="og:type" content="article"><meta property="og:title" content="time complexity"><meta property="og:url" content="http://yoursite.com/2023/05/16/time-complexity/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="time complexitybig O notationBig O notation measures the asymptotic growth of a function. f (n) &amp;#x3D; O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n). Ω a"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2023-05-16T11:21:18.000Z"><meta property="article:modified_time" content="2023-05-20T14:32:44.186Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="algorithm"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2023/05/16/time-complexity/"},"headline":"time complexity","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2023-05-16T11:21:18.000Z","dateModified":"2023-05-20T14:32:44.186Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"time complexitybig O notationBig O notation measures the asymptotic growth of a function. f (n) &#x3D; O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n). Ω a"}</script><link rel="canonical" href="http://yoursite.com/2023/05/16/time-complexity/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-05-16T11:21:18.000Z" title="2023-5-16 1:21:18 ├F10: PM┤">2023-05-16</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-05-20T14:32:44.186Z" title="2023-5-20 4:32:44 ├F10: PM┤">2023-05-20</time></span></div></div><h1 class="title is-3 is-size-4-mobile">time complexity</h1><div class="content"><h2><span id="time-complexity">time complexity</span></h2><h3><span id="big-o-notation">big O notation</span></h3><p>Big O notation measures the asymptotic growth of a function. f (n) &#x3D; O(g(n)) if for all sufficiently large n, f (n) is at most a constant factor larger than g(n).</p>
+<h3><span id="ω-and-θ-notation">Ω and Θ notation</span></h3><p>We say f (n) &#x3D; Ω(g(n)) if g(n) &#x3D; O(f (n)).<br>We say f (n) &#x3D; Θ(g(n)) if f (n) &#x3D; O(g(n)) and g(n) &#x3D; O(f (n)).</p>
+<h3><span id="types-of-complexity">types of complexity</span></h3><p>Worst-case complexity: what is the largest possible running time on any input of size n?<br>Average-case complexity: what is the average running time on a random input of size n?<br>Best-case complexity: what is the smallest possible running time on any input of size n?</p>
+<h2><span id="graph-algorithm">Graph algorithm</span></h2><h3><span id="ways-of-representing-graphs">ways of representing graphs</span></h3><h4><span id="adjacency-matrix">adjacency matrix</span></h4><p>For graph with n vertices this is an n × n matrix A, where $A_{ij}$ &#x3D; 1 if there is an edge from node i to node j, $A_{ij}$ &#x3D; 0 otherwise.<br>If the graph is undirected, the matrix is symmetric</p>
+<h4><span id="adjacency-lists">adjacency lists</span></h4><p>For each vertex, keep a list of its neighbors.</p>
+<h4><span id="incidence-matrix">incidence matrix</span></h4><p>The incidence matrix of an undirected graph with n vertices and m edges is an n × m matrix B where $B_{ij}$ &#x3D; 1 if the i’th vertex is part of the j’th edge, $B_{ij}$ &#x3D; 0 otherwise.</p>
+<h3><span id="two-fundamental-graph-exploration-algorithms">Two fundamental graph exploration algorithms</span></h3><h4><span id="depth-first-search-dfs">Depth First Search (DFS)</span></h4><h4><span id="breadth-first-search-bfs">Breadth First Search (BFS)</span></h4><p>For the BFS tree, this gives the shortest (fewest number of steps) paths from s to all other nodes</p>
+<h2><span id="greedy-algorithms">Greedy Algorithms</span></h2><p>Greedy algorithms are algorithms that build a solution step by step by always choosing the currently best option. </p>
+<h3><span id="interval-scheduling">Interval Scheduling</span></h3><p>Input: A list of intervals<br>Output: Maximum number of these intervals that can be chosen without getting any overlaps.<br>Solution:Pick the one that ends first.<br>Prove correctness of such an algorithm: Common strategy for analyzing greedy algorithms: prove that the algorithm always “stays ahead” of the optimal solution.</p>
+<h3><span id="job-scheduling-with-minimum-lateness">Job Scheduling With Minimum Lateness</span></h3><p>Input: A list of jobs, each job has a deadline di<br>, and a duration ti<br>(how long it takes to finish the job)<br>Output: Smallest possible maximum lateness in a schedule for doing<br>all jobs.<br>Solution: Pick the job with smallest di.</p>
+<h3><span id="shortest-path">Shortest path</span></h3><p>It is helpful to instead consider a more general problem. Let us try<br>to find the shortest paths from s to all other vertices: Dijkstra’s algorithm: we have some set D of vertices we have found<br>the shortest path to, and each step we add a new vertex to D. add the vertex outside D which is closest to<br>s when using only vertices in D as intermediate vertices.</p>
+<h2><span id="divide-amp-conquer">Divide &amp; Conquer</span></h2><p>Algorithms that split the input into significantly smaller parts, recursively solves each part, and then combines the subresults (somehow).</p>
+<h3><span id="merge-sort">Merge sort</span></h3><p>O(n log n).</p>
+<h3><span id="polynomial-multiplication">Polynomial multiplication</span></h3><p>$T(n) &#x3D; O(n^{1.59})$.<br>Using FFT, get time O(n log n) for Polynomial Multiplication</p>
+<h2><span id="unit-cost-model-and-bit-cost-model">Unit cost model and Bit cost model</span></h2><p>Unit cost model: assume all numbers fit in machine registers so that basic arithmetic operations take constant time.<br>Bit cost model: account for size of numbers and the time it takes to manipulate them.</p>
+<h3><span id="integer-multiplication">Integer multiplication</span></h3><p>Karatsuba’s algorithm: $T(n) &#x3D; O(n^{1.59})$.</p>
+<h3><span id="master-theorem">Master Theorem</span></h3><h2><span id="dynamic-programming">Dynamic Programming</span></h2><p>Split a problem into smaller subproblems such that results from one<br>subproblem can be reused when solving others</p>
+<h3><span id="fibonacci-numbers">Fibonacci numbers</span></h3><p>The Fibonacci numbers are a classic number sequence in<br>mathematics, defined by the linear recurrence<br>f0 &#x3D; 0; f1 &#x3D; 1; and fn &#x3D; fn−1 + fn−2 for n ≥ 2</p>
+<h3><span id="weighted-interval-scheduling">Weighted Interval Scheduling</span></h3><p>Input: A list of intervals [s1; t1]; [s2; t2]; : : : ; [sn; tn], each interval<br>[si<br>; ti<br>] has a weight wi<br>Output: What is the maximum total weight of these intervals that<br>can be chosen without getting any overlaps</p>
+<h3><span id="knapsack">Knapsack</span></h3><p>Input: A capacity C and a list of objects, each object has a value vi<br>and weight wi<br>Output: Subset S of objects such that<br>$\sum_{i∈S} wi ≤ C$ and $\sum_{i∈S} vi$ is maximized.</p>
+<h3><span id="top-down-and-bottom-up-fashion">top-down and bottom-up fashion</span></h3><p>top-down fashion: we start at the end result and<br>recursively compute results for relevant subproblems.</p>
+<p> bottom-up fashion: we iteratively compute results for larger and larger subproblems.</p>
+<h3><span id="characteristics-of-dynamic-programming">Characteristics of dynamic programming</span></h3><p>A problem is amenable to dynamic program if we can define a set<br>of subproblems such that:</p>
+<ol>
+<li>The number of different subproblems is as small as possible.</li>
+<li>There is some ordering of subproblems from “small” to “large”</li>
+<li>The value of a subproblem can be efficiently computed given<br>the values of some set of smaller subproblems.</li>
+</ol>
+<h3><span id="sequence-alignment">Sequence Alignment</span></h3><p>Input: Strings x and y of lengths m and n, parameters ‹ and ¸<br>Output: Minimum cost of an alignment of x and y with parameters $\sigma$ and $\alpha$.<br>$\alpha is the cost of aligning two different characters with each other<br>$\sigma$ is the cost of not aligning a character</p>
+<h3><span id="matrix-chain-multiplication">Matrix Chain Multiplication</span></h3><h2><span id="network-flow">Network Flow</span></h2><h3><span id="the-max-flow-problem">The Max-Flow problem</span></h3><p>Input: Flow network G.<br>Output: Flow f maximizing the value v(f ).<br>Solution: The Ford-Fulkerson Algorithm O(C(m + n))<br> or the scaling algorithm with O(m2<br>log(C)) or Edmonds-Karp algorithm with O(nm(n + m)) .</p>
+<h3><span id="edge-cuts">Edge Cuts</span></h3><p>An edge cut of a graph is a set of edges such that their removal would disconnect the graph.</p>
+<h3><span id="minimum-s-t-cut">Minimum s-t-Cut</span></h3><p>Input: A flow network G with source s and sink t.<br>Output: An s-t cut A; B of G minimizing the capacity c(A; B).</p>
+<h3><span id="the-max-flow-min-cut-theorem">The Max-Flow-Min-Cut Theorem</span></h3><p>For every flow network G, the maximum flow from s to t equals the<br>minimum capacity of an s-t cut in G.</p>
+<h3><span id="vertex-cuts">Vertex Cuts</span></h3><p>A vertex cut in a graph is a set of vertices such that if we remove<br>them, the graph splits into more than one connected component.</p>
+<h3><span id="matchings">Matchings</span></h3><p>A matching in a graph is a set M of edges such that no vertex appears in more than one edge of M.Of particular interest to us will be bipartite graphs.</p>
+<h3><span id="maximum-bipartite-matching">Maximum Bipartite Matching</span></h3><p>Input: A bipartite graph G<br>Output: A matching M in G of maximum possible size.</p>
+<h3><span id="edge-disjoint-paths">Edge-Disjoint Paths</span></h3><p>Given a directed graph with source and sink, what is maximum<br>number of edge-disjoint paths from s to t?<br>(edge-disjoint &#x3D; no edge used by more than one path)</p>
+<h3><span id="project-selection">Project Selection?</span></h3></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/algorithm/">algorithm</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/06/09/image-task/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Introduction to deep learning in computer vision</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/05/05/object-detection/"><span class="level-item">object detection</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

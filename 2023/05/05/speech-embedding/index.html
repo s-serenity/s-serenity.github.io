@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>speech embedding - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Contrastive Predictive CodingContrastive Predictive Coding (CPC) learns self-supervised representations by predicting the future in latent space by using powerful autoregressive models. The model uses"><meta property="og:type" content="article"><meta property="og:title" content="speech embedding"><meta property="og:url" content="http://yoursite.com/2023/05/05/speech-embedding/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="Contrastive Predictive CodingContrastive Predictive Coding (CPC) learns self-supervised representations by predicting the future in latent space by using powerful autoregressive models. The model uses"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2023-05-05T09:15:45.000Z"><meta property="article:modified_time" content="2023-05-23T13:59:20.937Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="speech"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2023/05/05/speech-embedding/"},"headline":"speech embedding","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2023-05-05T09:15:45.000Z","dateModified":"2023-05-23T13:59:20.937Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"Contrastive Predictive CodingContrastive Predictive Coding (CPC) learns self-supervised representations by predicting the future in latent space by using powerful autoregressive models. The model uses"}</script><link rel="canonical" href="http://yoursite.com/2023/05/05/speech-embedding/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-05-05T09:15:45.000Z" title="2023-5-5 11:15:45 ├F10: AM┤">2023-05-05</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-05-23T13:59:20.937Z" title="2023-5-23 3:59:20 ├F10: PM┤">2023-05-23</time></span></div></div><h1 class="title is-3 is-size-4-mobile">speech embedding</h1><div class="content"><h2><span id="contrastive-predictive-coding">Contrastive Predictive Coding</span></h2><p>Contrastive Predictive Coding (CPC) learns self-supervised representations by predicting the future in latent space by using powerful autoregressive models. The model uses a probabilistic contrastive loss which induces the latent space to capture information that is maximally useful to predict future samples. It describes a form of unidirectional modeling in the feature space,<br>where the model learns to predict the near future frames in<br>an acoustic sequence while contrasting with frames from other<br>sequences or frames from a more distant time.</p>
+<h2><span id="autoregressive-predictive-coding">Autoregressive Predictive Coding</span></h2><p>The APC approach uses an autoregressive model to encode<br>temporal information of past acoustic sequence; the model then<br>predicts future frames like a recurrent-based LM while<br>conditioning on past frames.</p>
+<h2><span id="tera">TERA</span></h2><p>TERA, which stands for Transformer Encoder Representations from Alteration, is a self-supervised speech pre-training<br>method. </p>
+<h2><span id="experiment-design">experiment design</span></h2><p>Amount of labeled data needed to perform well.<br>with pre-trained and without pre-trained.</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/speech/">speech</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/05/05/object-detection/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">object detection</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/04/25/Turing-Machines/"><span class="level-item">Turing Machines and Undecidability</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

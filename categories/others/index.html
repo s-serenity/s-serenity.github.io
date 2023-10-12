@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><title>Category: others - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Recording and sharing my learning process."><meta property="og:type" content="website"><meta property="og:title" content="s-serenity"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="Recording and sharing my learning process."><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm study development"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"s-serenity","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"Recording and sharing my learning process."}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">Categories</a></li><li class="is-active"><a href="#" aria-current="page">others</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2020-03-14T19:33:11.000Z" title="2020-3-14 8:33:11 ├F10: PM┤">2020-03-14</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-08-07T10:19:17.331Z" title="2021-8-7 12:19:17 ├F10: PM┤">2021-08-07</time></span><span class="level-item"><a class="link-muted" href="/categories/others/">others</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2020/03/14/Markdown/">第一篇 Markdown</a></p><div class="content"><h1><span id="第一篇-markdown-typora">第一篇 Markdown （Typora）</span></h1><h2><span id="基础语法">基础语法</span></h2><h2><span id="目录">目录</span></h2><h3><span id="标题篇">标题篇</span></h3><p>级数个#加空格，如# 表示后面的文字作为一级标题，## 表示后面的文字作为二级标题。</p>
+<h3><span id="字体篇">字体篇</span></h3><p>加粗：将想要加粗的文字在左右用两个*号括起来 ：</p>
+<p><code>**加粗**</code></p>
+<p>斜体：将想要斜体的文字在左右用一个*号括起来 ：</p>
+<p>斜体加粗：将想要斜体的文字在左右用三个*号括起来</p>
+<p>删除线：将想要加删除线的文字在左右用两个~号括起来<del>波浪线</del></p>
+<h3><span id="段落篇">段落篇</span></h3><ul>
+<li><p>生成目录：<code>[toc]</code>， 但是hexo上传博客用此方法显示目录不成功ORZ。</p>
+</li>
+<li><p>分割线：三个及以上的-或者*，试一试</p>
+<hr>
+</li>
+<li><p>无序列表：就是这个前面的小黑点，一个+-或者*加上空格，后面跟上文字。</p>
+</li>
+<li><p>有序列表：数字标号的。数字加点加上空格 </p>
+<ol>
+<li>这是第一个</li>
+<li>这是第二个</li>
+</ol>
+</li>
+</ul>
+<hr>
+<hr>
+<h3><span id="插入类">插入类</span></h3><ul>
+<li>插入图片：<code>![图片下方的文字](图片地址 &quot;图片标题&quot;)</code></li>
+</ul>
+<p>拿一张试试：<img src="/2020/03/14/Markdown/test.png" alt="试验图片" title="成功比个YE！"></p>
+<ul>
+<li><p>插入超链接：<code>[超链接名称](超链接地址 &quot;标题&quot;) </code></p>
+<p>试试：<a target="_blank" rel="noopener" href="https://s-serenity.github.io/" title="我的博客地址">我的博客</a></p>
+</li>
+<li><p>插入公式：$$包含TeX 或 LaTeX 格式的数学公式。</p>
+</li>
+<li><p>插入表格：|分列，-分割表头和内容，左右两边加：文字居中，只加一边文字偏哪边，默认偏左。</p>
+<p>举例  </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">表头|表头</span><br><span class="line"> --|--</span><br><span class="line">内容|内容</span><br><span class="line">内容|内容</span><br></pre></td></tr></table></figure>
+
+<p>​       </p>
+<p>试一个：没有成功诶，需要在两端也加上|才会显示表格，可是把最后一行作为表头显示了，emmm，应该是编辑器导致的差异。不过Typora可以很方便地直接右击插入表格。。。</p>
+<table>
+<thead>
+<tr>
+<th>表头</th>
+<th>表头</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>内容</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<ul>
+<li><p>插入代码块</p>
+<p>单行代码：一个反引号`括起来，反引号就是Esc下面那个键，记得换成英文输入法。</p>
+<p><code>print(&#39;hello world!&#39;)</code></p>
+<p>多行代码：三个反引号`括起来。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import pandas as pd</span><br></pre></td></tr></table></figure></li>
+</ul>
+<p>​</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-12-21T19:59:45.000Z" title="2018-12-21 8:59:45 ├F10: PM┤">2018-12-21</time></span><span class="level-item">Updated&nbsp;<time dateTime="2018-12-22T08:32:36.031Z" title="2018-12-22 9:32:36 ├F10: AM┤">2018-12-22</time></span><span class="level-item"><a class="link-muted" href="/categories/others/">others</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/12/21/My-first-blog/">My first blog</a></p><div class="content"><p>This is my first blog which is just for test. Happy~<br>I will present my learning process in this blog from today on. Fighting~</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2018-12-21T11:42:38.182Z" title="2018-12-21 12:42:38 ├F10: PM┤">2018-12-21</time></span><span class="level-item">Updated&nbsp;<time dateTime="2018-12-22T08:36:49.105Z" title="2018-12-22 9:36:49 ├F10: AM┤">2018-12-22</time></span><span class="level-item"><a class="link-muted" href="/categories/others/">others</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2018/12/21/hello-world/">Hello World</a></p><div class="content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2><span id="quick-start">Quick Start</span></h2><h3><span id="create-a-new-post">Create a new post</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3><span id="run-server">Run server</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3><span id="generate-static-files">Generate static files</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3><span id="deploy-to-remote-sites">Deploy to remote sites</span></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+</div></article></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

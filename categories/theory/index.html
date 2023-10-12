@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><title>Category: theory - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Recording and sharing my learning process."><meta property="og:type" content="website"><meta property="og:title" content="s-serenity"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="Recording and sharing my learning process."><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm study development"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"s-serenity","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"Recording and sharing my learning process."}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/categories">Categories</a></li><li class="is-active"><a href="#" aria-current="page">theory</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-09-26T19:10:33.000Z" title="2021-9-26 9:10:33 ├F10: PM┤">2021-09-26</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-28T14:10:18.004Z" title="2021-9-28 4:10:18 ├F10: PM┤">2021-09-28</time></span><span class="level-item"><a class="link-muted" href="/categories/theory/">theory</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/26/ML-4/">第二十篇 机器学习(4)-uplift模型</a></p><div class="content"><h3><span id="uplift模型">uplift模型</span></h3><p>uplift模型中文为增益模型，是工业界因果推断与机器学习结合最成熟的算法之一。传统的监督学习模型，往往是对输入x去预测一个y，而增益模型注重于x的变化对y的影响，以广告为例，传统的监督学习往往是给定这个特征去预测用户是否会点击，而增益模型注重的是给这个客户投放广告与否对客户是否购买广告商品所产生的影响。</p>
+<h3><span id="因果推断">因果推断</span></h3></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-09-25T14:43:07.000Z" title="2021-9-25 4:43:07 ├F10: PM┤">2021-09-25</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-25T08:46:55.795Z" title="2021-9-25 10:46:55 ├F10: AM┤">2021-09-25</time></span><span class="level-item"><a class="link-muted" href="/categories/theory/">theory</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/25/DL/">第十九篇 深度学习(1)-梯度下降</a></p><div class="content"></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-09-02T20:07:25.000Z" title="2021-9-2 10:07:25 ├F10: PM┤">2021-09-02</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-25T08:40:05.043Z" title="2021-9-25 10:40:05 ├F10: AM┤">2021-09-25</time></span><span class="level-item"><a class="link-muted" href="/categories/theory/">theory</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2021/09/02/RL/">第十七篇 强化学习(1)-马尔可夫决策过程</a></p><div class="content"><h3><span id="马尔可夫决策过程">马尔可夫决策过程</span></h3><p>马尔可夫性质：当前状态可以完全表征过程。</p>
+<p>对于任意有限的马尔可夫决策过程，都存在一个最优策略，不差于其他所有可能的策略。</p>
+<h4><span id="贝尔曼方程">贝尔曼方程</span></h4></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2019-01-07T22:50:43.000Z" title="2019-1-7 11:50:43 ├F10: PM┤">2019-01-07</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-05T12:53:17.996Z" title="2021-9-5 2:53:17 ├F10: PM┤">2021-09-05</time></span><span class="level-item"><a class="link-muted" href="/categories/theory/">theory</a></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2019/01/07/probability/">第零篇 概率论相关(1)-先验概率、后验概率与似然</a></p><div class="content"><h3><span id="先验概率-后验概率与似然">先验概率、后验概率与似然</span></h3><p>今天看到一个比较好的关于先验、后验和似然的通俗解释，先验概率就是基于历史数据的统计经验，后验概率是在已知结果发生时推断原因的概率，似然概率是已知原因推断结果的概率。</p>
+<p>根据上述解释，假设我们有一个数据集，这个数据集服从某一种分布，也可以理解为是一个黑盒子模型，黑盒子模型里面包含了很多参数，则似然概率就是已知参数得到某样本的概率，后验概率就是已知某样本得到参数的概率。</p>
+<p>为了更理解这一概念，再来看一下著名的贝叶斯公式：<br>$$<br>P(\theta \mid x)&#x3D;\frac{p(x \mid \theta) p(\theta)}{p(x)}<br>$$<br>其中$p(\theta)$是先验概率， $P(\theta \mid x)$是后验概率，$p(x \mid \theta)$是似然函数。</p>
+<p>这里区分一下两个概念，对于$p(x \mid \theta)$如果$\theta$已知且不变，x是变量，则此函数称为概率函数，而如果x已知且保持不变，$\theta$是变量，则此函数称为似然函数。</p>
+<h3><span id="最大似然估计mle">最大似然估计(MLE)</span></h3><p>最大似然，也就是说要让似然最大，则在数据集上的学习过程就是求模型参数使得当前观察到的样本概率最大，所以最大似然估计的目的就是根据已知的样本结果，反推最有可能导致这个结果的参数值。最大似然估计的适用场景是”模型已定、参数未知”，一个重要前提是样本集中的样本都是独立同分布的随机变量，因为只有独立同分布，样本集的似然函数才能等于各样本似然函数的乘积。</p>
+<p>假设一个用于学习的样本集是：$D&#x3D;\left{x_{1}, x_{2}, \cdots, x_{N}\right}$，来估计参数向量θ，则$l(\theta)&#x3D;p(D \mid \theta)&#x3D;p\left(x_{1}, x_{2}, \cdots, x_{N} \mid \theta\right)&#x3D;\prod_{i&#x3D;1}^{N} p\left(x_{i} \mid \theta\right)$，则使得似然函数最大的参数值求解过程为：<br>$$<br>\hat{\theta}&#x3D;\arg \max <em>{\theta} l(\theta)&#x3D;\arg \max <em>{\theta} \prod</em>{i&#x3D;1}^{N} p\left(x</em>{i} \mid \theta\right)<br>$$</p>
+<h3><span id="最大后验估计map">最大后验估计(MAP)</span></h3><p>最大后验估计与最大似然估计的不同之处在于最大后验估计中引入了先验概率，因此结合贝叶斯公式和最大似然估计，最大后验估计就转化为了：<br>$$<br>\operatorname{argmaxp}(\theta \mid X)&#x3D;\operatorname{argmax} \frac{p(X \mid \theta) p(\theta)}{p(X)}&#x3D;\operatorname{argmaxp}(X \mid \theta) p(\theta)&#x3D;\operatorname{argmax}\left(\prod_{x 1}^{x n} p(x i \mid \theta)\right) p(\theta)<br>$$<br>L2正则就是加入了高斯先验，L1正则就是加入了拉普拉斯先验。</p>
+<h3><span id="贝叶斯估计">贝叶斯估计</span></h3><p>在MLE和MAP中，都是假设模型参数$\theta$未知，但都是固定的值，属于点估计，而在贝叶斯估计中，假设模型参数是未知的随机变量，而不是确定值，最终得到的参数不是具体的值，而是一个分布，然后用这个分布的期望来作为最终的参数值。</p>
+<h3><span id="总结">总结</span></h3><p>最后让我们用大佬讲义中的片段总结一下本篇的主要内容：</p>
+<p><img src="/2019/01/07/probability/BLOG\Hexo\source_posts\probability\estimators.PNG"></p>
+<h4><span id="参考资料">参考资料</span></h4><p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/9c153d82ba2d">贝叶斯估计、最大似然估计、最大后验概率估计</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/93416473">极大似然估计、最大后验估计</a></p>
+</div></article></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

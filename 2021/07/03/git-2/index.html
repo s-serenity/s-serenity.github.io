@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>第六篇 git相关(3)-分支与合并 - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="git分支git分支是git的一大特性，git 的分支本质上仅仅是指向提交对象的可变指针，是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，这也是为什么git分支的创建和销毁都异常高效的原因，创建新分支时，就是在当前所在的提交对象上创建一个指针，而git是通过一个名为HEAD的特殊指针来记录自己的当前位置的。 与git分支相关的命令有： 1234567git branch --"><meta property="og:type" content="article"><meta property="og:title" content="第六篇 git相关(3)-分支与合并"><meta property="og:url" content="http://yoursite.com/2021/07/03/git-2/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="git分支git分支是git的一大特性，git 的分支本质上仅仅是指向提交对象的可变指针，是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，这也是为什么git分支的创建和销毁都异常高效的原因，创建新分支时，就是在当前所在的提交对象上创建一个指针，而git是通过一个名为HEAD的特殊指针来记录自己的当前位置的。 与git分支相关的命令有： 1234567git branch --"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2021-07-03T15:41:15.000Z"><meta property="article:modified_time" content="2021-08-29T09:09:22.832Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="git"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2021/07/03/git-2/"},"headline":"第六篇 git相关(3)-分支与合并","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2021-07-03T15:41:15.000Z","dateModified":"2021-08-29T09:09:22.832Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"git分支git分支是git的一大特性，git 的分支本质上仅仅是指向提交对象的可变指针，是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，这也是为什么git分支的创建和销毁都异常高效的原因，创建新分支时，就是在当前所在的提交对象上创建一个指针，而git是通过一个名为HEAD的特殊指针来记录自己的当前位置的。 与git分支相关的命令有： 1234567git branch --"}</script><link rel="canonical" href="http://yoursite.com/2021/07/03/git-2/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-07-03T15:41:15.000Z" title="2021-7-3 5:41:15 ├F10: PM┤">2021-07-03</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-08-29T09:09:22.832Z" title="2021-8-29 11:09:22 ├F10: AM┤">2021-08-29</time></span><span class="level-item"><a class="link-muted" href="/categories/development-tools/">development tools</a></span></div></div><h1 class="title is-3 is-size-4-mobile">第六篇 git相关(3)-分支与合并</h1><div class="content"><h3><span id="git分支">git分支</span></h3><p>git分支是git的一大特性，git 的分支本质上仅仅是指向提交对象的可变指针，是包含所指对象校验和（长度为 40 的 SHA-1 值字符串）的文件，这也是为什么git分支的创建和销毁都异常高效的原因，创建新分支时，就是在当前所在的提交对象上创建一个指针，而git是通过一个名为HEAD的特殊指针来记录自己的当前位置的。</p>
+<p>与git分支相关的命令有：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">git branch -- 查看本地分支</span><br><span class="line">git branch -v -- 查看本地分支每个分支的最后一次提交</span><br><span class="line">git branch -vv -- 查看本地分支每个分支跟踪的远程分支</span><br><span class="line">git checkout -b dev -- 新建dev分支，并切换到dev分支(此后HEAD会指向dev分支,工作目录也会变为dev分支指向的快照内容)</span><br><span class="line">git checkout master -- 切换到master分支(此后HEAD会指向master分支,工作目录也会变为master分支指向的快照内容)</span><br><span class="line">git merge dev -- 合并dev分支到当前分支</span><br><span class="line">git branch -d dev -- 删除dev分支</span><br></pre></td></tr></table></figure>
+
+<h4><span id="分支切换">分支切换</span></h4><p>注意在切换分支时，git会重置工作目录，自动添加、删除、修改文件以确保此时你的工作目录和这个分支最后一次提交时的样子一模一样，因此在切换分支前，要注意暂存当前的工作进度，可以使用<code>git stash</code>命令暂存当前工作。</p>
+<h4><span id="分支合并">分支合并</span></h4><p>在合并时，可能会看到fast-forward这个词，这是指当前分支是合并分支的直接上游，两者合并不会产生冲突，而只是指针向前移动了，所以叫做fast-forward。</p>
+<p>如果两个分支已经分叉开来，进行合并时，git会根据两个分支的共同祖先来做一个三方合并，此时的合并就不是简单的指针向前移动了，而是将三方合并的结果生成一个新的快照并创建一个新的提交指向它。</p>
+<p>有时候合并会发生冲突，靠git自动合并已经无法解决，就需要人工去解决冲突，git会在有冲突的文件中加入标记，使用<code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code>和<code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>、<code>=======</code>标识了冲突的位置，<code>=======</code>将两个分支的冲突位置内容分隔开来，为了解决冲突，只能选择其中一个，手动地将标识的片段改为你选择的内容即可，修改完冲突之后，还要使用<code>git add</code>来表示冲突已经解决，<code>git commit</code>来完成合并提交。</p>
+<h4><span id="远程分支">远程分支</span></h4><p>远程分支以 <code>(remote)/(branch)</code> 形式命名，本地分支与远程分支交互相关的命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git push (remote) (branch):(remote branch) --推从到远程分支</span><br><span class="line">git fetch (remote) --拉取远程仓库的内容，不会修改工作目录</span><br><span class="line">git pull (remote) --拉取并合并远程仓库的内容到本地</span><br><span class="line">git push (remote) --delete (branch) --删除远程分支</span><br></pre></td></tr></table></figure>
+
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/git/">git</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/07/09/linux-1/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">第七篇 Linux相关(2)-进程管理与性能分析</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2020/04/04/sort/"><span class="level-item">第五篇 算法(1)--排序</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

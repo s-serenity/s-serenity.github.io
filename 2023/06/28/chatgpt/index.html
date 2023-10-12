@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>chatgpt - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="chatgpt apiparameterstwo important parameters that you can use with OpenAI’s GPT API to help control text generation behavior: temperature and top_p sampling.Temperature is a parameter that controls t"><meta property="og:type" content="article"><meta property="og:title" content="chatgpt"><meta property="og:url" content="http://yoursite.com/2023/06/28/chatgpt/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="chatgpt apiparameterstwo important parameters that you can use with OpenAI’s GPT API to help control text generation behavior: temperature and top_p sampling.Temperature is a parameter that controls t"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2023-06-28T17:17:02.000Z"><meta property="article:modified_time" content="2023-06-29T15:48:13.686Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm study development"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2023/06/28/chatgpt/"},"headline":"chatgpt","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2023-06-28T17:17:02.000Z","dateModified":"2023-06-29T15:48:13.686Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"chatgpt apiparameterstwo important parameters that you can use with OpenAI’s GPT API to help control text generation behavior: temperature and top_p sampling.Temperature is a parameter that controls t"}</script><link rel="canonical" href="http://yoursite.com/2023/06/28/chatgpt/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-06-28T17:17:02.000Z" title="2023-6-28 7:17:02 ├F10: PM┤">2023-06-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-06-29T15:48:13.686Z" title="2023-6-29 5:48:13 ├F10: PM┤">2023-06-29</time></span></div></div><h1 class="title is-3 is-size-4-mobile">chatgpt</h1><div class="content"><h2><span id="chatgpt-api">chatgpt api</span></h2><h3><span id="parameters">parameters</span></h3><p>two important parameters that you can use with OpenAI’s GPT API to help control text generation behavior: temperature and top_p sampling.<br>Temperature is a parameter that controls the “creativity” or randomness of the text generated by GPT-3. A higher temperature (e.g., 0.7) results in more diverse and creative output, while a lower temperature (e.g., 0.2) makes the output more deterministic and focused.In practice, temperature affects the probability distribution over the possible tokens at each step of the generation process. A temperature of 0 would make the model completely deterministic, always choosing the most likely token.</p>
+<p>Top_p sampling is an alternative to temperature sampling. Instead of considering all possible tokens, GPT-3 considers only a subset of tokens (the nucleus) whose cumulative probability mass adds up to a certain threshold (top_p).</p>
+<h2><span id="reference">reference</span></h2><p><a target="_blank" rel="noopener" href="https://community.openai.com/t/cheat-sheet-mastering-temperature-and-top-p-in-chatgpt-api-a-few-tips-and-tricks-on-controlling-the-creativity-deterministic-output-of-prompt-responses/172683">https://community.openai.com/t/cheat-sheet-mastering-temperature-and-top-p-in-chatgpt-api-a-few-tips-and-tricks-on-controlling-the-creativity-deterministic-output-of-prompt-responses/172683</a></p>
+</div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/07/11/Regular-Expressions/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Regular Expressions</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/06/28/python-4/"><span class="level-item">python(5) subprocess and logging</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

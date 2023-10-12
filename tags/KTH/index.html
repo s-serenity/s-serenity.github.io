@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="robots" content="noindex"><title>Tag: KTH - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Recording and sharing my learning process."><meta property="og:type" content="website"><meta property="og:title" content="s-serenity"><meta property="og:url" content="http://yoursite.com/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="Recording and sharing my learning process."><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm study development"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com"},"headline":"s-serenity","image":["http://yoursite.com/img/og_image.png"],"author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"Recording and sharing my learning process."}</script><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><div class="card-content"><nav class="breadcrumb" aria-label="breadcrumbs"><ul><li><a href="/tags">Tags</a></li><li class="is-active"><a href="#" aria-current="page">KTH</a></li></ul></nav></div></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-31T15:53:12.000Z" title="2023-3-31 5:53:12 ├F10: PM┤">2023-03-31</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-04-05T15:28:04.862Z" title="2023-4-5 5:28:04 ├F10: PM┤">2023-04-05</time></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/03/31/speech/">speech</a></p><div class="content"><h2><span id="signal">signal</span></h2><p>spectrogram: A spectrogram of a time signal is a special two-dimensional representation that displays time in its horizontal axis and frequency in its vertical axis.</p>
+<h2><span id="short-time-fourier-analysis">short-time Fourier analysis</span></h2><p>Why use it?<br>Some regions of speech signals shorter than 100 milliseconds often appear to be periodic, so that we can use the exact definition of Fourier<br>transform.</p>
+<h3><span id="spectral-leakage">spectral leakage</span></h3><p>This phenomenon is called spectral leakage because the amplitude of one harmonic leaks over the rest and masks its value.</p>
+<h2><span id="feature-extraction">feature extraction</span></h2><p>Representation of speech signals in the frequency domain is especially useful because the frequency structure of a phoneme is generally unique.</p>
+<p>Sinusoids are important because speech signals can be decomposed as sums of sinusoids.</p>
+<p>For voiced sounds there is typically more energy at low frequencies<br>than at high frequencies, also called roll-off. To make the spectrograms easier to read, sometimes the signal is first preemphasized (typically with a first-order difference FIR filter) to boost the high frequencies<br>to counter the roll-off of natural speech.</p>
+<h2><span id="digital-systems">Digital Systems</span></h2><p>Linear Time-Invariant Systems and Linear Time-Varying Systems.</p>
+<h2><span id="the-fourier-transform">The Fourier Transform</span></h2><h2><span id="z-transform">Z-Transform</span></h2><h2><span id="digital-filter">digital filter</span></h2><h2><span id="filterbank">filterbank</span></h2><p>A filterbank is a collection of filters that span the whole frequency spectrum.</p>
+<h2><span id="short-time-analysis">short-time analysis</span></h2></div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2022-12-23T15:44:05.000Z" title="2022-12-23 4:44:05 ├F10: PM┤">2022-12-23</time></span><span class="level-item">Updated&nbsp;<time dateTime="2022-12-29T21:00:27.716Z" title="2022-12-29 10:00:27 ├F10: PM┤">2022-12-29</time></span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2022/12/23/Network-Representation-Learning/">Network Representation Learning</a></p><div class="content"><h2><span id="background">background</span></h2><p>Recording studying during KTH. First blog about network representation learning, a project belongs to machine learning, advanced course.</p>
+<h2><span id="line">LINE</span></h2><p>Reproduce paper “LINE: Large-scale Information Network Embedding”.</p>
+<h3><span id="alias-table-method">Alias Table Method</span></h3><p>It’s a method of effiently drawing samples from discrete distribution.<br>reference:<br><a target="_blank" rel="noopener" href="https://www.keithschwarz.com/darts-dice-coins/">https://www.keithschwarz.com/darts-dice-coins/</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/haolexiao/article/details/65157026">https://blog.csdn.net/haolexiao/article/details/65157026</a></p>
+<h3><span id="negative-sampling">Negative Sampling</span></h3><h4><span id="word2vec">word2vec</span></h4><p>Original paper:<br>Efficient estimation of word representations in vector space.<br>reference:<br>word2vec Explained: Deriving Mikolov et al.’s<br>Negative-Sampling Word-Embedding Method</p>
+<h4><span id="skip-gram-model">Skip-Gram Model</span></h4><p>Original papaer:Distributed Representations of Words and Phrases<br>and their Compositionality.<br>The idea behind the word2vec models is that the words that appear in the same context (near each other) should have similar word vectors. Therefore, we should consider some notion of similarity in our objective when training the model. This is done using the dot product since when vectors are similar, their dot product is larger.<br>reference:<br><a target="_blank" rel="noopener" href="https://www.baeldung.com/cs/nlps-word2vec-negative-sampling">https://www.baeldung.com/cs/nlps-word2vec-negative-sampling</a></p>
+<h2><span id="graphsage">graphSage</span></h2></div></article></div></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

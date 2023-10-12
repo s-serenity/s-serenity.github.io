@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>NP and reduction - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="PP is the set of all decision problems that can be solved inPolynomial time. Extended Church-Turing ThesisAny realistic model of computation can be efficientlysimulated by a Turing machine.(The ECT is"><meta property="og:type" content="article"><meta property="og:title" content="NP and reduction"><meta property="og:url" content="http://yoursite.com/2023/03/28/NP/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="PP is the set of all decision problems that can be solved inPolynomial time. Extended Church-Turing ThesisAny realistic model of computation can be efficientlysimulated by a Turing machine.(The ECT is"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2023-03-28T09:46:34.000Z"><meta property="article:modified_time" content="2023-05-21T21:24:08.965Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="Algorithm"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2023/03/28/NP/"},"headline":"NP and reduction","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2023-03-28T09:46:34.000Z","dateModified":"2023-05-21T21:24:08.965Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"PP is the set of all decision problems that can be solved inPolynomial time. Extended Church-Turing ThesisAny realistic model of computation can be efficientlysimulated by a Turing machine.(The ECT is"}</script><link rel="canonical" href="http://yoursite.com/2023/03/28/NP/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2023-03-28T09:46:34.000Z" title="2023-3-28 11:46:34 ├F10: AM┤">2023-03-28</time></span><span class="level-item">Updated&nbsp;<time dateTime="2023-05-21T21:24:08.965Z" title="2023-5-21 11:24:08 ├F10: PM┤">2023-05-21</time></span></div></div><h1 class="title is-3 is-size-4-mobile">NP and reduction</h1><div class="content"><h2><span id="p">P</span></h2><p>P is the set of all decision problems that can be solved in<br>Polynomial time.</p>
+<h2><span id="extended-church-turing-thesis">Extended Church-Turing Thesis</span></h2><p>Any realistic model of computation can be efficiently<br>simulated by a Turing machine.<br>(The ECT is probably false!Probable counter-example: Quantum computing,However, the ECT is true for the classic models of computation<br>underlying our laptops)</p>
+<h2><span id="np-problem">NP problem</span></h2><p>We do not know of polynomial-time algorithms for these problems, and we cannot prove that no<br>polynomial-time algorithm exists. </p>
+<p>NP stands for Nondeterministic Polynomial time.</p>
+<p>NP is a set of problems that there is a polynomial-time algorithm that verify if a solution to the problem is correct.<br>Note that showing that a problem is in NP does not mean that the problem can be solved in polynomial time. It only means that a proposed solution can be verified in polynomial time.</p>
+<p>All problems in P are also in NP, we do not know if P&#x3D;NP.</p>
+<h2><span id="np-hardness">NP-hardness</span></h2><p>We say that a problem Y is NP-hard if every problem in NP can be Karp-reduced to Y. To prove NP-hardness for Y we only have to find<br>one other NP-hard problem X and reduce X to Y.</p>
+<h2><span id="np-complete-problem">NP-complete problem</span></h2><p>A large class of problems in this “gray area” has been characterized,<br>and it has been proved that they are equivalent in the following sense: a polynomial-time algorithm for any one of them would imply the existence of a polynomial-time algorithm for all of them. These are the NP-complete problems.</p>
+<p>Every problem in NP can be reduced to X. We will call such an X an NP-complete problem.</p>
+<p>To prove a problem is np-complete, we need to prove it lies in Np and it is np-hard. In NP is proved by verifying the solution in polynomial time. Np-hard is proved by using Karp-reduction from known NP-hard problem.</p>
+<p>the NP-complete problems are the hardest problems in NP</p>
+<h2><span id="the-cook-levin-theorem">The Cook-Levin Theorem</span></h2><p>The Sat problem is NP-hard.</p>
+<h3><span id="hamiltonian-cycle">Hamiltonian Cycle</span></h3><p>Reduction from Sat to Hamiltonian Cycle.</p>
+<h3><span id="travelling-salesman">Travelling Salesman</span></h3><p>Reduction from Hamiltonian Cycle</p>
+<h3><span id="graph-coloring">Graph Coloring</span></h3><p>Graph Coloring is NP-hard.<br>2-coloring is not NP-hard.</p>
+<h3><span id="vertex-cover">Vertex Cover</span></h3><p>we say that a set of nodes S is a vertex cover if every edge e has at least one end in S.</p>
+<h3><span id="set-cover">Set Cover</span></h3><p>Given a set U of n elements, a collection S1,…, Sm of subsets of U, and<br>a number k, does there exist a collection of at most k of these sets whose<br>union is equal to all of U?</p>
+<h2><span id="conp">CoNP</span></h2><p>The complexity class CoNP consists of all problems where a “no” answer can be efficiently verified.<br>For every NP-complete problem there is a<br>corresponding CoNP-complete problem.</p>
+<p>We do not know if NP&#x3D;CoNP.</p>
+<h2><span id="pspace">PSPACE</span></h2><p>The complexity class PSPACE consists of all problems that can<br>be solved by an algorithm using at most a polynomial amount of<br>space.<br>It is strongly believed that NP !&#x3D; PSPACE, but we do not even<br>know with certainty whether P !&#x3D; PSPACE or not!</p>
+<p>For many 2-player games like Geography, deciding if there is a<br>winning strategy from a given position is a PSPACE problem</p>
+<h2><span id="bpp-and-zpp">BPP and ZPP</span></h2><h3><span id="bpp">BPP</span></h3><p>BPP (Bounded-error Probabilistic Polynomial-time)<br>consists of all decision problems for which there is a<br>polynomial-time randomized algorithms that is correct with<br>probability at least 2&#x3D;3 on all instances.</p>
+<h3><span id="zpp">ZPP</span></h3><p>ZPP (Zero-error Probabilistic Polynomial Time)<br>consists of all decision problems for which there is a Las Vegas<br>algorithm running in expected polynomial time.<br>It is widely believed that P &#x3D; ZPP &#x3D; BPP but all three could be<br>different.</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Algorithm/">Algorithm</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2023/03/31/speech/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">speech</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/01/03/toolnotes/"><span class="level-item">toolnotes</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>

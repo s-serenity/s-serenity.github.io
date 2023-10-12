@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><title>第九篇 python(1)-语法进阶 - s-serenity</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="s-serenity"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="s-serenity"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="yieldyield可以暂停一个函数的运行，返回值给函数调用者，并使得函数可以从上次离开的地方接着运行。通常我们可以借助yield来实现一个生成器。 生成器生成器是一个可以产生一个序列的函数，调用生成器函数会产生一个生成器对象，并不会开始启动函数，只有当执行__next__()时函数才会执行。生成器时一个一次性操作，和我们常见的列表、字典等可以迭代的对象不同，列表等是可以无限次迭代的。 装饰器py"><meta property="og:type" content="article"><meta property="og:title" content="第九篇 python(1)-语法进阶"><meta property="og:url" content="http://yoursite.com/2021/07/30/python/"><meta property="og:site_name" content="s-serenity"><meta property="og:description" content="yieldyield可以暂停一个函数的运行，返回值给函数调用者，并使得函数可以从上次离开的地方接着运行。通常我们可以借助yield来实现一个生成器。 生成器生成器是一个可以产生一个序列的函数，调用生成器函数会产生一个生成器对象，并不会开始启动函数，只有当执行__next__()时函数才会执行。生成器时一个一次性操作，和我们常见的列表、字典等可以迭代的对象不同，列表等是可以无限次迭代的。 装饰器py"><meta property="og:locale" content="en_US"><meta property="og:image" content="http://yoursite.com/img/og_image.png"><meta property="article:published_time" content="2021-07-30T19:39:18.000Z"><meta property="article:modified_time" content="2021-09-25T05:50:27.700Z"><meta property="article:author" content="s-serenity"><meta property="article:tag" content="python"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://yoursite.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://yoursite.com/2021/07/30/python/"},"headline":"第九篇 python(1)-语法进阶","image":["http://yoursite.com/img/og_image.png"],"datePublished":"2021-07-30T19:39:18.000Z","dateModified":"2021-09-25T05:50:27.700Z","author":{"@type":"Person","name":"s-serenity"},"publisher":{"@type":"Organization","name":"s-serenity","logo":{"@type":"ImageObject"}},"description":"yieldyield可以暂停一个函数的运行，返回值给函数调用者，并使得函数可以从上次离开的地方接着运行。通常我们可以借助yield来实现一个生成器。 生成器生成器是一个可以产生一个序列的函数，调用生成器函数会产生一个生成器对象，并不会开始启动函数，只有当执行__next__()时函数才会执行。生成器时一个一次性操作，和我们常见的列表、字典等可以迭代的对象不同，列表等是可以无限次迭代的。 装饰器py"}</script><link rel="canonical" href="http://yoursite.com/2021/07/30/python/"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.1.0"></head><body class="is-1-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/">s-serenity</a></div><div class="navbar-menu"><div class="navbar-end"></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-12"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item">Posted&nbsp;<time dateTime="2021-07-30T19:39:18.000Z" title="2021-7-30 9:39:18 ├F10: PM┤">2021-07-30</time></span><span class="level-item">Updated&nbsp;<time dateTime="2021-09-25T05:50:27.700Z" title="2021-9-25 7:50:27 ├F10: AM┤">2021-09-25</time></span><span class="level-item"><a class="link-muted" href="/categories/programming-language/">programming language</a></span></div></div><h1 class="title is-3 is-size-4-mobile">第九篇 python(1)-语法进阶</h1><div class="content"><h3><span id="yield">yield</span></h3><p>yield可以暂停一个函数的运行，返回值给函数调用者，并使得函数可以从上次离开的地方接着运行。通常我们可以借助yield来实现一个生成器。</p>
+<h3><span id="生成器">生成器</span></h3><p>生成器是一个可以产生一个序列的函数，调用生成器函数会产生一个生成器对象，并不会开始启动函数，只有当执行<code>__next__()</code>时函数才会执行。生成器时一个一次性操作，和我们常见的列表、字典等可以迭代的对象不同，列表等是可以无限次迭代的。</p>
+<h3><span id="装饰器">装饰器</span></h3><p>python中函数是一等对象，所以函数可以像普通变量一样当作参数传给另一个函数的，装饰器可以在不改变另一个函数的情况下用来封装另一个函数以拓展这个被封装函数的功能，有了装饰器，我们就可以抽离出大量与函数功能本身无关的雷同代码到装饰器中并继续重用。</p>
+<p>装饰器不仅可以是函数，也可以是类。使用类装饰器主要依靠类的<code>__call__</code>方法。我们可以直接定义一个装饰器函数或者装饰器类，但是有个缺点是原函数的元信息不见了，比如函数的<code>docstring</code>、<code>__name__</code>都会发生改变，此时我们可以使用<strong>functools.wraps</strong>，<code>wraps</code>本身也是一个装饰器，它能把原函数的元信息拷贝到装饰器里面的函数中。</p>
+</div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/python/">python</a></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/08/07/SQL/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">第十篇 SQL(1)-数据统计</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2021/07/16/java/"><span class="level-item">第八篇 java(1)-面向对象</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><!--!--><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/">s-serenity</a><p class="is-size-7"><span>&copy; 2023 s-serenity</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("en");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><!--!--><script src="/js/main.js" defer></script><!--!--></body></html>
